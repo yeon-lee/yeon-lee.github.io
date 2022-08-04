@@ -3,8 +3,8 @@
 # -----------------------------------------------------------------------------
 
 title: Dr. # the website title (if blank, full name will be used instead)
-first_name: Jong Yeon
-middle_name: 
+first_name: Jong
+middle_name: Yeon
 last_name: Lee
 email: dlwhddus9999@gmail.com
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
@@ -33,7 +33,7 @@ highlight_theme_dark: native    # https://github.com/jwarby/jekyll-pygments-them
 
 # repo color theme
 repo_theme_light: default       # https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md
-repo_theme_dark: dark           # https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md
+repo_theme_dark: default         # https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md
 
 # -----------------------------------------------------------------------------
 # RSS Feed
@@ -101,7 +101,7 @@ bing_site_verification:  # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: al-folio # blog_name will be displayed in your blog page
+blog_name: Anyon # blog_name will be displayed in your blog page
 blog_nav_title: blog # your blog must have a title for it to be displayed in the nav bar
 blog_description: a simple whitespace theme for academics
 permalink: /blog/:year/:title/
