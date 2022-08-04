@@ -13,13 +13,13 @@ profile:
     <p>Santa Barbara, CA 93106</p>
     <p>United States</p>
 
-news: true  # includes a list of news items
+news: false  # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true  # includes social icons at the bottom of the page
+social: false  # includes social icons at the bottom of the page
 ---
 
 Hi! I'm Jong Yeon, a Gordon and Betty Moore Postdoctoral Scholar at Kavli Institute of Theoretical Physics.
-Write your biography here. I am interested in a broad range of topics in quantum matter -- topological band structures, intrinsic topological orders and fractionalizations, exotic quantum phase transitions, Moire materials, and quantum information and dynamics. 
+I am interested in a broad range of topics in quantum matter -- topological band structures, intrinsic topological orders and fractionalizations, exotic quantum phase transitions, Moire materials, and quantum information and dynamics. 
 
 
 See my google [google scholar](https://scholar.google.com/citations?user=fyVphr4AAAAJ&hl=en) for publications. 
