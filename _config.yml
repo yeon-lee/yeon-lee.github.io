@@ -102,7 +102,7 @@ bing_site_verification:  # out your bing-site-verification ID (Bing Webmaster)
 # -----------------------------------------------------------------------------
 
 blog_name: Anyon  
-blog_nav_title: #Blog # if I comment this, blog does not show up
+blog_nav_title: Blog # if I comment this, blog does not show up
 blog_description: a simple whitespace theme for academics
 permalink: /blog/:year/:title/
 
