@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: Assistant Professor at <a href='https://physics.illinois.edu/people/directory/profile/jongyeon'>University of Illinois Urbana-Champaigne</a> 
+subtitle: Assistant Professor at <a href='https://physics.illinois.edu/people/directory/profile/jongyeon'>University of Illinois Urbana-Champaign</a> 
 
 profile:
   align: right
@@ -16,7 +16,7 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: false  # includes social icons at the bottom of the page
 ---
 
-I am a theoretical physicist interested in quantum matter. I work on a broad range of topics in quantum matter -- topological band structures, intrinsic topological orders and fractionalizations, exotic quantum phase transitions, Moire materials, and quantum information and dynamics. 
+I am a theoretical physicist. I work on a broad range of topics in quantum matter and quantum information -- topological band structures, intrinsic topological orders and fractionalizations, exotic quantum phase transitions, Moire materials, quantum information and dynamical systems. 
 
 See my [google scholar](https://scholar.google.com/citations?user=fyVphr4AAAAJ&hl=en) page for publications. 
 
