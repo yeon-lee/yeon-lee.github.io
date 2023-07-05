@@ -1,8 +1,7 @@
 ---
 layout: post
-date: 2015-06-12 07:59:00-0400
+date: 2022-03-17 
 inline: true
 ---
 
-Received the Richard P. Feynman Prize, awarded to a graduating senior on the basis of excellence in theoretical physics.
-<!-- Received Richard Feymann Prize in Theoretical Physics at Caltech! -->
+Received Outstanding Young Researcher Award for a "broad range of significant contributions to the theoreticla and numerical study of topological and strongly correlated systems".
