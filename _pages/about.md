@@ -20,9 +20,11 @@ I am a theoretical physicist interested in quantum matter. I work on a broad ran
 
 See my [google scholar](https://scholar.google.com/citations?user=fyVphr4AAAAJ&hl=en) page for publications. 
 
-2011-2015: Undergraduate at California Institute of Technology
-2015-2020: Ph.D. at Harvard University (advisor: [Ashvin Vishwanath](https://www.physics.harvard.edu/people/facpages/vishwanath))
-2020-2023: Moore Postdoctoral Scholar at <a href='https://www.kitp.ucsb.edu/'>Kavli Institute of Theoretical Physics</a> -->
+* 2011-2015: Undergraduate at California Institute of Technology
+
+* 2015-2020: Ph.D. at Harvard University (advisor: [Ashvin Vishwanath](https://www.physics.harvard.edu/people/facpages/vishwanath))
+
+* 2020-2023: Moore Postdoctoral Scholar at <a href='https://www.kitp.ucsb.edu/'>Kavli Institute of Theoretical Physics</a> 
 
 <!-- I completed my undergraduate education with a dual degree in Physics and Mathematics at California Institute of Technology (Caltech). In 2020, I received my Ph.D. degree in Physics at Harvard University where I worked with my advisor Professor [Ashvin Vishwanath](https://www.physics.harvard.edu/people/facpages/vishwanath). In 2020-2023, I was a Gordon and Betty Moore Postdoctoral Scholar at <a href='https://www.kitp.ucsb.edu/'>Kavli Institute of Theoretical Physics</a> -->
 
