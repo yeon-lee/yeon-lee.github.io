@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: [Assistant Professor in Theoretical Physics at University of Illinois Urbana-Champaigne](https://physics.illinois.edu/people/directory/profile/jongyeon). 
+subtitle: <a href='https://physics.illinois.edu/people/directory/profile/jongyeon'>Assistant Professor in Theoretical Physics at University of Illinois Urbana-Champaigne</a> 
 
 profile:
   align: right
