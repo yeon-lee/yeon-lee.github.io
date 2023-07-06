@@ -7,7 +7,7 @@ subtitle: Assistant Professor at <a href='https://physics.illinois.edu/people/di
 profile:
   align: right
   image: prof_pic.jpg
-  image_cicular: false # crops the image to make it circular
+  image_cicular: true # crops the image to make it circular
   address: >
     <p>dlwhddus9999 at gmail.com</p>
 
