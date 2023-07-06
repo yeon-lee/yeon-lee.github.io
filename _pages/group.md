@@ -2,9 +2,7 @@
 layout: page
 permalink: /teaching/
 title: Group
-description: Group 
+description: Group members
 nav: true
 nav_order: 2
 ---
-
-Group Members
