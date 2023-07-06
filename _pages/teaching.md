@@ -4,7 +4,7 @@ permalink: /teaching/
 title: Class
 description: Teaching materials
 nav: true
-nav_order: 3
+nav_order: 2
 ---
 
 
