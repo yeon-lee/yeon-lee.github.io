@@ -9,7 +9,8 @@ profile:
   image: prof_pic.jpg
   image_cicular: true # crops the image to make it circular
   address: >
-    <p>dlwhddus9999 at gmail.com</p>
+    
+    <p> <font size="8"> dlwhddus9999 at gmail.com </font></p>
 
 news: false  # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
