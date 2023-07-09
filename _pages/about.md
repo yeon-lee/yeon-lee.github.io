@@ -29,6 +29,8 @@ See my [google scholar](https://scholar.google.com/citations?user=fyVphr4AAAAJ&h
 
 * 2020-2023: Moore Fellow at <a href='https://www.kitp.ucsb.edu/'>Kavli Institute of Theoretical Physics</a> 
 
+<h1 class="post-title">{{ page.title }} {% if page.cv_pdf %}<a href="{{ page.cv_pdf | prepend: 'assets/pdf/' | relative_url}}" target="_blank" rel="noopener noreferrer" class="float-right"><i class="fas fa-file-pdf"></i></a>{% endif %}</h1>
+            <p class="post-description">{{ page.description }}</p>
 <!-- I completed my undergraduate education with a dual degree in Physics and Mathematics at California Institute of Technology (Caltech). In 2020, I received my Ph.D. degree in Physics at Harvard University where I worked with my advisor Professor [Ashvin Vishwanath](https://www.physics.harvard.edu/people/facpages/vishwanath). In 2020-2023, I was a Gordon and Betty Moore Postdoctoral Scholar at <a href='https://www.kitp.ucsb.edu/'>Kavli Institute of Theoretical Physics</a> -->
 
 
