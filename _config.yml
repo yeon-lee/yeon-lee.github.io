@@ -88,7 +88,7 @@ contact_note: >
 # Analytics and search engine verification
 # -----------------------------------------------------------------------------
 
-google_analytics: "G-FQFGBC4CGG"                        # Tracking ID, e.g. "UA-000000-01"
+google_analytics: "G-FQFGBC4CGG"   # Tracking ID, e.g. "UA-000000-01"
 panelbear_analytics:  # panelbear analytics site ID (format: XXXXXXXXX)
 
 google_site_verification:  # your google-site-verification ID (Google Search Console)
@@ -104,7 +104,7 @@ blog_description: a simple whitespace theme for academics
 permalink: /blog/:year/:title/
 
 # Pagination
-pagination: 5
+pagination:
   enabled: true
 
 # Comments
