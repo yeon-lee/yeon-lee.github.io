@@ -5,7 +5,6 @@ permalink: /research/
 description:  
 nav: true
 nav_order: 2
-feature-img: "assets/img/cover.png"
 display_categories: [Quantum Information, Quantum Matter]
 horizontal: false
 ---
