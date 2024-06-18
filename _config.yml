@@ -1,0 +1,21 @@
+# Dependencies
+markdown:         kramdown
+highlighter:      rouge
+
+
+# Setup
+title:            'Quantum resources workshop - Singapore 2022'
+tagline:          'Quantum resources: from mathematical foundations to operational characterisation'
+description:      'Workshop on quantum resource theories, taking place between 5 - 8 December 2022 in Singapore.'
+url:              "https://2022.quantumresources.science"
+baseurl:          ''
+
+
+author:
+  name:           'Bartosz Regula'
+
+paginate:         5
+
+# Custom vars
+version:          2.1.0
+
