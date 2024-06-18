@@ -4,18 +4,18 @@ highlighter:      rouge
 
 
 # Setup
-title:            'Quantum resources workshop - Singapore 2022'
-tagline:          'Quantum resources: from mathematical foundations to operational characterisation'
-description:      'Workshop on quantum resource theories, taking place between 5 - 8 December 2022 in Singapore.'
-url:              "https://2022.quantumresources.science"
+title:            'Quantum resources workshop - Jeju 2025'
+tagline:          'Quantum resources 2025'
+description:      'Workshop on quantum resource theories, taking place between 17 - 21 March 2025 in Jeju, Korea'
+url:              "https://2025.quantumresources.science"
 baseurl:          ''
 
 
 author:
-  name:           'Bartosz Regula'
+  name:           'Hyukjoon Kwon'
 
 paginate:         5
 
 # Custom vars
-version:          2.1.0
+version:          1.0.0
 
