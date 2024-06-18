@@ -3,13 +3,11 @@ layout: default
 order: 1
 ---
 
-<!-- ![Marina Bay](https://live.staticflickr.com/8369/8463911183_ea4f26d3d6_c_d.jpg) -->
-
-![Group photo](/photo.jpg)
+<!--- ![Group photo](/photo.jpg) --->
 
 
-## Quantum resources: from mathematical foundations to operational characterisation
-<h3 class="lessspace"><em>Singapore, 5 &ndash; 8 December 2022</em></h3>
+## Quantum resources 2025
+<h3 class="lessspace"><em>Jeju, 17 &ndash; 21 March 2025</em></h3>
 
 Various properties of quantum systems are starting to find use in the development of practical quantum technologies, elevating phenomena such as entanglement and coherence from mathematical curiosities to physical resources. The framework of quantum resource theories aims to understand these features in a unified fashion and establish methods to characterise them effectively.
 
