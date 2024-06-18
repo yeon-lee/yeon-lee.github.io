@@ -15,6 +15,8 @@ The workshop *Quantum resources: from mathematical foundations to operational ch
 
 The workshop will consist of invited talks by experts in various aspects of quantum resource theories as well as contributed talks, poster sessions, and extended discussion sessions.
 
+This is a successor of the previous events, Quantum resources: from mathematical foundations to operational characterisation, which took place in December 2022.
+
 
 ## Invited speakers
 
