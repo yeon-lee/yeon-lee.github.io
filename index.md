@@ -29,14 +29,16 @@ The workshop will take place at <a href="https://www.glad-hotels.com/maisongladj
 All deadlines in Anywhere on Earth (AoE) time.
 
 Submission deadline: October 2024
+
 Notification: December 2024
+
 Registration deadline: 20 February 2025
+
 **Workshop: 17 &ndash; 21 March 2025**
 
 
 ## Organising committee
 * Hyukjoon Kwon (Korea Institute for Advanced Study)
-* Bartosz Regula (University of Tokyo)
 
 Please contact <a href="mailto:hj.kwon9001@gmail.com">hj.kwon9001@gmail.com</a> with any queries.
 
