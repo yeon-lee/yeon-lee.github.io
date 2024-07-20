@@ -5,7 +5,6 @@ order: 1
 
 [Group photo](/photo.jpg)
 
-
 ## Quantum resources 2025
 <h3 class="lessspace"><em>Jeju, 17 &ndash; 21 March 2025</em></h3>
 
