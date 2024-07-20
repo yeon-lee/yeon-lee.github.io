@@ -18,7 +18,8 @@ This is a successor of the previous events, Quantum resources: from mathematical
 * **Marco Tomamichel** 
 * **David Arvidsson-Shukur** 
 * **Ryuji Takagi** 
-* **Seok-Hyung Lie** 
+* **Seok-Hyung Lie**
+* and More...
 
 ## Location
 
