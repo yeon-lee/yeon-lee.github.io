@@ -3,7 +3,7 @@ layout: default
 order: 1
 ---
 
-<!--- ![Group photo](/photo.jpg) --->
+[Group photo](/photo.jpg)
 
 
 ## Quantum resources 2025
