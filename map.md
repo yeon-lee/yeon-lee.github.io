@@ -1,6 +1,6 @@
 ---
 layout: page
-title: o
+title: Venue and accommodation
 order: 6
 ---
 
