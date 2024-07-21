@@ -5,6 +5,7 @@ order: 6
 ---
 
 # Workshop venue
+![Hotel](/hotel.jpg)
 The workshop will take place at <a href="https://www.glad-hotels.com/maisongladjeju/index.do?locale=en">MAISON GLAD JEJU</a>, located in the city center of Jeju Island, Korea.
 
 # Getting there
