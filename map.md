@@ -13,5 +13,3 @@ The workshop will take place at <a href="https://www.glad-hotels.com/maisongladj
 ## By Taxi
 
 ## By public transport 
-
-Map of local area and suggestion for a walk from the conference venue:
