@@ -54,4 +54,4 @@ Please contact <a href="mailto:hj.kwon9001@gmail.com">hj.kwon9001@gmail.com</a> 
 ## Sponsor
 The workshop is sponsored by Korea Institute for Advanced Study (KIAS).
 
-<a href="https://kias.re.kr"> <img src="kias-wordmask.png" width="400"/> </a>
+<a href="https://kias.re.kr"> <img src="kias-wordmask.png" width="300"/> </a>
