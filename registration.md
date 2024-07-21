@@ -4,5 +4,5 @@ title: Registration
 order: 3
 ---
 
-Registration
+## To be announced soon
 
