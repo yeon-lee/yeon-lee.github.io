@@ -4,5 +4,5 @@ title: Registration
 order: 4
 ---
 
-## To be announced soon
+## The registration page will be open soon.
 
