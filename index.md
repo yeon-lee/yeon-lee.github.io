@@ -6,6 +6,10 @@ order: 1
 ## Quantum resources 2025
 <h3 class="lessspace"><em>Jeju, 17 &ndash; 21 March 2025</em></h3>
 
+Quantum resource theory is a burgeoning field at the intersection of quantum physics and information theory, dedicated to understanding and quantifying the valuable resources that enable quantum technologies to surpass classical counterparts. These resources, such as entanglement, coherence, and magic, are pivotal for advancements in quantum computing, cryptography, and communication. Rigorous characterization and quantification of these quantum resources have deepened our understanding of quantum foundations and explored their implications for thermodynamics, leading to the development of new theoretical frameworks and practical protocols that harness their full potential.
+
+Quantum Resources 2025 brings together leading experts and emerging voices in the field to explore the latest theoretical insights, practical applications, and future directions of quantum resource theory, fostering collaboration and innovation at the forefront of quantum science.
+
 This is a successor of the previous events, Quantum Resource, which took place in <a herf = https://2022.quantumresources.science/>>2022</a> and <a herf = https://2023.quantumresources.science/>>2023</a> (Singapore).
 
 ## Invited speakers
