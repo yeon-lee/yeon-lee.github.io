@@ -10,7 +10,7 @@ Quantum resource theory is a burgeoning field at the intersection of quantum phy
 
 Quantum Resources 2025 brings together leading experts and emerging voices in the field to explore the latest theoretical insights, practical applications, and future directions of quantum resource theory, fostering collaboration and innovation at the forefront of quantum science.
 
-This is a successor of the previous events, Quantum Resource, which took place in <a href = "https://2022.quantumresources.science">2022</a> and <a href = "https://2023.quantumresources.science"> 2023 </a> (Singapore).
+This is a successor of the previous events, Quantum Resources, which took place in <a href = "https://2022.quantumresources.science">2022</a> and <a href = "https://2023.quantumresources.science"> 2023 </a> (Singapore).
 
 ## Invited speakers
 
