@@ -6,20 +6,20 @@ order: 1
 ## Quantum resources 2025
 <h3 class="lessspace"><em>Jeju, 17 &ndash; 21 March 2025</em></h3>
 
-This is a successor of the previous events, Quantum resources: from mathematical foundations to operational characterisation, which took place in 2022 and 2023 (Singapore).
+This is a successor of the previous events, Quantum Resource, which took place in <a herf = https://2022.quantumresources.science/>>2022</a> and <a herf = https://2023.quantumresources.science/>>2023</a> (Singapore).
 
 ## Invited speakers
 
-* **Andres Winter** 
-* **Masahito Hayashi** 
-* **Valerio Scarani** 
-* **Kun Fang** 
-* **Mark M. Wilde** 
-* **Marco Tomamichel** 
-* **David Arvidsson-Shukur** 
-* **Ryuji Takagi** 
-* **Seok-Hyung Lie**
-* and More...
+* **Andres Winter** (Universitat Autònoma de Barcelona)
+* **Masahito Hayashi** (Nagoya University)
+* **Valerio Scarani** (National University of Singapore)
+* **Kun Fang** (The Chinese University of Hong Kong)
+* **Mark M. Wilde** (Cornell University)
+* **Marco Tomamichel** (National University of Singapore)
+* **David Arvidsson-Shukur** (Hitachi Cambridge Laboratory)
+* **Ryuji Takagi** (University of Tokyo)
+* **Seok-Hyung Lie** (Ulsan National Institute of Science and Technology)
+* and more to be confirmed.
 
 ## Location
 
