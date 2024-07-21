@@ -3,7 +3,7 @@ layout: default
 order: 1
 ---
 
-![Jeju](/Jeju_resize.jpeg)
+![Jeju](/Jeju_resize.jpg)
 
 ## Quantum resources 2025
 <h3 class="lessspace"><em>Jeju, 17 &ndash; 21 March 2025</em></h3>
