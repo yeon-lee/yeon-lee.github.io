@@ -48,3 +48,4 @@ Registration deadline: 20 February 2025
 Please contact <a href="mailto:hj.kwon9001@gmail.com">hj.kwon9001@gmail.com</a> with any queries.
 
 ## Sponsor
+The workshop is sponsored by Korea Institute for Advanced Study (KIAS).
