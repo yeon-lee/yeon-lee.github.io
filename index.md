@@ -35,15 +35,15 @@ The workshop will take place at <a href="https://www.glad-hotels.com/maisongladj
 
 ## Dates
 
-* All deadlines in Anywhere on Earth (AoE) time.
+- All deadlines in Anywhere on Earth (AoE) time.
 
-- Submission deadline: October 2024
+* Submission deadline: October 2024
 
-- Notification: December 2024
+* Notification: December 2024
 
-- Registration deadline: 20 February 2025
+* Registration deadline: 20 February 2025
 
-**Workshop: 17 &ndash; 21 March 2025**
+* **Workshop: 17 &ndash; 21 March 2025**
 
 
 ## Organising committee
