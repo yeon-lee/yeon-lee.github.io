@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Confirmed Participants
+title: x
 order: 4
 ---
 
