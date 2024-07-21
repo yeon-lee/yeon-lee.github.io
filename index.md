@@ -5,7 +5,7 @@ order: 1
 
 ![Jeju](/Jeju_resize.jpg)
 
-## Quantum resources 2025
+## Quantum Resources 2025
 <h3 class="lessspace"><em>Jeju, 17 &ndash; 21 March 2025</em></h3>
 
 Quantum resource theory is a burgeoning field at the intersection of quantum physics and information theory, dedicated to understanding and quantifying the valuable resources that enable quantum technologies to surpass classical counterparts. These resources, such as entanglement, coherence, and magic, are pivotal for advancements in quantum computing, cryptography, and communication. Rigorous characterization and quantification of these quantum resources have deepened our understanding of quantum foundations and explored their implications for thermodynamics, leading to the development of new theoretical frameworks and practical protocols that harness their full potential.
