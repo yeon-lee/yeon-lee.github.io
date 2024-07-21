@@ -35,7 +35,7 @@ The workshop will take place at <a href="https://www.glad-hotels.com/maisongladj
 
 ## Dates
 
-- All deadlines in Anywhere on Earth (AoE) time.
+All deadlines in Anywhere on Earth (AoE) time.
 
 * Submission deadline: October 2024
 
