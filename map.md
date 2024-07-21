@@ -14,10 +14,10 @@ The workshop will take place at <a href="https://www.glad-hotels.com/maisongladj
 - From Jeju International Airport, it takes 15 minutes to get to the hotel.
 
 ## By Shuttle Bus
-### Jeju International Airport → MAISON GLAD JEJU (Hours: 10:30 / 15:30 / 19:30)
+### Jeju International Airport → MAISON GLAD JEJU (10:30 / 15:30 / 19:30)
 - Boarding location: Bus Parking Area B, at the Airport (near the parking tower)
 
-### MAISON GLAD JEJU → Jeju International Airport (Hours: 09:30 / 14:30 / 18:30)
+### MAISON GLAD JEJU → Jeju International Airport (09:30 / 14:30 / 18:30)
 - Boarding location: Parking lot in front of hotel lobby
 
 ### Notice
