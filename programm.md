@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Programme
+title: Programm
 order: 2
 ---
 
