@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Confirmed Participants
-order: 2
+order: 4
 ---
 
 ## Confirmed Participants
