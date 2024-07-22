@@ -48,7 +48,7 @@ All deadlines in Anywhere on Earth (AoE) time.
 ## Organizing committee
 * Hyukjoon Kwon (Korea Institute for Advanced Study)
 
-## Steerring committee
+## Steering committee
 * Bartosz Regula (RIKEN)
 * Ryuji Takagi (University of Tokyo)
 
