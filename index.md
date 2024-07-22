@@ -17,16 +17,15 @@ The conference will be held in person to enhance active interactions. We look fo
 This is a successor of the previous events, Quantum Resources, which took place in <a href = "https://2022.quantumresources.science">2022</a> and <a href = "https://2023.quantumresources.science"> 2023 </a> (Singapore).
 
 ## Invited speakers
-
-* **Andres Winter** (Universitat Autònoma de Barcelona)
+* **David Arvidsson-Shukur** (Hitachi Cambridge Laboratory)
+* **Kun Fang** (The Chinese University of Hong Kong)
 * **Masahito Hayashi** (Nagoya University)
 * **Valerio Scarani** (National University of Singapore)
-* **Kun Fang** (The Chinese University of Hong Kong)
-* **Mark M. Wilde** (Cornell University)
-* **Marco Tomamichel** (National University of Singapore)
-* **David Arvidsson-Shukur** (Hitachi Cambridge Laboratory)
-* **Ryuji Takagi** (University of Tokyo)
 * **Seok-Hyung Lie** (Ulsan National Institute of Science and Technology)
+* **Ryuji Takagi** (University of Tokyo)
+* **Marco Tomamichel** (National University of Singapore) 
+* **Mark M. Wilde** (Cornell University)
+* **Andres Winter** (Universitat Autònoma de Barcelona)
 * and more to be confirmed.
 
 ## Location
