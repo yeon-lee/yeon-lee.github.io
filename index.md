@@ -46,8 +46,12 @@ All deadlines in Anywhere on Earth (AoE) time.
 * **Workshop: 17 &ndash; 21 March 2025**
 
 
-## Organising committee
+## Organizing committee
 * Hyukjoon Kwon (Korea Institute for Advanced Study)
+
+## Steerring committee
+* Bartosz Regula (RIKEN)
+* Ryuji Takagi (University of Tokyo)
 
 Please contact <a href="mailto:hj.kwon9001@gmail.com">hj.kwon9001@gmail.com</a> with any queries.
 
