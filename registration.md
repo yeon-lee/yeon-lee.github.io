@@ -8,5 +8,5 @@ order: 4
 
 | Type    | Price | Note |
 |---|---|---|
-| Student | 300 USD |
-| Standard | 400 USD |
+| **Student** | **300 USD** |
+| **Standard** | **400 USD** |
