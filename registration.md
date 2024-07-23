@@ -4,8 +4,7 @@ title: x
 order: 4
 ---
 
-## The registration page will be open soon.
-
+## Registration Fee
 | Type    | Price | Note |
 |---|---|---|
 | **Student** | **300 USD** |
