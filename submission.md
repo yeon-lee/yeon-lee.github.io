@@ -10,4 +10,6 @@ order: 3
 
 * For your abstract submission, you will need either **1) arXiv reference + 1-paragraph abstract** **"or"** **2) 1-page extended abstract (pdf file only)** that briefly explains the background/motivation and main results of the work.
 
+* Submissions will be reviewed by "..."
+
 * Accepted talks will be announced on 15 November 2024.
