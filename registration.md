@@ -16,5 +16,5 @@ Pay for registration fee using your credit card via this website. Click the foll
 ## Registration Fee
 | Type    | Price | Note |
 |---|---|---|
-| **Student** | **300 USD** |
-| **Standard** | **400 USD** |
+| **Student** | **300 USD** | **Lunch & Banquet(Wed) included**
+| **Standard** | **400 USD** | **Lunch & Banquet(Wed) included**
