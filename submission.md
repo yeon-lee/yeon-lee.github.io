@@ -13,6 +13,8 @@ order: 3
  - **1) arXiv reference + 1-paragraph abstract**
   
   **"or"**
+
+  ** dd
   
 - **2) 1-page extended abstract (pdf file only)** that briefly explains the background/motivation and main results of the work.
 
