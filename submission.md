@@ -9,8 +9,10 @@ order: 3
 * Please submit your abstract by completing the submission form via <a href="https://forms.gle/U573dXqnVY5tpC9F9">**Submission Page**</a>.
 
 * For your abstract submission, you will need either
-* **1) arXiv reference + 1-paragraph abstract** 
-  </n> **"or"**
+* **1) arXiv reference + 1-paragraph abstract**
+  
+  **"or"**
+  
 * **2) 1-page extended abstract (pdf file only)** that briefly explains the background/motivation and main results of the work.
 
 * Submissions will be reviewed by the program committee.
