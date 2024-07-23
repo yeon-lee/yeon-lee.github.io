@@ -14,7 +14,7 @@ Quantum Resources 2025 brings together leading experts and emerging voices in th
 
 The conference will be **held in person** to enhance active interactions. We look forward to seeing you on Jeju Island in March 2025.
 
-This is a successor of the previous events, Quantum Resources, which took place in <a href = "https://2022.quantumresources.science">2022</a> and <a href = "https://2023.quantumresources.science"> 2023 </a> (Singapore).
+This is a successor of the previous events, Quantum Resources, which took place in <a href = "https://2022.quantumresources.science">2022</a> (Singapore, hosted by Bartosz Regula) and <a href = "https://2023.quantumresources.science"> 2023 </a> (Singapore, hosted by Ryuji Takagi).
 
 ## Invited speakers
 * **David Arvidsson-Shukur** (Hitachi Cambridge Laboratory)
