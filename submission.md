@@ -16,6 +16,6 @@ order: 3
   
 * **2) 1-page extended abstract (pdf file only)** that briefly explains the background/motivation and main results of the work.
 
-### - Submissions will be reviewed by the program committee.
+### - Submissions will be reviewed by Program Committee.
 
 ### - Accepted talks will be announced on 15 November 2024.
