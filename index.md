@@ -25,7 +25,7 @@ This is a successor of the previous events, Quantum Resources, which took place 
 * **Ryuji Takagi** (University of Tokyo)
 * **Marco Tomamichel** (National University of Singapore) 
 * **Mark M. Wilde** (Cornell University)
-* **Andres Winter** (Universitat Autònoma de Barcelona)
+* **Andreas Winter** (Universitat Autònoma de Barcelona)
 * and more to be confirmed.
 
 ## Location
