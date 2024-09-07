@@ -20,6 +20,7 @@ This is a successor of the previous events, Quantum Resources, which took place 
 * **David Arvidsson-Shukur** (Hitachi Cambridge Laboratory)
 * **Kun Fang** (The Chinese University of Hong Kong)
 * **Masahito Hayashi** (Nagoya University)
+* **Ludovico Lami** (University of Amsterdam & QuSoft)
 * **Seok-Hyung Lie** (Ulsan National Institute of Science and Technology)
 * **Valerio Scarani** (National University of Singapore)
 * **Ryuji Takagi** (University of Tokyo)
