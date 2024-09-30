@@ -55,7 +55,9 @@ All deadlines in Anywhere on Earth (AoE) time.
 * Bartosz Regula (RIKEN)
 * Ryuji Takagi (University of Tokyo)
 
-Please contact <a href="mailto:hj.kwon9001@gmail.com">hj.kwon9001@gmail.com</a> with any queries.
+## If you have any questions, please contact below:
+* Juhye Park (KIAS)  /  <a href="mailto:pjh999@kias.re.kr">pjh999@kias.re.kr</a> 
+* Hyukjoon Kwon (KIAS)  /  <a href="mailto:hjkwon@kias.re.kr">hjkwon@kias.re.kr</a> 
 
 ## Sponsor
 The workshop is sponsored by Quantum Universe Center, Korea Institute for Advanced Study (KIAS), National Research Foundation of Korea (NRF), and Institute for Information & Communication Technology Planning & Evaluation (IITP).
