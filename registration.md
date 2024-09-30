@@ -12,6 +12,7 @@ Pay for registration fee using your credit card via this website. Click the foll
 * <a href = "http://events.kias.re.kr/h/quantumresources.science/?pageNo=5690">**[Overseas]**</a> (Visa, Mastercard, etc.)
 * <a href = "http://events.kias.re.kr/h/quantumresources.science/?pageNo=5689">**[Domestic]**</a> (Korean credit cards only)
 
+* <a href = "http://events.kias.re.kr/h/quantumresources.science/?pageNo=5688">**[Bank Transfer]**</a> (Korean credit cards only)
 
 ## Registration Fee
 | Type    | Price | Note |
