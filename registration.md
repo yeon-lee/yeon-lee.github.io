@@ -3,6 +3,7 @@ layout: page
 title: Registration
 order: 4
 ---
+![JejuLee](/jeju_lee.jpg)
 
 ## Registration
 ### - For registration, please fill out the following <a href = "https://forms.gle/DqpGD6JNUdB6ZdQy7">**[Google form]**</a>.
