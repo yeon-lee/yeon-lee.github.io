@@ -6,7 +6,7 @@ order: 4
 
 ## Registration
 ### - For registration, please fill out the following <a href = "https://forms.gle/DqpGD6JNUdB6ZdQy7">**[Google form]**</a>.
-### - Registration Deadline: 20 February 2025
+### - Registration Deadline: <u> 20 February 2025 </u>
 
 
 ## Payment
