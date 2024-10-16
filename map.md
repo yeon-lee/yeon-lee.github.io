@@ -6,6 +6,8 @@ order: 6
 
 # Workshop venue
 - The workshop will take place at <a href="https://www.glad-hotels.com/maisongladjeju/index.do?locale=en">MAISON GLAD JEJU</a>, located in the city center of Jeju Island, Korea.
+- To book the hotel with a discounted rate, please fill out the <a href="2025_MAISON GLAD JEJU_Reservation Form.docx"> **RESERVATION FORM** </a> and send it to <a href="mailto:maisonglad@glad-hotels.com">maisonglad@glad-hotels.com</a>
+
 <img src="hotel.jpg" width="750"/>
 
 
