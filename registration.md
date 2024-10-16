@@ -16,7 +16,7 @@ order: 4
 * <a href = "http://events.kias.re.kr/h/quantumresources.science/?pageNo=5688">**[Bank Transfer]**</a> (only when credit card payment is unavailable)
 
 ## Registration Fee
-| Type    | Price | Note |
+| Type | Price | Note |
 |---|---|---|
 | **Student** | **300 USD (400,000 KRW)** | **Lunch & Banquet (Wed.) included**
 | **Standard** | **400 USD (550,000 KRW)** | **Lunch & Banquet (Wed.) included**
