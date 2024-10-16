@@ -1,14 +1,16 @@
 ---
 layout: page
-title: x
+title: Registration
 order: 4
 ---
 
 ## Registration
-* For registration, please fill out the following <a href = "https://forms.gle/DqpGD6JNUdB6ZdQy7">**[Google form]**</a>.
+### - For registration, please fill out the following <a href = "https://forms.gle/DqpGD6JNUdB6ZdQy7">**[Google form]**</a>.
+### - Registration Deadline: 20 February 2025
+
 
 ## Payment
-Pay for registration fee using your credit card via this website. Click the following to proceed with your credit card payment.
+### - Pay for the registration fee using your credit card via this website. Click the following to proceed with your credit card payment.
 * <a href = "http://events.kias.re.kr/h/quantumresources.science/?pageNo=5690">**[Overseas]**</a> (Visa, Mastercard, etc.)
 * <a href = "http://events.kias.re.kr/h/quantumresources.science/?pageNo=5689">**[Domestic]**</a> (Korean credit cards only)
 * <a href = "http://events.kias.re.kr/h/quantumresources.science/?pageNo=5688">**[Bank Transfer]**</a> (only when credit card payment is unavailable)
