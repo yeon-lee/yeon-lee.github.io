@@ -18,5 +18,5 @@ order: 4
 ## Registration Fee
 | Type    | Price | Note |
 |---|---|---|
-| **Student** | **300 USD (400,000 KRW)** | **Lunch & Banquet(Wed.) included**
-| **Standard** | **400 USD (550,000 KRW)** | **Lunch & Banquet(Wed.) included**
+| **Student** | **300 USD (400,000 KRW)** | **Lunch & Banquet (Wed.) included**
+| **Standard** | **400 USD (550,000 KRW)** | **Lunch & Banquet (Wed.) included**
