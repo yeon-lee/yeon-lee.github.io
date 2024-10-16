@@ -8,7 +8,7 @@ order: 3
 
 ### - Please submit your abstract by completing the submission form via <a href="https://forms.gle/U573dXqnVY5tpC9F9"> [Submission Page] </a>.
 
-### - Abstrat Submission Deadline: <u>30 October 2024</u>
+### - Abstract Submission Deadline: <u>30 October 2024</u>
 
 ### - For your abstract submission [talk/poster only], you will need either
 
