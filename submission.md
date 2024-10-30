@@ -10,7 +10,7 @@ order: 3
 
 #### - Please submit your abstract by completing the submission form via <a href="https://forms.gle/U573dXqnVY5tpC9F9"> [Submission Page] </a>.
 
-#### - Abstract Submission Deadline: <u>30 October 2024</u>
+#### - Abstract Submission Deadline: <s><u>30 October 2024</u></s> <u>10 November 2024</u>
 
 #### - For your abstract submission [talk/poster only], you will need either
 
@@ -22,6 +22,6 @@ order: 3
 
 #### - Submissions will be reviewed by Program Committee.
 
-#### - Accepted talks will be announced on 15 November 2024.
+#### - Accepted talks will be announced on <s>15 November 2024</s> 30 November 2024.
 
 #### - Unaccepted talks will be automatically transferred to a poster session.
