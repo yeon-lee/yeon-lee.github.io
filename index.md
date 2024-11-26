@@ -18,7 +18,7 @@ This is a successor of the previous events, Quantum Resources, which took place 
 
 ## Invited speakers
 * **David Arvidsson-Shukur** (Hitachi Cambridge Laboratory)
-* **Kun Fang** (The Chinese University of Hong Kong)
+* **Kun Fang** (The Chinese University of Hong Kong, Shenzhen)
 * **Masahito Hayashi** (Nagoya University)
 * **Ludovico Lami** (University of Amsterdam & QuSoft)
 * **Seok-Hyung Lie** (Ulsan National Institute of Science and Technology)
