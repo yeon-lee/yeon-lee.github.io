@@ -64,4 +64,3 @@ The workshop is sponsored by Quantum Universe Center, Korea Institute for Advanc
 
 <a href="https://kias.re.kr"> <img src="kias-wordmask.png" width="280"/> </a>
 <a href="https://nrf.re.kr"> <img src="nrf.png" width="250"/> </a>
-<a href="https://iitp.kr"> <img src="iitp.png" width="250"/> </a>
