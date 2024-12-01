@@ -38,5 +38,6 @@ This year, we received 87 fascinating submissions (76 for talks) from around the
 * Hongshun Yao: "Protocols and Trade-Offs of Quantum State Purification"
 * Elia Zanoni: "Choi-Defined Resource Theories"
 * Xuanqiang Zhao: "Power of quantum measurement in simulating unphysical operations"
-* Chengkai Zhu: "Bidirectional classical communication cost of a bipartite quantum channel assisted by non-signalling correlations"
+* Leonard Sikorski:	"Cost of quantum secret key"
+
 
