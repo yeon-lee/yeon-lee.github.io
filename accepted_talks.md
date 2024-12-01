@@ -25,6 +25,7 @@ This year, we received 87 fascinating submissions (76 for talks) from around the
 * Tanuj Khattar: "Rise of conditionally clean ancillae for optimizing quantum circuits"
 * Josep Lumbreras or Ruo Cheng Huan: "Quantum state-agnostic work extraction (almost) without dissipation"
 * Bartosz Regula: "Asymptotic quantification of entanglement with a single copy"
+* Leonard Sikorski:	"Cost of quantum secret key"
 * Vishal Singh: "Extendibility limits quantum-secured communication and key distillation"
 * Jeongrak Son: "Entanglement generation from athermality"
 * Minjeong Song: "Causal Classification of Spatiotemporal Quantum Correlations"
@@ -38,6 +39,5 @@ This year, we received 87 fascinating submissions (76 for talks) from around the
 * Hongshun Yao: "Protocols and Trade-Offs of Quantum State Purification"
 * Elia Zanoni: "Choi-Defined Resource Theories"
 * Xuanqiang Zhao: "Power of quantum measurement in simulating unphysical operations"
-* Leonard Sikorski:	"Cost of quantum secret key"
 
 
