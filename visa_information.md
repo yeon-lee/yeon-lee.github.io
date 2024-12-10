@@ -4,7 +4,6 @@ title: Visa information
 order: 5
 ---
 
-## Visa Information
 #### For those planning to attend the workshop in Jeju Island, please note that Jeju Island has a more relaxed visa policy compared to mainland Korea.
 
 #### In many cases, travelers can visit Jeju without a visa for tourism purposes.
