@@ -6,6 +6,7 @@ order: 2
 ## Program at a glance
 
 ## Monday 17 March
+
 | Time | Description |
 |--- |--- |
 | 8:50 - 9:20   | registration |
