@@ -22,7 +22,6 @@ order: 2
 | | *chair: Mario Berta* |
 | 14:00 - 14:30 | <span class="p-contrib"> Invited speaker <br /><i> Invited talk title </i></span>                      |
 | 14:35 - 14:55 | Speaker <br /><i> Title </i>                           |
-
 | 15:00 - 15:20 | Speaker <br /><i> Title </i>                           |
 | 15:25 - 16:00 | **coffee**                           |
 | 16:00 - 17:30 | <span class="p-invited">discussions</span> |
