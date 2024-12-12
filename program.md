@@ -3,7 +3,8 @@ layout: page
 title: x
 order: 2
 ---
-## Program at a glance
+
+<!-- ## Program at a glance -->
 
 ## Monday 17 March
 
@@ -12,11 +13,11 @@ order: 2
 | 8:50 - 9:20   | registration |
 | 9:20 - 9:30   | **opening**                          |
 | | *chair:* |
-| 10:00 - 10:35  | <span class="p-contrib"> Invited speaker <br /><i> Invited talk title </i></span>                      |
+| 10:00 - 10:35  | <span class="p-contrib"> Ryuji Takagi <br /><i> Invited talk title </i></span>                      |
 | 10:35 - 11:00 | Chung-Yun Hsieh <br /><i>Thermodynamic approach to quantifying incompatible instruments</i> |
 | 11:00 - 11:30 | **coffee**                           |
 | | *chair:* |
-| 11:30 - 12:05 | <span class="p-contrib"> Invited speaker <br /><i> Invited talk title </i></span>                      |
+| 11:30 - 12:05 | <span class="p-contrib"> Nelly Ng <br /><i> Invited talk title </i></span>                      |
 | 12:05 - 12:30 | Hiroyasu Tajima <br /><i>Gibbs-preserving operations requiring infinite amount of quantum coherence</i> |
 | 12:30 - 13:30 | **lunch**                            |
 | | *chair:* |
@@ -35,11 +36,11 @@ order: 2
 | Time | Description |
 |--- |--- |
 | | *chair:* |
-| 10:00 - 10:35  | <span class="p-contrib"> Invited speaker <br /><i> Invited talk title </i></span>                      |
+| 10:00 - 10:35  | <span class="p-contrib"> Ludovico Lami <br /><i> Invited talk title </i></span>                      |
 | 10:35 - 11:00 | Ray Ganardi <br /><i>Second law of entanglement manipulation with entanglement battery</i> |
 | 11:00 - 11:30 | **coffee**                           |
 | | *chair:* |
-| 11:30 - 12:05 | <span class="p-contrib"> Invited speaker <br /><i> Invited talk title </i></span>                      |
+| 11:30 - 12:05 | <span class="p-contrib"> Valerio Scarani <br /><i> Invited talk title </i></span>                      |
 | 12:05 - 12:30 | Chandan Datta <br /><i>Operational advantage of quantum resources in a semi-device independent framework</i> |
 | 12:30 - 13:30 | **lunch**                            |
 | | *chair:* |
@@ -58,11 +59,11 @@ order: 2
 | Time | Description |
 |--- |--- |
 | | *chair:* |
-| 10:00 - 10:35  | <span class="p-contrib"> Invited speaker <br /><i> Invited talk title </i></span>                      |
+| 10:00 - 10:35  | <span class="p-contrib"> Marco Tomamichel <br /><i> Invited talk title </i></span>                      |
 | 10:35 - 11:00 | Junjing Xing <br /><i>Teleportation with Embezzling Catalysts</i> |
 | 11:00 - 11:30 | **coffee**                           |
 | | *chair:* |
-| 11:30 - 12:05 | <span class="p-contrib"> Invited speaker <br /><i> Invited talk title </i></span>                      |
+| 11:30 - 12:05 | <span class="p-contrib"> Andreas Winter <br /><i> Invited talk title </i></span>                      |
 | 12:05 - 12:30 | Elia Zanoni <br /><i>Choi-Defined Resource Theories</i> |
 | 12:30 - 13:30 | **lunch**                            |
 | 13:30 - 18:00 | <span class="p-invited"> Excursion </span> |
@@ -72,15 +73,15 @@ order: 2
 | Time | Description |
 |--- |--- |
 | | *chair:* |
-| 10:00 - 10:35  | <span class="p-contrib"> Invited speaker <br /><i> Invited talk title </i></span>                      |
+| 10:00 - 10:35  | <span class="p-contrib"> Kun Fang <br /><i> Invited talk title </i></span>                      |
 | 10:35 - 11:00 | Arnab Adhikary <br /><i>Counterintuitive yet resource efficient regimes of measurement-based quantum computation</i> |
 | 11:00 - 11:30 | **coffee**                           |
 | | *chair:* |
-| 11:30 - 12:05 | <span class="p-contrib"> Invited speaker <br /><i> Invited talk title </i></span>                      |
+| 11:30 - 12:05 | <span class="p-contrib"> Masahito Hayashi <br /><i> Invited talk title </i></span>                      |
 | 12:05 - 12:30 | Mario Berta <br /><i>Approximation algorithms for higher-order refinements in resource theories</i> |
 | 12:30 - 13:30 | **lunch**                            |
 | | *chair:* |
-| 13:30 - 14:10 |<span class="p-contrib"> Invited speaker <br /><i> Invited talk title </i></span>                      |
+| 13:30 - 14:10 |<span class="p-contrib"> Mark M. Wilde <br /><i> Invited talk title </i></span>                      |
 | 14:10 - 14:35 | Rivu Gupta <br /><i>Process resource-breaking channels: the case for magic in universal quantum computation</i> |
 | 14:35 - 15:00 | Tobias Haug <br /><i>Pseudorandom density matrices</i> |
 | 15:00 - 15:30 | **coffee**                           |
@@ -95,11 +96,11 @@ order: 2
 | Time | Description |
 |--- |--- |
 | | *chair:* |
-| 10:00 - 10:35  | <span class="p-contrib"> Invited speaker <br /><i> Invited talk title </i></span>                      |
+| 10:00 - 10:35  | <span class="p-contrib"> Seok Hyung Lie <br /><i> Invited talk title </i></span>                      |
 | 10:35 - 11:00 | Clive Cenxin Aw <br /><i>Irreversibility as the Dependence on Bayesian Priors</i> |
 | 11:00 - 11:30 | **coffee**                           |
 | | *chair:* |
-| 11:30 - 12:05 | <span class="p-contrib"> Invited speaker <br /><i> Invited talk title </i></span>                      |
+| 11:30 - 12:05 | <span class="p-contrib"> David Arvidsson-Shukur <br /><i> Invited talk title </i></span>                      |
 | 12:05 - 12:30 | Jonathan Thio <br /><i>The set of Kirkwood-Dirac-positive states is almost always minimal</i> |
 | 12:30 - 13:30 | **lunch**                            |
 | | *chair:* |
