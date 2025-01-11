@@ -64,3 +64,9 @@ The workshop is sponsored by Quantum Universe Center, Korea Institute for Advanc
 
 <a href="https://kias.re.kr"> <img src="kias-wordmask.png" width="280"/> </a>
 <a href="https://nrf.re.kr"> <img src="nrf.png" width="250"/> </a>
+
+## 
+
+<div class="warning"><p><b><i class="fas fa-exclamation-triangle"></i>&nbsp; Scam alert</b></p>
+	<p>We have been notified that an unaffiliated email "Conferences@reservationsmanagement.org" is contacting participants about alleged accommodation bookings for the workshop. Please note that this is a scam, and <b>you will not be contacted by any third party on our behalf</b>.</p>
+</div>
