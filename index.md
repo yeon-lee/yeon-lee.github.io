@@ -62,8 +62,7 @@ All deadlines in Anywhere on Earth (AoE) time.
 ## Sponsor
 The workshop is sponsored by Quantum Universe Center, Korea Institute for Advanced Study (KIAS), National Research Foundation of Korea (NRF), and Institute for Information & Communication Technology Planning & Evaluation (IITP).
 
-<a href="https://kias.re.kr"> <img src="kias-wordmask.png" width="280"/> </a>
-<a href="https://nrf.re.kr"> <img src="nrf.png" width="250"/> </a>
+<a href="https://kias.re.kr"> <img src="kias-wordmask.png" width="280"/> </a> <a href="https://nrf.re.kr"> <img src="nrf.png" width="250"/> </a>
 
 
 <div class="warning"><p><b><i class="fas fa-exclamation-triangle"></i>&nbsp; Scam alert</b></p>
