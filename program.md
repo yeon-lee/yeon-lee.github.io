@@ -4,7 +4,9 @@ title: x
 order: 2
 ---
 
-<!-- ## Program at a glance -->
+## Program at a glance
+
+<Timetable_v1.0.png>
 
 ## Monday 17 March
 
