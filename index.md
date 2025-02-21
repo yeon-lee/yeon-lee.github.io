@@ -27,8 +27,7 @@ This is a successor of the previous events, Quantum Resources, which took place 
 * **Marco Tomamichel** (National University of Singapore)
 * **Nelly Ng** (Nanyang Technological University)
 * **Mark M. Wilde** (Cornell University)
-* **Andreas Winter** (Universitat Autònoma de Barcelona)
-* and more to be confirmed.
+<!-- * **Andreas Winter** (Universitat Autònoma de Barcelona) -->
 
 ## Location
 
