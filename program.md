@@ -5,7 +5,7 @@ order: 2
 ---
 
 ## Program at a glance
-<img src="Time_table_v2.png" width="750"/>
+<img src="Time_table_v2.1.png" width="750"/>
 
 ## Monday 17 March
 
