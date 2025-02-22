@@ -3,6 +3,7 @@ layout: page
 title: Posters
 order: 3
 ---
+![JejuLee2](/jeju_lee2.jpg)
 
 Poster sessions take place on Monday and Tuesday in the foyer just outside the Ballroom. Posters should be printed within A0 portrait.
 
