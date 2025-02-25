@@ -50,7 +50,7 @@ Poster sessions take place on Monday and Tuesday. Posters should be printed with
 * **Quantum-secured imaging under spoofing attacks** -	Yonggi Jo
 * **LANGUAGE MODEL FOR LARGE-TEXT TRANSMISSION IN NOISY QUANTUM COMMUNICATIONS** -	Yuqi Li
 * **Bidirectional classical communication cost of a bipartite quantum channel assisted by non-signalling correlations** -	Chengkai Zhu
-* **Noise detection and error mitigation to hypergraph states using Clifford circuits** -	Guedong Park
+* **Efficient noise tailoring and detection to hypergraph states using Clifford circuits** -	Guedong Park
 * **Maneuvering measurement-coherence into measurement-entanglement** -	Ho-Joon Kim
 * **Near-optimal coherent state discrimination via continuously labelled non-Gaussian measurements** -	James Moran
 * **Quantum Dynamic Programming** -	Jeongrak Son
