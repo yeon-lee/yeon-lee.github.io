@@ -25,7 +25,7 @@ Poster sessions take place on Monday and Tuesday. Posters should be printed with
 *	**Quantum geometric tensor determines the i.i.d. conversion rate in the resource theory of asymmetry for any compact Lie group** -Koji Yamaguchi
 * **Quantum conditional entropies and fully entangled fraction of states with maximally mixed marginals** -Komal Kumar
 * **A nonstabilizerness monotone from stabilizerness asymmetry** -Poetri Sonya Tarabunga
-* **Device-independent self-testing of unsharp measurements** -Prabuddha Roy
+* **Generalized Parity-Oblivious Communication Games Powered by Quantum Preparation Contextuality** -Prabuddha Roy
 *	**Concurrence speed limit and its relation to bound in many body physics** -Shrobona Bagchi
 *	**Unbounded sharing of nonlocality using qubit projective measurements** -Souradeep Sasmal
 * **Constrained Measurement Incompatibility from Generalised Contextuality of Steered Preparation** -Sumit Mukherjee
