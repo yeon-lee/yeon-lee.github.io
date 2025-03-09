@@ -27,7 +27,7 @@ This is a successor of the previous events, Quantum Resources, which took place 
 * **Marco Tomamichel** (National University of Singapore)
 * **Nelly Ng** (Nanyang Technological University)
 * **Mark M. Wilde** (Cornell University)
-* **Andreas Winter** (Universitat Autònoma de Barcelona)
+<!--* **Andreas Winter** (Universitat Autònoma de Barcelona)-->
 
 ## Location
 
@@ -41,7 +41,7 @@ All deadlines in Anywhere on Earth (AoE) time.
 
 * Notification: <s>15 November 2024</s> **30 November 2024**
 
-* Registration deadline: <s>20 February 2025</s> <s>**7 March 2025**</s>
+* Registration deadline: <s>20 February 2025</s> <s>7 March 2025</s>
 
 * **Workshop: 17 &ndash; 21 March 2025**
 
