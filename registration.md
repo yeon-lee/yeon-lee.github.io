@@ -5,7 +5,7 @@ order: 4
 ---
 ![JejuLee](/jeju_lee.jpg)
 
-### Registration is not closed.
+### Registration is now closed.
 
 {% comment %}
 ### [Registration]
