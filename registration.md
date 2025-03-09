@@ -5,6 +5,9 @@ order: 4
 ---
 ![JejuLee](/jeju_lee.jpg)
 
+### Registration is not closed.
+
+{% comment %}
 ### [Registration]
 #### - For registration, please fill out the following <a href = "https://forms.gle/DqpGD6JNUdB6ZdQy7">**[Google form]**</a>.
 #### - Registration Deadline: <s> 20 February 2025 </s> <u> 7 March 2025 </u>
@@ -21,3 +24,6 @@ order: 4
 ### [Registration Fee] (Lunch & Banquet (Wed.) included)
 * **Standard: 400 USD (550,000 KRW)**
 * **Student: 300 USD (400,000 KRW)**
+
+{% endcomment %}
+
