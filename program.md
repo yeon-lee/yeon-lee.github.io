@@ -76,7 +76,7 @@ order: 2
 | Time | Description |
 |--- |--- |
 | | *chair: Masahito Hayashi* |
-| 10:00 - 10:35 | <span class="p-contrib"> Mark M. Wilde <br /><i> Invited talk title </i></span>                      |
+| 10:00 - 10:35 | <span class="p-contrib"> Mark M. Wilde <br /><i> Fundamental work costs of preparation and erasure in the presence of quantum side information </i></span>                      |
 | 10:35 - 11:00 | Arnab Adhikary <br /><i>Counterintuitive yet resource efficient regimes of measurement-based quantum computation</i> |
 | 11:00 - 11:30 | **coffee**                           |
 | | *chair: Bartosz Regula* |
