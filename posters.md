@@ -35,6 +35,7 @@ Poster sessions take place on Monday and Tuesday. Posters should be printed with
 * **Large-Sample Majorization of Tuples of Finite Distributions and Pairs of Pure States** -Frits Verhagen
 * **Micromagnon description of ground states of ferrimagnetic spin chains** -Marcin Wieśniak
 * **Conditions of tabletop reversibility: when is reversing Lindbladian dynamics cost-free?** -Minjeong Song
+* **Activation of post-quantumness in bipartite generalised EPR scenarios** -Beata Zjawin
 
 ## Tuesday Posters
 * **Measurement-device-independent certification of continuous-variable quantum resources** -	Paolo Abiuso
