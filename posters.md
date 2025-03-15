@@ -36,6 +36,7 @@ Poster sessions take place on Monday and Tuesday. Posters should be printed with
 * **Micromagnon description of ground states of ferrimagnetic spin chains** -Marcin Wieśniak
 * **Conditions of tabletop reversibility: when is reversing Lindbladian dynamics cost-free?** -Minjeong Song
 * **Activation of post-quantumness in bipartite generalised EPR scenarios** -Beata Zjawin
+* **Quantification of energy consumption of quantum resource distribution** -Karol Horodecki
 
 ## Tuesday Posters
 * **Measurement-device-independent certification of continuous-variable quantum resources** -	Paolo Abiuso
