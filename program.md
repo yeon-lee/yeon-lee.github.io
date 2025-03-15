@@ -5,7 +5,7 @@ order: 2
 ---
 
 ## Program at a glance
-<img src="Time_table_v3.png" width="750"/>
+<img src="Time_table_v4.png" width="750"/>
 
 ## Monday 17 March
 
@@ -77,7 +77,7 @@ order: 2
 |--- |--- |
 | | *chair: Masahito Hayashi* |
 | 10:00 - 10:35 | <span class="p-contrib"> Mark M. Wilde <br /><i> Fundamental work costs of preparation and erasure in the presence of quantum side information </i></span>                      |
-| 10:35 - 11:00 | Arnab Adhikary <br /><i>Counterintuitive yet resource efficient regimes of measurement-based quantum computation</i> |
+| 10:35 - 11:00 | Gelo Noel M. Tabia <br /><i>Super-activating quantum memory by entanglement-breaking channels</i> |
 | 11:00 - 11:30 | **coffee**                           |
 | | *chair: Bartosz Regula* |
 | 11:30 - 12:05 | <span class="p-contrib"> Kun Fang <br /><i>  Generalized quantum asymptotic equipartition </i></span>                      |
@@ -91,8 +91,7 @@ order: 2
 | | *chair: Ryuji Takagi* |
 | 15:25 - 15:50 | Tanuj Khattar <br /><i>Rise of conditionally clean ancillae for optimizing quantum circuits</i> |
 | 15:50 - 16:15 | Xuanqiang Zhao <br /><i>Power of quantum measurement in simulating unphysical operations</i> |
-| 16:15 - 16:40 | Gelo Noel M. Tabia <br /><i>Super-activating quantum memory by entanglement-breaking channels</i> |
-| 16:40 - 18:30 | <span class="p-invited">Open problems</span> |
+| 16:15 - 18:30 | <span class="p-invited">Open problems</span> |
 
 ## Friday 21 March
 
