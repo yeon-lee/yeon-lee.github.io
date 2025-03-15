@@ -59,7 +59,7 @@ All deadlines in Anywhere on Earth (AoE) time.
 * Hyukjoon Kwon (KIAS)  /  <a href="mailto:hjkwon@kias.re.kr">hjkwon@kias.re.kr</a> 
 
 ## Sponsor
-The workshop is sponsored by Quantum Universe Center, Korea Institute for Advanced Study (KIAS), National Research Foundation of Korea (NRF), and Institute for Information & Communication Technology Planning & Evaluation (IITP).
+The workshop is sponsored by Quantum Universe Center, Korea Institute for Advanced Study (KIAS), National Research Foundation of Korea (NRF).
 
 <a href="https://kias.re.kr"> <img src="kias-wordmask.png" width="280"/> </a> <a href="https://nrf.re.kr"> <img src="nrf.png" width="250"/> </a>
 
