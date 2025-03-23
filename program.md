@@ -23,7 +23,7 @@ order: 2
 | 12:30 - 13:40 | **lunch**                            |
 | | *chair: Minjeong Song* |
 | 13:40 - 14:05 | Josep Lumbreras or Ruo Cheng Huan <br /><i>Quantum state-agnostic work extraction (almost) without dissipation</i> |
-| 14:05 - 14:30 | Jeongrak Son <br /><i>Entanglement generation from athermality</i> |
+| 14:05 - 14:30 | Jeongrak Son <a href="Son_Quantum_Resources_2025.pdf"> <br /><i>Entanglement generation from athermality</i></a> |
 | 14:30 - 14:55 | Benjamin Stratton <br /><i>Informational non-equilibrium concentration</i> |
 | 14:55 - 15:25 | **coffee**                           |
 | | *chair: Spiros Kechrimparis* |
@@ -38,11 +38,11 @@ order: 2
 | Time | Description |
 |--- |--- |
 | | *chair: Mark Wilde* |
-| 10:00 - 10:35  | <span class="p-contrib"> Ludovico Lami <br /><i> A solution of the generalised quantum Stein’s lemma </i></span>                      |
+| 10:00 - 10:35  | <span class="p-contrib"> Ludovico Lami <a href="Lami_Quantum_Resources_2025.pdf"><br /><i> A solution of the generalised quantum Stein’s lemma </i></a> </span>                      |
 | 10:35 - 11:00 | Ray Ganardi <br /><i>Second law of entanglement manipulation with entanglement battery</i> |
 | 11:00 - 11:30 | **coffee**                           |
 | | *chair: David Arvidsson-Shukur* |
-| 11:30 - 12:05 | <span class="p-contrib"> Valerio Scarani <br /><i> Bayesian retrodiction in stochastic thermodynamics </i></span>                      |
+| 11:30 - 12:05 | <span class="p-contrib"> Valerio Scarani <a href="Scarani_Quantum_Resources_2025.pptx"><br /><i> Bayesian retrodiction in stochastic thermodynamics </i></a> </span>                      |
 | 12:05 - 12:30 | Chandan Datta <br /><i>Operational advantage of quantum resources in a semi-device independent framework</i> |
 | 12:30 - 13:40 | **lunch**                            |
 | | *chair: Giorgos Eftaxias* |
@@ -77,10 +77,10 @@ order: 2
 |--- |--- |
 | | *chair: Masahito Hayashi* |
 | 10:00 - 10:35 | <span class="p-contrib"> Mark M. Wilde <br /><i> Fundamental work costs of preparation and erasure in the presence of quantum side information </i></span>                      |
-| 10:35 - 11:00 | Gelo Noel M. Tabia <br /><i>Super-activating quantum memory by entanglement-breaking channels</i> |
+| 10:35 - 11:00 | Gelo Noel M. Tabia <a href="Tabia_Quantum_Resources_2025.pdf"><br /><i>Super-activating quantum memory by entanglement-breaking channels</i></a> |
 | 11:00 - 11:30 | **coffee**                           |
 | | *chair: Bartosz Regula* |
-| 11:30 - 12:05 | <span class="p-contrib"> Kun Fang <br /><i>  Generalized quantum asymptotic equipartition </i></span>                      |
+| 11:30 - 12:05 | <span class="p-contrib"> Kun Fang <a href="Fang_Quantum_Resources_2025_resized.pdf"> <br /><i>  Generalized quantum asymptotic equipartition </i></a> </span>                      |
 | 12:05 - 12:30 | Mario Berta <br /><i>Approximation algorithms for higher-order refinements in resource theories</i> |
 | 12:30 - 13:30 | **lunch**                            |
 | | *chair: Chandan Datta* |
