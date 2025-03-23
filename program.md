@@ -46,7 +46,7 @@ order: 2
 | 12:05 - 12:30 | Chandan Datta <br /><i>Operational advantage of quantum resources in a semi-device independent framework</i> |
 | 12:30 - 13:40 | **lunch**                            |
 | | *chair: Giorgos Eftaxias* |
-| 13:40 - 14:05 | Adam G. Hawkins <br /><i>Distributing quantum correlations through local operations and classical resources</i> |
+| 13:40 - 14:05 | Adam G. Hawkins <a href="Hawkins_Quantum_Resources_2025.pptx"><br /><i>Distributing quantum correlations through local operations and classical resources</i></a> |
 | 14:05 - 14:30 | Hongshun Yao <br /><i>Protocols and Trade-Offs of Quantum State Purification</i> |
 | 14:30 - 14:55 | Bartosz Regula <br /><i>Asymptotic quantification of entanglement with a single copy</i> |
 | 14:55 - 15:25 | **coffee**                           |
