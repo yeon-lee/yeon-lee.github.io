@@ -28,7 +28,7 @@ order: 2
 | 14:55 - 15:25 | **coffee**                           |
 | | *chair: Spiros Kechrimparis* |
 | 15:25 - 15:50 | Mile Gu or Jayne Thompson <br /><i>Energetic advantages for quantum agents in online execution of complex strategies</i> |
-| 15:50 - 16:15 | Kaito Watanabe <br /><i>Black box work extraction and composite hypothesis testing</i> |
+| 15:50 - 16:15 | Kaito Watanabe <a href="Watanabe_Quantum_Resources_2025.pdf"> <br /><i>Black box work extraction and composite hypothesis testing</i> </a>|
 | 16:15 - 18:00 | <span class="p-invited"> Poster Session I </span> |
 
 
@@ -39,7 +39,7 @@ order: 2
 |--- |--- |
 | | *chair: Mark Wilde* |
 | 10:00 - 10:35  | <span class="p-contrib"> Ludovico Lami <a href="Lami_Quantum_Resources_2025.pdf"><br /><i> A solution of the generalised quantum Stein’s lemma </i></a> </span>                      |
-| 10:35 - 11:00 | Ray Ganardi <br /><i>Second law of entanglement manipulation with entanglement battery</i> |
+| 10:35 - 11:00 | Ray Ganardi <a href="Ganardi_Quantum_Resources_2025.pdf"><br /><i>Second law of entanglement manipulation with entanglement battery</i></a> |
 | 11:00 - 11:30 | **coffee**                           |
 | | *chair: David Arvidsson-Shukur* |
 | 11:30 - 12:05 | <span class="p-contrib"> Valerio Scarani <a href="Scarani_Quantum_Resources_2025.pptx"><br /><i> Bayesian retrodiction in stochastic thermodynamics </i></a> </span>                      |
@@ -62,7 +62,7 @@ order: 2
 |--- |--- |
 | | *chair: Mario Berta* |
 | 10:00 - 10:35  | <span class="p-contrib"> Marco Tomamichel <br /><i> Quantum Conditional Entropies of Rényi type </i></span>                      |
-| 10:35 - 11:00 | Junjing Xing <br /><i>Teleportation with Embezzling Catalysts</i> |
+| 10:35 - 11:00 | Junjing Xing <<a href="Xing_Quantum_Resources_2025.pptx">> <br /><i>Teleportation with Embezzling Catalysts</i> </a>|
 | 11:00 - 11:30 | **coffee**                           |
 | | *chair: Kun Fang* |
 | 11:30 - 12:05 | <span class="p-contrib"> Masahito Hayashi <br /><i> Generalized Quantum Stein’s Lemma and Second Law of Quantum Resource Theories </i></span>                      |
@@ -81,11 +81,11 @@ order: 2
 | 11:00 - 11:30 | **coffee**                           |
 | | *chair: Bartosz Regula* |
 | 11:30 - 12:05 | <span class="p-contrib"> Kun Fang <a href="Fang_Quantum_Resources_2025_resized.pdf"> <br /><i>  Generalized quantum asymptotic equipartition </i></a> </span>                      |
-| 12:05 - 12:30 | Mario Berta <br /><i>Approximation algorithms for higher-order refinements in resource theories</i> |
+| 12:05 - 12:30 | Mario Berta <a href="Berta_Quantum_Resources_2025.pdf"><br /><i>Approximation algorithms for higher-order refinements in resource theories</i> </a>|
 | 12:30 - 13:30 | **lunch**                            |
 | | *chair: Chandan Datta* |
 | 13:40 - 14:05 | Giorgos Eftaxias <br /><i>Advantages of Multicopy Nonlocality Distillation and Its Application to Minimizing Communication Complexity</i> |
-| 14:05 - 14:30 | Rivu Gupta <br /><i>Process resource-breaking channels: the case for magic in universal quantum computation</i> |
+| 14:05 - 14:30 | Rivu Gupta <a href="Gupta_Quantum_Resources_2025.pdf">br /><i>Process resource-breaking channels: the case for magic in universal quantum computation</i> </a>|
 | 14:30 - 14:55 | Xin Wang <br /><i>Amortized Stabilizer R'enyi Entropy of quantum dynamics</i> |
 | 14:55 - 15:25 | **coffee**                           |
 | | *chair: Ryuji Takagi* |
@@ -98,7 +98,7 @@ order: 2
 | Time | Description |
 |--- |--- |
 | | *chair: Nelly Ng* |
-| 10:00 - 10:35  | <span class="p-contrib"> Seok Hyung Lie <br /><i> Temporal correlation in quantum state as a resource </i></span>                      |
+| 10:00 - 10:35  | <span class="p-contrib"> Seok Hyung Lie <a href="Lie_Quantum_Resources_2025.pdf"><br /><i> Temporal correlation in quantum state as a resource </i> </a> </span>                      |
 | 10:35 - 11:00 | Clive Cenxin Aw <br /><i>Irreversibility as the Dependence on Bayesian Priors</i> |
 | 11:00 - 11:30 | **coffee**                           |
 | | *chair: Ray Ganardi* |
@@ -107,6 +107,6 @@ order: 2
 | 12:30 - 13:40 | **lunch**                            |
 | | *chair: Hyukjoon Kwon* |
 | 13:40 - 14:05 | Minjeong Song <br /><i>Causal Classification of Spatiotemporal Quantum Correlations</i> |
-| 14:05 - 14:30 | Spiros Kechrimparis <br /><i>Enhancing Quantum State Discrimination with Indefinite Causal Order</i> |
-| 14:30 - 14:55 | Oliver Hahn <br /><i>Bridging magic and non-Gaussian resources via Gottesman-Kitaev-Preskill encoding</i> |
+| 14:05 - 14:30 | Spiros Kechrimparis <a href="Kechrimparis_Quantum_Resources_2025.pdf"><br /><i>Enhancing Quantum State Discrimination with Indefinite Causal Order</i> </a>|
+| 14:30 - 14:55 | Oliver Hahn <a href="Hahn_Quantum_Resources_2025.pdf"> <br /><i>Bridging magic and non-Gaussian resources via Gottesman-Kitaev-Preskill encoding</i> </a>|
 | 15:25 - 18:00 | <span class="p-invited"> Closing </span> |
