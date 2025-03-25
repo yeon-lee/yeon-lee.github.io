@@ -62,7 +62,7 @@ order: 2
 |--- |--- |
 | | *chair: Mario Berta* |
 | 10:00 - 10:35  | <span class="p-contrib"> Marco Tomamichel <br /><i> Quantum Conditional Entropies of Rényi type </i></span>                      |
-| 10:35 - 11:00 | Junjing Xing <<a href="Xing_Quantum_Resources_2025.pptx">> <br /><i>Teleportation with Embezzling Catalysts</i> </a>|
+| 10:35 - 11:00 | Junjing Xing <a href="Xing_Quantum_Resources_2025.pptx">> <br /><i>Teleportation with Embezzling Catalysts</i> </a>|
 | 11:00 - 11:30 | **coffee**                           |
 | | *chair: Kun Fang* |
 | 11:30 - 12:05 | <span class="p-contrib"> Masahito Hayashi <br /><i> Generalized Quantum Stein’s Lemma and Second Law of Quantum Resource Theories </i></span>                      |
@@ -85,7 +85,7 @@ order: 2
 | 12:30 - 13:30 | **lunch**                            |
 | | *chair: Chandan Datta* |
 | 13:40 - 14:05 | Giorgos Eftaxias <br /><i>Advantages of Multicopy Nonlocality Distillation and Its Application to Minimizing Communication Complexity</i> |
-| 14:05 - 14:30 | Rivu Gupta <a href="Gupta_Quantum_Resources_2025.pdf">br /><i>Process resource-breaking channels: the case for magic in universal quantum computation</i> </a>|
+| 14:05 - 14:30 | Rivu Gupta <a href="Gupta_Quantum_Resources_2025.pdf"> <br/><i>Process resource-breaking channels: the case for magic in universal quantum computation</i> </a>|
 | 14:30 - 14:55 | Xin Wang <br /><i>Amortized Stabilizer R'enyi Entropy of quantum dynamics</i> |
 | 14:55 - 15:25 | **coffee**                           |
 | | *chair: Ryuji Takagi* |
