@@ -62,7 +62,7 @@ order: 2
 |--- |--- |
 | | *chair: Mario Berta* |
 | 10:00 - 10:35  | <span class="p-contrib"> Marco Tomamichel <br /><i> Quantum Conditional Entropies of Rényi type </i></span>                      |
-| 10:35 - 11:00 | Junjing Xing <a href="Xing_Quantum_Resources_2025.pptx">> <br /><i>Teleportation with Embezzling Catalysts</i> </a>|
+| 10:35 - 11:00 | Junjing Xing <a href="Xing_Quantum_Resources_2025.pptx"> <br /><i>Teleportation with Embezzling Catalysts</i> </a>|
 | 11:00 - 11:30 | **coffee**                           |
 | | *chair: Kun Fang* |
 | 11:30 - 12:05 | <span class="p-contrib"> Masahito Hayashi <br /><i> Generalized Quantum Stein’s Lemma and Second Law of Quantum Resource Theories </i></span>                      |
