@@ -14,7 +14,7 @@ Poster sessions take place on Monday and Tuesday. Posters should be printed with
 * **Monogamy of nonlocality from multipartite information causality** -Anubhav
 * **Robust self-testing of Bell inequalities tilted for maximal loophole-free nonlocality** -Ekta Panwar
 * **Magic spreading in many-body dynamics** -Emanuele Tirrito
-* **Channel Uncertainty and Inevitable Negative Entropy** -Goni Yoeli
+* <a href="https://drive.google.com/file/d/1607DBj6nX3Zqpv3CHwmmhNROQ7cOWSYe/view?usp=drive_link">**Channel Uncertainty and Inevitable Negative Entropy**</a> -Goni Yoeli
 * **Robust and device-independent certification of randomness in qudit systems** -Ignacio Perito
 * **Emergent resource theories: strong symmetries in physical dilations of covariant quantum maps** -Marco Cattaneo
 * **Squashed quantum non-Markovianity: a measure of genuine quantum non-Markovianity in states*** -Rajeev Gangwar
@@ -39,7 +39,7 @@ Poster sessions take place on Monday and Tuesday. Posters should be printed with
 * **Quantification of energy consumption of quantum resource distribution** -Karol Horodecki
 
 ## Tuesday Posters
-* **Measurement-device-independent certification of continuous-variable quantum resources** -	Paolo Abiuso
+* <a href="https://drive.google.com/file/d/1FLKb6EsqxvXpf1Jey2DEd1n5CxAQpYJY/view?usp=drive_link"> **Measurement-device-independent certification of continuous-variable quantum resources** </a>-	Paolo Abiuso
 * **Adaptive Channel Reshaping for Improved Entanglement Distillation** -	Dina Abdelhadi
 * **Enhanced sensitivity of coherent anti-Stokes Raman spectroscopy (CARS) via SU(1,1) interferometry** -	Devendra Kumar Mishra
 * **Identifying quantum resources in encoded computations** -	Jack Davis
@@ -55,7 +55,7 @@ Poster sessions take place on Monday and Tuesday. Posters should be printed with
 * **Efficient noise tailoring and detection to hypergraph states using Clifford circuits** -	Guedong Park
 * **Maneuvering measurement-coherence into measurement-entanglement** -	Ho-Joon Kim
 * **Near-optimal coherent state discrimination via continuously labelled non-Gaussian measurements** -	James Moran
-* **Quantum Dynamic Programming** -	Jeongrak Son
+* <a href="https://drive.google.com/file/d/1lm8FI2ln_Q0CfnJnLpxCqMXbI6FO019O/view?usp=drive_link">**Quantum Dynamic Programming**</a> -	Jeongrak Son
 * **A generalised framework for defining discrete Wigner functions via the Gottesman-Kitaev-Preskill code** -	Lucky Antonopoulos
 * **Circuit Knitting Faces Exponential Sampling Overhead Scaling Bounded by Entanglement Cost** -	Mingrui Jing
 * **Quantum Entanglement Allocation through a Central Hub** -	Xia Liu
@@ -64,7 +64,7 @@ Poster sessions take place on Monday and Tuesday. Posters should be printed with
 * **Entanglement Activation in Multiphoton Distillation Networks** -	Zhenhuan Liu
 * **Repeater-Based Quantum Communication Protocol: Maximizing Teleportation Fidelity with Minimal Entanglement** -	Jatin Ghai
 * **On the sampling cost for estimation of gradients of parametrized quantum circuits based on parameter-shift approach** -	Hironari Nagayoshi
-* **Deep Reinforcement Learning for Efficient Quantum Circuit Optimization** -	Muhammad Raza, Dang Khoa Tao, Sumin Jin
+* <a href="https://drive.google.com/file/d/13cD0xIrCkWNzWSZZFxcX1SEUY1jplDo2/view?usp=drive_link">**Deep Reinforcement Learning for Efficient Quantum Circuit Optimization** </a>-	Muhammad Raza, Dang Khoa Tao, Sumin Jin
 * **Quantum Batteries: The Future of Energy Storage** -	Syed Abubacker Siddique
 * **Quantum Tilted Empirical Risk for Learning from Quantum Data** -	Yixian Qiu
 
