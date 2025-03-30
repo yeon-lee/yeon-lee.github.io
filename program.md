@@ -22,7 +22,7 @@ order: 2
 | 12:05 - 12:30 | Hiroyasu Tajima <br /><i>Gibbs-preserving operations requiring infinite amount of quantum coherence</i> |
 | 12:30 - 13:40 | **lunch**                            |
 | | *chair: Minjeong Song* |
-| 13:40 - 14:05 | Josep Lumbreras or Ruo Cheng Huan <br /><i>Quantum state-agnostic work extraction (almost) without dissipation</i> |
+| 13:40 - 14:05 | Josep Lumbreras <br /><i>Quantum state-agnostic work extraction (almost) without dissipation</i> |
 | 14:05 - 14:30 | Jeongrak Son <a href="Son_Quantum_Resources_2025.pdf"> <br /><i>Entanglement generation from athermality</i></a> |
 | 14:30 - 14:55 | Benjamin Stratton <br /><i>Informational non-equilibrium concentration</i> |
 | 14:55 - 15:25 | **coffee**                           |
