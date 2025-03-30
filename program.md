@@ -14,7 +14,7 @@ order: 2
 | 9:00 - 9:50   | Registration |
 | 9:50 - 10:00   | **opening**                          |
 | | *chair: Seok Hyung Lie* |
-| 10:00 - 10:35  | <span class="p-contrib"> Ryuji Takagi <br /><i> When quantum memory is useful for dense coding </i></span> |
+| 10:00 - 10:35  | <span class="p-contrib"> Ryuji Takagi <a href="Takagi_Quantum_Resources_2025.pdf">  <br /><i> When quantum memory is useful for dense coding </i></span> </a> |
 | 10:35 - 11:00 | Chung-Yun Hsieh <br /><i>Thermodynamic approach to quantifying incompatible instruments</i> |
 | 11:00 - 11:30 | **coffee**                           |
 | | *chair: Xin Wang* |
@@ -22,7 +22,7 @@ order: 2
 | 12:05 - 12:30 | Hiroyasu Tajima <br /><i>Gibbs-preserving operations requiring infinite amount of quantum coherence</i> |
 | 12:30 - 13:40 | **lunch**                            |
 | | *chair: Minjeong Song* |
-| 13:40 - 14:05 | Josep Lumbreras <br /><i>Quantum state-agnostic work extraction (almost) without dissipation</i> |
+| 13:40 - 14:05 | Josep Lumbreras <a href="lumbreras_Quantum_Resources_2025.pdf"> <br /><I> Quantum state-agnostic work extraction (almost) without dissipation</i> </a>|
 | 14:05 - 14:30 | Jeongrak Son <a href="Son_Quantum_Resources_2025.pdf"> <br /><i>Entanglement generation from athermality</i></a> |
 | 14:30 - 14:55 | Benjamin Stratton <br /><i>Informational non-equilibrium concentration</i> |
 | 14:55 - 15:25 | **coffee**                           |
@@ -51,7 +51,7 @@ order: 2
 | 14:30 - 14:55 | Bartosz Regula <br /><i>Asymptotic quantification of entanglement with a single copy</i> |
 | 14:55 - 15:25 | **coffee**                           |
 | | *chair: Ludovico Lami* |
-| 15:25 - 15:50 | Leonard Sikorski <br /><i>Cost of quantum secret key</i> |
+| 15:25 - 15:50 | Leonard Sikorski <a href="Sikorski_Quantum_Resources_2025.pdf">  <br /><i>Cost of quantum secret key</i> </a>|
 | 15:50 - 16:15 | Vishal Singh <br /><i>Extendibility limits quantum-secured communication and key distillation</i> |
 | 16:15 - 18:00 | <span class="p-invited"> Poster Session II </span> |
 
