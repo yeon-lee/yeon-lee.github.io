@@ -6,16 +6,10 @@ order: 1
 <!--![Jeju](/Jeju_resize.jpg)-->
 ![GroupPhoto](/Group_photo_2025.jpg)
 
-## Quantum Resources 2025
-<h3 class="lessspace"><em>Jeju, 17 &ndash; 21 March 2025</em></h3>
+## Quantum Information Dynamics and Non-Equilibrium Physics 2025
+<h3 class="lessspace"><em>Jeju, 23 &ndash; 27 June 2025</em></h3>
 
-Quantum resource theory is a burgeoning field at the intersection of quantum physics and information theory, dedicated to understanding and quantifying the valuable resources that enable quantum technologies to surpass classical counterparts. These resources, such as entanglement, coherence, and magic, are pivotal for advancements in quantum computing, cryptography, and communication. Rigorous characterization and quantification of these quantum resources have deepened our understanding of quantum foundations and explored their implications for thermodynamics, leading to the development of new theoretical frameworks and practical protocols that harness their full potential.
-
-Quantum Resources 2025 brings together leading experts and emerging voices in the field to explore the latest theoretical insights, practical applications, and future directions of quantum resource theory, fostering collaboration and innovation at the forefront of quantum science.
-
-The conference will be **held in person** to enhance active interactions. We look forward to seeing you on Jeju Island in March 2025.
-
-This is a successor of the previous events, Quantum Resources, which took place in <a href = "https://2022.quantumresources.science">2022</a> (Singapore, hosted by Bartosz Regula) and <a href = "https://2023.quantumresources.science"> 2023 </a> (Singapore, hosted by Ryuji Takagi).
+This workshop aims to bring together leading experts in quantum information and quantum many-body dynamics—fields that align closely with your research interests. It would be great if you could join us as an invited speaker and share your expertise with the community.
 
 ## Invited speakers
 * **Alvaro Martin Alhambra** (Instituto de Fisica Teorica)
@@ -50,12 +44,8 @@ All deadlines in Anywhere on Earth (AoE) time.
 
 
 ## Organizing committee
-* Hyukjoon Kwon (Korea Institute for Advanced Study)
-* Seok-Hyung Lie (Ulsan National Institute of Science and Technology)
-
-## Steering committee
-* Bartosz Regula (RIKEN)
-* Ryuji Takagi (University of Tokyo)
+* Jong Yeon Lee (UIUC and Korea Institute for Advanced Study)
+* Isaac Kim (UC Davis and Korea Institute for Advanced Study)
 
 ## If you have any questions, please contact below:
 * Juhye Park (KIAS)  /  <a href="mailto:pjh999@kias.re.kr">pjh999@kias.re.kr</a> 
