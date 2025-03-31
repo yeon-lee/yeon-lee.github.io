@@ -39,7 +39,7 @@ The workshop will take place at <a href="https://kias.re.kr/kias/main/main.do">K
 
 All deadlines in Anywhere on Earth (AoE) time.
 
-* Registration deadline: 1 May 2025 &ndash; 2 June 2025</s>
+* Registration deadline: <s>1 May 2025 &ndash; 2 June 2025</s>
 
 * **Workshop: 23 &ndash; 27 June 2025**
 
