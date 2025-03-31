@@ -3,8 +3,7 @@ layout: default
 order: 1
 ---
 
-<!--![Jeju](/Jeju_resize.jpg)-->
-![GroupPhoto](/Group_photo_2025.jpg)
+<!--![Jeju](/Jeju_resize.jpg)--> 
 
 ## Quantum Information Dynamics and Non-Equilibrium Physics 2025
 <h3 class="lessspace"><em>Seoul, 23 &ndash; 27 June 2025</em></h3>
@@ -39,7 +38,7 @@ The workshop will take place at <a href="https://kias.re.kr/kias/main/main.do">K
 
 All deadlines in Anywhere on Earth (AoE) time.
 
-* Registration deadline: <s>1 May 2025 &ndash; 2 June 2025</s>
+* Registration deadline: 1 May 2025 &ndash; 2 June 2025
 
 * **Workshop: 23 &ndash; 27 June 2025**
 
