@@ -18,33 +18,35 @@ The conference will be **held in person** to enhance active interactions. We loo
 This is a successor of the previous events, Quantum Resources, which took place in <a href = "https://2022.quantumresources.science">2022</a> (Singapore, hosted by Bartosz Regula) and <a href = "https://2023.quantumresources.science"> 2023 </a> (Singapore, hosted by Ryuji Takagi).
 
 ## Invited speakers
-* **David Arvidsson-Shukur** (Hitachi Cambridge Laboratory)
-* **Kun Fang** (The Chinese University of Hong Kong, Shenzhen)
-* **Masahito Hayashi** (Nagoya University)
-* **Ludovico Lami** (University of Amsterdam & QuSoft)
-* **Seok-Hyung Lie** (Ulsan National Institute of Science and Technology)
-* **Valerio Scarani** (National University of Singapore)
-* **Ryuji Takagi** (University of Tokyo)
-* **Marco Tomamichel** (National University of Singapore)
-* **Nelly Ng** (Nanyang Technological University)
-* **Mark M. Wilde** (Cornell University)
+* **Alvaro Martin Alhambra** (Instituto de Fisica Teorica)
+* **Ehud Altman** (The Chinese University of Hong Kong, Shenzhen)
+* **Yingfei Gu** (Nagoya University)
+* **Wenwei Ho** (University of Amsterdam & QuSoft)
+* **Min-Hsiu Hsieh** (Ulsan National Institute of Science and Technology)
+* **Hsin-Yuan (Robert) Huang** (National University of Singapore)
+* **Hosho Katsura** (University of Tokyo)
+* **Tomotaka Kuwahara** (National University of Singapore)
+* **Ethan Lake** (Nanyang Technological University)
+* **Zi-Wen Liu** (Cornell University)
+* **Tibor Rakovsky**
+* **Thomas Schuster**
+* **Hayata Yamasaki**
+* **Zhicheng Yang**
+* **Yi-Zhuang You**
+* **Pengfei Zhang**
 <!--* **Andreas Winter** (Universitat Autònoma de Barcelona)-->
 
 ## Location
 
-The workshop will take place at <a href="https://www.glad-hotels.com/maisongladjeju/index.do?locale=en">MAISON GLAD JEJU </a>.
+The workshop will take place at <a href="https://kias.re.kr/kias/main/main.do">Korea Institute of Advanced Study, Seoul </a>.
 
 ## Dates
 
 All deadlines in Anywhere on Earth (AoE) time.
 
-* <s> Submission deadline: 30 October 2024</s> **<s>10 November 2024</s>** 
+* Registration deadline: <s>20 April 2025</s> <s>2 June 2025</s>
 
-* Notification: <s>15 November 2024</s> **30 November 2024**
-
-* Registration deadline: <s>20 February 2025</s> <s>7 March 2025</s>
-
-* **Workshop: 17 &ndash; 21 March 2025**
+* **Workshop: 23 &ndash; 27 June 2025**
 
 
 ## Organizing committee
