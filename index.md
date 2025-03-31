@@ -7,27 +7,28 @@ order: 1
 ![GroupPhoto](/Group_photo_2025.jpg)
 
 ## Quantum Information Dynamics and Non-Equilibrium Physics 2025
-<h3 class="lessspace"><em>Jeju, 23 &ndash; 27 June 2025</em></h3>
+<h3 class="lessspace"><em>Seoul, 23 &ndash; 27 June 2025</em></h3>
 
 This workshop aims to bring together leading experts in quantum information and quantum many-body dynamics—fields that align closely with your research interests. It would be great if you could join us as an invited speaker and share your expertise with the community.
 
 ## Invited speakers
 * **Alvaro Martin Alhambra** (Instituto de Fisica Teorica)
-* **Ehud Altman** (The Chinese University of Hong Kong, Shenzhen)
-* **Yingfei Gu** (Nagoya University)
-* **Wenwei Ho** (University of Amsterdam & QuSoft)
-* **Min-Hsiu Hsieh** (Ulsan National Institute of Science and Technology)
-* **Hsin-Yuan (Robert) Huang** (National University of Singapore)
+* **Ehud Altman** (UC Berkeley)
+* **Yingfei Gu** (Tsinghua University)
+* **Wenwei Ho** (National University of Singapore)
+* **Min-Hsiu Hsieh** (Foxconn Research, Quantum Computing Research Center)
+* **Hsin-Yuan (Robert) Huang** (California Institute of Technology)
 * **Hosho Katsura** (University of Tokyo)
-* **Tomotaka Kuwahara** (National University of Singapore)
-* **Ethan Lake** (Nanyang Technological University)
-* **Zi-Wen Liu** (Cornell University)
-* **Tibor Rakovsky**
-* **Thomas Schuster**
-* **Hayata Yamasaki**
-* **Zhicheng Yang**
-* **Yi-Zhuang You**
-* **Pengfei Zhang**
+* **Tomotaka Kuwahara** (RIKEN)
+* **Ethan Lake** (UC Berkeley)
+* **Zi-Wen Liu** (Tsinghua University)
+* **Tibor Rakovsky** (Budapest University of Technology and Economics)
+* **Thomas Schuster** (California Institute of Technology)
+* **Hayata Yamasaki** (The University of Tokyo)
+* **Zhicheng Yang** (Peking University)
+* **Yi-Zhuang You** (UC San Diego)
+* **Pengfei Zhang** (Fudan University)
+* **More to be confirmed**
 <!--* **Andreas Winter** (Universitat Autònoma de Barcelona)-->
 
 ## Location
@@ -38,7 +39,7 @@ The workshop will take place at <a href="https://kias.re.kr/kias/main/main.do">K
 
 All deadlines in Anywhere on Earth (AoE) time.
 
-* Registration deadline: <s>20 April 2025</s> <s>2 June 2025</s>
+* Registration deadline: 1 May 2025 &ndash; 2 June 2025</s>
 
 * **Workshop: 23 &ndash; 27 June 2025**
 
