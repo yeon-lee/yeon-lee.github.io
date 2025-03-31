@@ -4,15 +4,15 @@ highlighter:      rouge
 
 
 # Setup
-title:            'Quantum resources workshop - Jeju 2025'
-tagline:          'Quantum resources 2025'
-description:      'Workshop on quantum resource theories, taking place between 17 - 21 March 2025 in Jeju, Korea'
+title:            'Quantum Information and Dynamics Workshop - Seoul 2025'
+tagline:          'DYNQI 2025'
+description:      'Workshop on quantum information and dynamics, taking place between 23 - 27 June 2025 in Seoul, Korea'
 url:              ""
 baseurl:          ""
 
 
 author:
-  name:           'Hyukjoon Kwon'
+  name:           'Jong Yeon Lee'
 
 paginate:         5
 
