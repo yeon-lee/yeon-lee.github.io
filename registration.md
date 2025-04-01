@@ -3,14 +3,10 @@ layout: page
 title: Registration
 order: 4
 ---
-![JejuLee](/jeju_lee.jpg)
 
-### Registration is now closed.
-
-{% comment %}
 ### [Registration]
-#### - For registration, please fill out the following <a href = "https://forms.gle/DqpGD6JNUdB6ZdQy7">**[Google form]**</a>.
-#### - Registration Deadline: <s> 20 February 2025 </s> <u> 7 March 2025 </u>
+#### - For registration, please send an email to pjh999@kias.re.kr 
+#### - Registration Deadline: 1 June 2025
 <br/>
 
 ### [Payment]
@@ -21,9 +17,5 @@ order: 4
 
 <br/>
 
-### [Registration Fee] (Lunch & Banquet (Wed.) included)
-* **Standard: 400 USD (550,000 KRW)**
-* **Student: 300 USD (400,000 KRW)**
 
-{% endcomment %}
 
