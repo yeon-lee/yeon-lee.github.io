@@ -1,0 +1,9 @@
+/* Override sidebar-about heading size with !important */
+.sidebar-about h1 {
+  font-size: 1.8rem !important;
+}
+
+/* If you also want to reduce paragraph size */
+.sidebar-about p {
+  font-size: 0.9rem !important;
+}
