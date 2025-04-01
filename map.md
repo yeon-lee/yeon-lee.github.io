@@ -5,35 +5,9 @@ order: 6
 ---
 
 ## Workshop venue
-- The workshop will take place at <a href="https://www.glad-hotels.com/maisongladjeju/index.do?locale=en">MAISON GLAD JEJU</a>, located in the city center of Jeju Island, Korea.
-- **To book the hotel with a discounted rate**, please fill out the <a href="2025_MAISON GLAD JEJU_Reservation Form.docx"> **RESERVATION FORM** </a> and send it to <a href="mailto:maisonglad@glad-hotels.com">maisonglad@glad-hotels.com</a>.
-
-<div class="warning"><p><b><i class="fas fa-exclamation-triangle"></i>&nbsp; Scam alert</b></p>
-	<p>We have been notified that an unaffiliated email "Conferences@reservationsmanagement.org" is contacting participants about alleged accommodation bookings for the workshop. Please note that this is a scam, and <b>you will not be contacted by any third party on our behalf</b>.</p>
-</div>
-
-<img src="hotel.jpg" width="750"/>
-
-
-
-## Getting there
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3327.624548396652!2d126.48375958778261!3d33.485124504727395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x350cfb07b2f2ecf9%3A0xe969e73f7efcf19f!2z66mU7KKFIOq4gOuemOuTnCDsoJzso7w!5e0!3m2!1sko!2skr!4v1721552000626!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+- The workshop will take place at Korea Institute of Advanced Study located in Seoul, Korea.
+- Invited speakers will be accommodated at [Arirang Hill Hotel Dongdaemun](https://www.google.com/maps/place/Arirang+Hill+Hotel+Dongdaemun/@37.5935881,127.0139174,17z/data=!3m1!4b1!4m9!3m8!1s0x357ca2ed7e74759b:0x7b496f955842d68!5m2!4m1!1i2!8m2!3d37.5935881!4d127.0164977!16s%2Fg%2F11b8_csm8r?entry=ttu&g_ep=EgoyMDI1MDMyNS4xIKXMDSoASAFQAw%3D%3D) (10min Taxi/35min walk from KIAS)
+- There will be a shuttle every morning from the hotel and KIAS.
 
 ### [By Taxi]
-- From Jeju International Airport, it takes 15 minutes to get to the hotel.
-
-### [By Shuttle Bus]
-#### Jeju International Airport → MAISON GLAD JEJU (10:30 / 15:30 / 19:30)
-- Boarding location: Bus Parking Area B, at the Airport (near the parking tower)
-
-#### MAISON GLAD JEJU → Jeju International Airport (09:30 / 14:30 / 18:30)
-- Boarding location: Parking lot in front of hotel lobby
-
-#### Notice
-- Shuttle bus departs on time at all times (boarding ends 5 minutes before departure time)
-- The shuttle bus service is subject to change depending on Hotel operation.
-
-### [By public transport]
-- There are buses (Nos. 315, 316, 365, 322, 465, and 466) departing from Jeju International Airport that stop near the hotel, taking around 20 minutes.
-
-
+- From Incheon International Airport, it takes 1h 30m to get to the hotel (about 50USD).
