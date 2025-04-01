@@ -5,7 +5,7 @@ order: 1
 
 <!--![Jeju](/Jeju_resize.jpg)--> 
 
-## Quantum Information Dynamics and Non-Equilibrium Physics 2025
+## Quantum Information Dynamics and Non-Equilibrium Physics
 <h3 class="lessspace"><em>Seoul, 23 &ndash; 27 June 2025</em></h3>
 
 This workshop aims to bring together leading experts in quantum information and quantum many-body dynamics.
