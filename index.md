@@ -8,7 +8,7 @@ order: 1
 ## Quantum Information Dynamics and Non-Equilibrium Physics 2025
 <h3 class="lessspace"><em>Seoul, 23 &ndash; 27 June 2025</em></h3>
 
-This workshop aims to bring together leading experts in quantum information and quantum many-body dynamics—fields that align closely with your research interests. It would be great if you could join us as an invited speaker and share your expertise with the community.
+This workshop aims to bring together leading experts in quantum information and quantum many-body dynamics.
 
 ## Invited speakers
 * **Alvaro Martin Alhambra** (Instituto de Fisica Teorica)
@@ -52,6 +52,6 @@ All deadlines in Anywhere on Earth (AoE) time.
 * Hyukjoon Kwon (KIAS)  /  <a href="mailto:hjkwon@kias.re.kr">hjkwon@kias.re.kr</a> 
 
 ## Sponsor
-The workshop is sponsored by Quantum Universe Center, Korea Institute for Advanced Study (KIAS), National Research Foundation of Korea (NRF).
+The workshop is sponsored by Quantum Universe Center, Korea Institute for Advanced Study (KIAS) 
 
-<a href="https://kias.re.kr"> <img src="kias-wordmask.png" width="280"/> </a> <a href="https://nrf.re.kr"> <img src="nrf.png" width="250"/> </a>
+<a href="https://kias.re.kr"> <img src="kias-wordmask.png" width="280"/> </a>  
