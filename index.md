@@ -44,8 +44,8 @@ All deadlines in Anywhere on Earth (AoE) time.
 
 
 ## Organizing committee
-* Jong Yeon Lee (UIUC and Korea Institute for Advanced Study)
-* Isaac Kim (UC Davis and Korea Institute for Advanced Study)
+* Jong Yeon Lee (UIUC and KIAS)
+* Isaac Kim (UC Davis and KIAS)
 
 ## If you have any questions, please contact below:
 * Juhye Park (KIAS)  /  <a href="mailto:pjh999@kias.re.kr">pjh999@kias.re.kr</a> 
