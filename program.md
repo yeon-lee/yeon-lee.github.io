@@ -4,6 +4,7 @@ title: Program
 order: 2
 ---
 
+<!--
 ## Program at a glance
 <img src="Time_table_v4.png" width="750"/>
 
@@ -37,3 +38,4 @@ order: 2
 | 16:30 - 18:00 | <span class="p-invited"> Poster Session I </span> |
 | 18:00 - 19:30 | **dinner**
 
+-->
