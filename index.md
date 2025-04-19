@@ -23,7 +23,7 @@ This workshop aims to bring together leading experts in quantum information and 
 * **Zi-Wen Liu** (Tsinghua University)
 * **Tibor Rakovsky** (Budapest University of Technology and Economics)
 * **Thomas Schuster** (California Institute of Technology)
-* **Zhong Wang (Tsinghua University)
+* **Zhong Wang** (Tsinghua University)
 * **Hayata Yamasaki** (The University of Tokyo)
 * **Zhicheng Yang** (Peking University)
 * **Yi-Zhuang You** (UC San Diego)
