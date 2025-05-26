@@ -11,23 +11,23 @@ order: 1
 This workshop aims to bring together leading experts in quantum information and quantum many-body dynamics.
 
 ## Invited speakers
-* **Alvaro Martin Alhambra** (Instituto de Fisica Teorica)
+* **Alvaro Martin Alhambra** (Instituto de Fisica Teorica) -- Efficient Quantum Gibbs Samplers
 * **Ehud Altman** (UC Berkeley)
-* **Yingfei Gu** (Tsinghua University)
+* **Yingfei Gu** (Tsinghua University) -- Detecting quantum anomalies from a mixed state perspective
 * **Wenwei Ho** (National University of Singapore)
 * **Min-Hsiu Hsieh** (Foxconn Research, Quantum Computing Research Center)
 * **Hsin-Yuan (Robert) Huang** (California Institute of Technology)
-* **Hosho Katsura** (University of Tokyo)
+* **Hosho Katsura** (University of Tokyo) -- Disorder-free SYK-like models
 * **Tomotaka Kuwahara** (RIKEN)
-* **Ethan Lake** (UC Berkeley)
+* **Ethan Lake** (UC Berkeley) -- Decoding the toric code with local Lindbladians
 * **Zi-Wen Liu** (Tsinghua University)
-* **Tibor Rakovsky** (Budapest University of Technology and Economics)
+* **Tibor Rakovsky** (Budapest University of Technology and Economics) -- From slow mixing in quantum channels to quantum spin glass order in qLDPC codes
 * **Thomas Schuster** (California Institute of Technology)
 * **Zhong Wang** (Tsinghua University)
 * **Hayata Yamasaki** (The University of Tokyo)
-* **Zhicheng Yang** (Peking University)
+* **Zhicheng Yang** (Peking University) -- Stabilizer entanglement as a magic highway
 * **Yi-Zhuang You** (UC San Diego)
-* **Pengfei Zhang** (Fudan University)
+* **Pengfei Zhang** (Fudan University) -- Operator Size Dynamics: Theory & Application
 * **More to be confirmed**
 <!--* **Andreas Winter** (Universitat Autònoma de Barcelona)-->
 
