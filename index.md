@@ -22,7 +22,7 @@ This workshop aims to bring together leading experts in quantum information and 
 * **Ethan Lake** (UC Berkeley) -- Decoding the toric code with local Lindbladians
 * **Zi-Wen Liu** (Tsinghua University)
 * **Tibor Rakovsky** (Budapest University of Technology and Economics) -- From slow mixing in quantum channels to quantum spin glass order in qLDPC codes
-* **Thomas Schuster** (California Institute of Technology)
+* **Thomas Schuster** (California Institute of Technology) -- Random unitaries in extremely low depth
 * **Zhong Wang** (Tsinghua University)
 * **Hayata Yamasaki** (The University of Tokyo)
 * **Zhicheng Yang** (Peking University) -- Stabilizer entanglement as a magic highway
