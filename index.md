@@ -12,10 +12,10 @@ This workshop aims to bring together leading experts in quantum information and 
 
 ## Invited speakers
 * **Alvaro Martin Alhambra** (Instituto de Fisica Teorica) -- Efficient Quantum Gibbs Samplers
-* **Ehud Altman** (UC Berkeley)
+* **Ehud Altman** (UC Berkeley) -- Fractional quantum hall states under decoherence
 * **Yingfei Gu** (Tsinghua University) -- Detecting quantum anomalies from a mixed state perspective
-* **Wenwei Ho** (National University of Singapore)
-* **Min-Hsiu Hsieh** (Foxconn Research, Quantum Computing Research Center)
+* **Wenwei Ho** (National University of Singapore) -- Deep thermalization: novel form of quantum equilibration from the lens of quantum information
+* **Min-Hsiu Hsieh** (Foxconn Research, Quantum Computing Research Center) -- Optimal Representation for Quantum Simulation of Materials
 * **Hsin-Yuan (Robert) Huang** (California Institute of Technology)
 * **Hosho Katsura** (University of Tokyo) -- Disorder-free SYK-like models
 * **Tomotaka Kuwahara** (RIKEN)
