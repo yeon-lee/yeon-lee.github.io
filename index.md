@@ -16,18 +16,18 @@ This workshop aims to bring together leading experts in quantum information and 
 * **Yingfei Gu** (Tsinghua University) -- Detecting quantum anomalies from a mixed state perspective
 * **Wenwei Ho** (National University of Singapore) -- Deep thermalization: novel form of quantum equilibration from the lens of quantum information
 * **Min-Hsiu Hsieh** (Foxconn Research, Quantum Computing Research Center) -- Optimal Representation for Quantum Simulation of Materials
-* **Hsin-Yuan (Robert) Huang** (California Institute of Technology)
+* **Hsin-Yuan (Robert) Huang** (California Institute of Technology) -- What cannot be learned in the quantum universe?
 * **Hosho Katsura** (University of Tokyo) -- Disorder-free SYK-like models
-* **Tomotaka Kuwahara** (RIKEN)
 * **Ethan Lake** (UC Berkeley) -- Decoding the toric code with local Lindbladians
-* **Zi-Wen Liu** (Tsinghua University)
+* **Zi-Wen Liu** (Tsinghua University) -- Various results on convergence efficiency of quantum gates and circuits
 * **Tibor Rakovsky** (Budapest University of Technology and Economics) -- From slow mixing in quantum channels to quantum spin glass order in qLDPC codes
 * **Thomas Schuster** (California Institute of Technology) -- Random unitaries in extremely low depth
-* **Zhong Wang** (Tsinghua University)
-* **Hayata Yamasaki** (The University of Tokyo)
 * **Zhicheng Yang** (Peking University) -- Stabilizer entanglement as a magic highway
 * **Yi-Zhuang You** (UC San Diego) -- Can LLM learn to speak the quantum language?
 * **Pengfei Zhang** (Fudan University) -- Operator Size Dynamics: Theory & Application
+* **Zhong Wang** (Tsinghua University)
+* **Hayata Yamasaki** (The University of Tokyo)
+* **Tomotaka Kuwahara** (RIKEN)
 * **More to be confirmed**
 <!--* **Andreas Winter** (Universitat Autònoma de Barcelona)-->
 
