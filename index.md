@@ -25,9 +25,9 @@ This workshop aims to bring together leading experts in quantum information and 
 * **Zhicheng Yang** (Peking University) -- Stabilizer entanglement as a magic highway
 * **Yi-Zhuang You** (UC San Diego) -- Can LLM learn to speak the quantum language?
 * **Pengfei Zhang** (Fudan University) -- Operator Size Dynamics: Theory & Application
-* **Zhong Wang** (Tsinghua University)
-* **Hayata Yamasaki** (The University of Tokyo)
-* **Tomotaka Kuwahara** (RIKEN)
+* **Zhong Wang** (Tsinghua University) -- Nonreciprocal dynamics in open quantum systems
+* **Hayata Yamasaki** (The University of Tokyo) -- 
+* **Tomotaka Kuwahara** (RIKEN) -- Quantum complexity and generalized area law in fully connected models
 * **More to be confirmed**
 <!--* **Andreas Winter** (Universitat Autònoma de Barcelona)-->
 
