@@ -4,7 +4,7 @@ order: 1
 ---
 
 <!--![Jeju](/Jeju_resize.jpg)--> 
-![Poster](/Poster_2025.jpg)
+![Poster](/poster.png)
 
 ## Quantum Information Dynamics and Non-Equilibrium Physics
 <h3 class="lessspace"><em>Seoul, 23 &ndash; 27 June 2025</em></h3>
