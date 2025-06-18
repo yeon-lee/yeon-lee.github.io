@@ -6,18 +6,18 @@ order: 2
 
 ## Monday, June 23, 2025
 
-| Time                            | Event                                                         |
-| ------------------------------- | ------------------------------------------------------------- |
-| <nobr>9:00–9:30</nobr>          | **Opening**                                                   |
-| <nobr>9:30–10:30</nobr>         | *Zijian Wang* — Fractional quantum Hall states under decoherence |
-| <nobr>10:30–11:00</nobr>        | **Coffee Break**                                              |
-| <nobr>11:00–12:00</nobr>        | *Yingfei Gu* — Detecting quantum anomalies from a mixed-state perspective |
-| <nobr>12:00–14:00</nobr>        | **Lunch**                                                     |
-| <nobr>14:00–15:00</nobr>        | *Zhong Wang* — Nonreciprocal dynamics in open quantum systems |
-| <nobr>15:00–15:30</nobr>        | **Coffee Break**                                              |
-| <nobr>15:30–16:30</nobr>        | *Open Discussion* — Big questions in open quantum systems and information dynamics |
-| <nobr>16:30–</nobr>             | **Free Discussion**                                           |
-| <nobr>17:30–19:30</nobr>        | **Dinner for Invited Speakers**                               |
+| Time                            | Event                                                                 |
+| ------------------------------- | --------------------------------------------------------------------- |
+| <nobr>9:00–9:30</nobr>          | **Opening**                                                           |
+| <nobr>9:30–10:30</nobr>         | *Hsin-Yuan (Robert) Huang* — Certifying quantum states with few single-qubit measurements |
+| <nobr>10:30–11:00</nobr>        | **Coffee Break**                                                      |
+| <nobr>11:00–12:00</nobr>        | *Thomas Schuster* — Random unitaries in extremely low depth           |
+| <nobr>12:00–14:00</nobr>        | **Lunch**                                                             |
+| <nobr>14:00–15:00</nobr>        | *Hayata Yamasaki* — Generalized Quantum Stein’s Lemma and Second Law of Quantum Resource Theories |
+| <nobr>15:00–15:30</nobr>        | **Coffee Break**                                                      |
+| <nobr>15:30–16:30</nobr>        | *Zi-Wen Liu* — Various results on convergence efficiency of quantum gates and circuits |
+| <nobr>16:30–</nobr>             | **Free Discussion**                                                   |
+| <nobr>17:30–19:30</nobr>        | **Dinner for Invited Speakers**                                       |
 
 ## Tuesday, June 24, 2025
 
@@ -51,18 +51,18 @@ order: 2
 
 ## Thursday, June 26, 2025
 
-| Time                            | Event                                                                 |
-| ------------------------------- | --------------------------------------------------------------------- |
-| <nobr>9:00–9:30</nobr>          | **Coffee Break**                                                      |
-| <nobr>9:30–10:30</nobr>         | *Hsin-Yuan (Robert) Huang* — Certifying quantum states with few single-qubit measurements |
-| <nobr>10:30–11:00</nobr>        | **Coffee Break**                                                      |
-| <nobr>11:00–12:00</nobr>        | *Thomas Schuster* — Random unitaries in extremely low depth          |
-| <nobr>12:00–14:00</nobr>        | **Lunch**                                                             |
-| <nobr>14:00–15:00</nobr>        | *Hayata Yamasaki* — Generalized Quantum Stein’s Lemma and Second Law of Quantum Resource Theories |
-| <nobr>15:00–15:30</nobr>        | **Coffee Break**                                                      |
-| <nobr>15:30–16:30</nobr>        | *Zi-Wen Liu* — Various results on convergence efficiency of quantum gates and circuits |
-| <nobr>16:30–</nobr>             | **Free Discussion**                                                   |
-| <nobr>17:30–19:30</nobr>        | **Dinner for Invited Speakers**                                       |
+| Time                            | Event                                                         |
+| ------------------------------- | ------------------------------------------------------------- |
+| <nobr>9:00–9:30</nobr>          | **Opening**                                                   |
+| <nobr>9:30–10:30</nobr>         | *Zijian Wang* — Fractional quantum Hall states under decoherence |
+| <nobr>10:30–11:00</nobr>        | **Coffee Break**                                              |
+| <nobr>11:00–12:00</nobr>        | *Yingfei Gu* — Detecting quantum anomalies from a mixed-state perspective |
+| <nobr>12:00–14:00</nobr>        | **Lunch**                                                     |
+| <nobr>14:00–15:00</nobr>        | *Zhong Wang* — Nonreciprocal dynamics in open quantum systems |
+| <nobr>15:00–15:30</nobr>        | **Coffee Break**                                              |
+| <nobr>15:30–16:30</nobr>        | *Open Discussion* — Big questions in open quantum systems and information dynamics |
+| <nobr>16:30–</nobr>             | **Free Discussion**                                           |
+| <nobr>17:30–19:30</nobr>        | **Dinner for Invited Speakers**                               |
 
 ## Friday, June 27, 2025
 
