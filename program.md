@@ -12,7 +12,7 @@ order: 2
 ## Schedule for 6/23
 
 | Time | Description |
-|--- |--- |
+|---- |---- |
 | 9:00 - 9:30   | **opening**                          |
 | 9:30 - 10:30  | <i> Zijian Wang -- Fractional quantum hall states under decoherence </i> |
 | 10:30 - 11:00 | **coffee**                           |
@@ -27,7 +27,7 @@ order: 2
 ## Schedule for 6/24
 
 | Time | Description |
-|--- |--- |
+|---- |---- |
 | 9:00 - 9:30   | **coffee**                          |
 | 9:30 - 10:30  | <i> Tomotaka Kuwahara -- Quantum complexity and generalized area law in fully connected models </i> |
 | 10:30 - 11:00 | **coffee**                           |
@@ -42,7 +42,7 @@ order: 2
 ## Schedule for 6/25
 
 | Time | Description |
-|--- |--- |
+|---- |---- |
 | 9:00 - 9:30   | **coffee**                          |
 | 9:30 - 10:30  | <i> Hosho Katsura -- Disorder-free SYK-like models </i> |
 | 10:30 - 11:00 | **coffee**                           |
@@ -57,7 +57,7 @@ order: 2
 ## Schedule for 6/26
 
 | Time | Description |
-|--- |--- |
+|---- |---- |
 | 9:00 - 9:30   | **coffee**                          |
 | 9:30 - 10:30  | <i> Hsin-Yuan (Robert) Huang -- Certifying quantum states with few single-qubit measurements </i> |
 | 10:30 - 11:00 | **coffee**                           |
@@ -73,7 +73,7 @@ order: 2
 
 
 | Time | Description |
-|--- |--- |
+|---- |---- |
 | 9:00 - 9:30   | **coffee**                          |
 | 9:30 - 10:30  | <i> Min-Hsiu Hsieh -- Optimal Representation for Quantum Simulation of Materials </i> |
 | 10:30 - 11:00 | **coffee**                           |
