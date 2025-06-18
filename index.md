@@ -4,6 +4,7 @@ order: 1
 ---
 
 <!--![Jeju](/Jeju_resize.jpg)--> 
+![Poster](/Poster_2025.jpg)
 
 ## Quantum Information Dynamics and Non-Equilibrium Physics
 <h3 class="lessspace"><em>Seoul, 23 &ndash; 27 June 2025</em></h3>
@@ -28,8 +29,6 @@ This workshop aims to bring together leading experts in quantum information and 
 * **Zhong Wang** (Tsinghua University) -- Nonreciprocal dynamics in open quantum systems
 * **Hayata Yamasaki** (The University of Tokyo) -- 
 * **Tomotaka Kuwahara** (RIKEN) -- Quantum complexity and generalized area law in fully connected models
-* **More to be confirmed**
-<!--* **Andreas Winter** (Universitat Autònoma de Barcelona)-->
 
 ## Location
 
@@ -37,12 +36,7 @@ The workshop will take place at <a href="https://kias.re.kr/kias/main/main.do">K
 
 ## Dates
 
-All deadlines in Anywhere on Earth (AoE) time.
-
-* Registration deadline: 1 May 2025 &ndash; 2 June 2025
-
 * **Workshop: 23 &ndash; 27 June 2025**
-
 
 ## Organizing committee
 * Jong Yeon Lee (UIUC and KIAS)
