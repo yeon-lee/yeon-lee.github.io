@@ -16,7 +16,7 @@ order: 2
 | 14:00–15:00 | *Zhong Wang* — Nonreciprocal dynamics in open quantum systems |
 | 15:00–15:30 | **Coffee Break**                                              |
 | 15:30–16:30 | *Open Discussion* — Big questions in open quantum systems and information dynamics |
-| 16:30–18:00 | **Free Discussion**                                           |
+| 16:30–      | **Free Discussion**                                           |
 | 17:30–19:30 | **Dinner for Invited Speakers**                               |
 
 ## Tuesday, June 24, 2025
@@ -31,7 +31,7 @@ order: 2
 | 14:00–15:00 | *Wenwei Ho* — Deep thermalization: novel form of quantum equilibration from the lens of quantum information |
 | 15:00–15:30 | **Coffee Break**                                                    |
 | 15:30–16:30 | *Tibor Rakovsky* — From slow mixing in quantum channels to quantum spin glass order in qLDPC codes |
-| 16:30–18:00 | **Free Discussion**                                                 |
+| 16:30–      | **Free Discussion**                                                 |
 | 17:30–19:30 | **Dinner for Invited Speakers**                                     |
 
 ## Wednesday, June 25, 2025
@@ -46,7 +46,7 @@ order: 2
 | 14:00–15:00 | *Zhicheng Yang* — Stabilizer entanglement as a magic highway  |
 | 15:00–15:30 | **Coffee Break**                                              |
 | 15:30–16:30 | *Ethan Lake* — Decoding the toric code with local Lindbladians |
-| 16:30–18:00 | **Free Discussion**                                           |
+| 16:30–      | **Free Discussion**                                           |
 | 17:30–19:30 | **Dinner for Invited Speakers**                               |
 
 ## Thursday, June 26, 2025
@@ -61,7 +61,7 @@ order: 2
 | 14:00–15:00 | *Hayata Yamasaki* — Generalized Quantum Stein’s Lemma and Second Law of Quantum Resource Theories |
 | 15:00–15:30 | **Coffee Break**                                                      |
 | 15:30–16:30 | *Zi-Wen Liu* — Various results on convergence efficiency of quantum gates and circuits |
-| 16:30–18:00 | **Free Discussion**                                                   |
+| 16:30–      | **Free Discussion**                                                   |
 | 17:30–19:30 | **Dinner for Invited Speakers**                                       |
 
 ## Friday, June 27, 2025
