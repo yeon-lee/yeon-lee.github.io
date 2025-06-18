@@ -59,14 +59,11 @@ order: 2
 | Time | Description |
 |--- |--- |
 | 9:00 - 9:30   | **coffee**                          |
-| 9:30 - 10:30  | <i> Hsin-Yuan (Robert) Huang -- Certifying quantum states with few single-qubit measurements
- </i> |
+| 9:30 - 10:30  | <i> Hsin-Yuan (Robert) Huang -- Certifying quantum states with few single-qubit measurements </i> |
 | 10:30 - 11:00 | **coffee**                           |
-| 11:00 - 12:00 | <i> Thomas Schuster -- Random unitaries in extremely low depth
- </i> |
+| 11:00 - 12:00 | <i> Thomas Schuster -- Random unitaries in extremely low depth </i> |
 | 12:00 - 14:00 | **lunch**                            |
-| 14:00 - 15:00 | <i> Hayata Yamasaki – Generalized Quantum Stein's Lemma and Second Law of Quantum Resource Theories 
- </i> |
+| 14:00 - 15:00 | <i> Hayata Yamasaki – Generalized Quantum Stein's Lemma and Second Law of Quantum Resource Theories  </i> |
 | 15:00 - 15:30 | **coffee**
 | 15:30 - 16:30 | <i> Zi-Wen Liu -- Various results on convergence efficiency of quantum gates and circuits </i> |
 | 16:30 - 18:00 | **Free Discussion**
