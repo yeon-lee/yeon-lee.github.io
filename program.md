@@ -4,79 +4,73 @@ title: Program
 order: 2
 ---
 
-<!--
-## Program at a glance
-<img src="Time_table_v4.png" width="750"/>
--->
+## Monday, June 23, 2025
 
-## Schedule for 6/23
+| Time        | Event                                                         |
+| ----------- | ------------------------------------------------------------- |
+| 9:00–9:30   | **Opening**                                                   |
+| 9:30–10:30  | *Zijian Wang* — Fractional quantum Hall states under decoherence |
+| 10:30–11:00 | **Coffee Break**                                              |
+| 11:00–12:00 | *Yingfei Gu* — Detecting quantum anomalies from a mixed-state perspective |
+| 12:00–14:00 | **Lunch**                                                     |
+| 14:00–15:00 | *Zhong Wang* — Nonreciprocal dynamics in open quantum systems |
+| 15:00–15:30 | **Coffee Break**                                              |
+| 15:30–16:30 | *Open Discussion* — Big questions in open quantum systems and information dynamics |
+| 16:30–18:00 | **Free Discussion**                                           |
+| 17:30–19:30 | **Dinner for Invited Speakers**                               |
 
-| Time | Description |
-|---- |---- |
-| 9:00 - 9:30   | **opening**                          |
-| 9:30 - 10:30  | <i> Zijian Wang -- Fractional quantum hall states under decoherence </i> |
-| 10:30 - 11:00 | **coffee**                           |
-| 11:00 - 12:00 | <i> Yingfei Gu -- Detecting quantum anomalies from a mixed state perspective </i> |
-| 12:00 - 14:00 | **lunch**                            |
-| 14:00 - 15:00 | <i> Zhong Wang -- Nonreciprocal dynamics in open quantum systems </i> |
-| 15:00 - 15:30 | **coffee**
-| 15:30 - 16:30 | <i> Open Discussion – Big questions in open quantum systems and information dynamics </i> |
-| 16:30 - 18:00 | **Free Discussion**
-| 17:30 - 19:30 | **Dinner for Invited Speakers**
+## Tuesday, June 24, 2025
 
-## Schedule for 6/24
+| Time        | Event                                                               |
+| ----------- | ------------------------------------------------------------------- |
+| 9:00–9:30   | **Coffee Break**                                                    |
+| 9:30–10:30  | *Tomotaka Kuwahara* — Quantum complexity and generalized area law in fully connected models |
+| 10:30–11:00 | **Coffee Break**                                                    |
+| 11:00–12:00 | *Alvaro Martín Alhambra* — Efficient Quantum Gibbs Samplers         |
+| 12:00–14:00 | **Lunch**                                                           |
+| 14:00–15:00 | *Wenwei Ho* — Deep thermalization: novel form of quantum equilibration from the lens of quantum information |
+| 15:00–15:30 | **Coffee Break**                                                    |
+| 15:30–16:30 | *Tibor Rakovsky* — From slow mixing in quantum channels to quantum spin glass order in qLDPC codes |
+| 16:30–18:00 | **Free Discussion**                                                 |
+| 17:30–19:30 | **Dinner for Invited Speakers**                                     |
 
-| Time | Description |
-|---- |---- |
-| 9:00 - 9:30   | **coffee**                          |
-| 9:30 - 10:30  | <i> Tomotaka Kuwahara -- Quantum complexity and generalized area law in fully connected models </i> |
-| 10:30 - 11:00 | **coffee**                           |
-| 11:00 - 12:00 | <i> Alvaro Martin Alhambra -- Efficient Quantum Gibbs Samplers </i> |
-| 12:00 - 14:00 | **lunch**                            |
-| 14:00 - 15:00 | <i> Wenwei Ho -- Deep thermalization: novel form of quantum equilibration from the lens of quantum information </i> |
-| 15:00 - 15:30 | **coffee**
-| 15:30 - 16:30 | <i> Tibor Rakovsky -- From slow mixing in quantum channels to quantum spin glass order in qLDPC codes </i> |
-| 16:30 - 18:00 | **Free Discussion**
-| 17:30 - 19:30 | **Dinner for Invited Speakers**
+## Wednesday, June 25, 2025
 
-## Schedule for 6/25
+| Time        | Event                                                         |
+| ----------- | ------------------------------------------------------------- |
+| 9:00–9:30   | **Coffee Break**                                              |
+| 9:30–10:30  | *Hosho Katsura* — Disorder-free SYK-like models               |
+| 10:30–11:00 | **Coffee Break**                                              |
+| 11:00–12:00 | *Pengfei Zhang* — Operator Size Dynamics: Theory & Application |
+| 12:00–14:00 | **Lunch**                                                     |
+| 14:00–15:00 | *Zhicheng Yang* — Stabilizer entanglement as a magic highway  |
+| 15:00–15:30 | **Coffee Break**                                              |
+| 15:30–16:30 | *Ethan Lake* — Decoding the toric code with local Lindbladians |
+| 16:30–18:00 | **Free Discussion**                                           |
+| 17:30–19:30 | **Dinner for Invited Speakers**                               |
 
-| Time | Description |
-|---- |---- |
-| 9:00 - 9:30   | **coffee**                          |
-| 9:30 - 10:30  | <i> Hosho Katsura -- Disorder-free SYK-like models </i> |
-| 10:30 - 11:00 | **coffee**                           |
-| 11:00 - 12:00 | <i> Pengfei Zhang -- Operator Size Dynamics: Theory & Application </i> |
-| 12:00 - 14:00 | **lunch**                            |
-| 14:00 - 15:00 | <i> Zhicheng Yang -- Stabilizer entanglement as a magic highway </i> |
-| 15:00 - 15:30 | **coffee**
-| 15:30 - 16:30 | <i> Ethan Lake -- Decoding the toric code with local Lindbladians </i> |
-| 16:30 - 18:00 | **Free Discussion**
-| 17:30 - 19:30 | **Dinner for Invited Speakers**
+## Thursday, June 26, 2025
 
-## Schedule for 6/26
+| Time        | Event                                                                 |
+| ----------- | --------------------------------------------------------------------- |
+| 9:00–9:30   | **Coffee Break**                                                      |
+| 9:30–10:30  | *Hsin-Yuan (Robert) Huang* — Certifying quantum states with few single-qubit measurements |
+| 10:30–11:00 | **Coffee Break**                                                      |
+| 11:00–12:00 | *Thomas Schuster* — Random unitaries in extremely low depth          |
+| 12:00–14:00 | **Lunch**                                                             |
+| 14:00–15:00 | *Hayata Yamasaki* — Generalized Quantum Stein’s Lemma and Second Law of Quantum Resource Theories |
+| 15:00–15:30 | **Coffee Break**                                                      |
+| 15:30–16:30 | *Zi-Wen Liu* — Various results on convergence efficiency of quantum gates and circuits |
+| 16:30–18:00 | **Free Discussion**                                                   |
+| 17:30–19:30 | **Dinner for Invited Speakers**                                       |
 
-| Time | Description |
-|---- |---- |
-| 9:00 - 9:30   | **coffee**                          |
-| 9:30 - 10:30  | <i> Hsin-Yuan (Robert) Huang -- Certifying quantum states with few single-qubit measurements </i> |
-| 10:30 - 11:00 | **coffee**                           |
-| 11:00 - 12:00 | <i> Thomas Schuster -- Random unitaries in extremely low depth </i> |
-| 12:00 - 14:00 | **lunch**                            |
-| 14:00 - 15:00 | <i> Hayata Yamasaki – Generalized Quantum Stein's Lemma and Second Law of Quantum Resource Theories  </i> |
-| 15:00 - 15:30 | **coffee**
-| 15:30 - 16:30 | <i> Zi-Wen Liu -- Various results on convergence efficiency of quantum gates and circuits </i> |
-| 16:30 - 18:00 | **Free Discussion**
-| 17:30 - 19:30 | **Dinner for Invited Speakers**
+## Friday, June 27, 2025
 
-## Schedule for 27 (Fri)
-
-
-| Time | Description |
-|---- |---- |
-| 9:00 - 9:30   | **coffee**                          |
-| 9:30 - 10:30  | <i> Min-Hsiu Hsieh -- Optimal Representation for Quantum Simulation of Materials </i> |
-| 10:30 - 11:00 | **coffee**                           |
-| 11:00 - 12:00 | <i> Yi-Zhuang You -- Can LLM learn to speak the quantum language? </i> |
-| 12:00 - 14:00 | **lunch**                            |
-| 14:00 -       | <i> Free time (If you want recommendation, let organizers know! </i> |
+| Time        | Event                                              |
+| ----------- | -------------------------------------------------- |
+| 9:00–9:30   | **Coffee Break**                                   |
+| 9:30–10:30  | *Min-Hsiu Hsieh* — Optimal Representation for Quantum Simulation of Materials |
+| 10:30–11:00 | **Coffee Break**                                   |
+| 11:00–12:00 | *Yi-Zhuang You* — Can LLM learn to speak the quantum language? |
+| 12:00–14:00 | **Lunch**                                          |
+| 14:00–      | *Free Time* (Ask organizers for recommendations)   |
