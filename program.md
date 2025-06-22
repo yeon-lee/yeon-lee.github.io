@@ -8,7 +8,7 @@ order: 2
 
 | Time                            | Event                                                                 |
 | ------------------------------- | --------------------------------------------------------------------- |
-| <nobr>9:00–9:30</nobr>          | **Opening**                                                           |
+| <nobr>9:00–9:30</nobr>          | **Registration**                                                      |
 | <nobr>9:30–10:30</nobr>         | *Hsin-Yuan (Robert) Huang* — Certifying quantum states with few single-qubit measurements |
 | <nobr>10:30–11:00</nobr>        | **Coffee Break**                                                      |
 | <nobr>11:00–12:00</nobr>        | *Thomas Schuster* — Random unitaries in extremely low depth           |
@@ -53,7 +53,7 @@ order: 2
 
 | Time                            | Event                                                         |
 | ------------------------------- | ------------------------------------------------------------- |
-| <nobr>9:00–9:30</nobr>          | **Opening**                                                   |
+| <nobr>9:00–9:30</nobr>          | **Coffee Break**                                              |
 | <nobr>9:30–10:30</nobr>         | *Zijian Wang* — Fractional quantum Hall states under decoherence |
 | <nobr>10:30–11:00</nobr>        | **Coffee Break**                                              |
 | <nobr>11:00–12:00</nobr>        | *Yingfei Gu* — Detecting quantum anomalies from a mixed-state perspective |
