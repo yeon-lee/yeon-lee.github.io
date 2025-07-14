@@ -9,7 +9,7 @@ order: 1
 ## Quantum Information Dynamics and Non-Equilibrium Physics
 <h3 class="lessspace"><em>Seoul, 23 &ndash; 27 June 2025</em></h3>
 
-This workshop aims to bring together leading experts in quantum information and quantum many-body dynamics. Recorded talks are on [KIAS's youtube channel](https://www.youtube.com/watch?v=70_k3pYAwuc&list=PLuRMKAkKTCDjTL8IZTkGwOP_xeC8b81vy).
+This workshop aims to bring together leading experts in quantum information and quantum many-body dynamics. Recorded talks are on KIAS's youtube channel (**https://www.youtube.com/watch?v=70_k3pYAwuc&list=PLuRMKAkKTCDjTL8IZTkGwOP_xeC8b81vy**).
 
 
 ## Invited speakers
