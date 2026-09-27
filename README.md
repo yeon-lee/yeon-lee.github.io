@@ -26,6 +26,9 @@ arXiv automatically every night.
 
 Do **not** edit `_bibliography/papers.bib` — it is generated and will be overwritten (see below).
 
+The QID 2025 workshop site lives in the separate repo [`yeon-lee/qid2025`](https://github.com/yeon-lee/qid2025) and is served at
+<https://yeon-lee.github.io/qid2025/>; `_pages/moved/` holds redirect stubs for its old root-level URLs.
+
 ## How publications stay up to date
 
 ```
