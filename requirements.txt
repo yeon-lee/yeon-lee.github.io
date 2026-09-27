@@ -1,2 +1,2 @@
 pyyaml
-rendercv[full]>=2.3,<3
+rendercv[full]>=2.8,<3

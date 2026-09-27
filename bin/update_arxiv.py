@@ -51,7 +51,12 @@ OUTPUT_PATH = ROOT / "_bibliography" / "papers.bib"
 MANUAL_PATH = ROOT / "_bibliography" / "manual.bib"
 PREVIEW_DIR = ROOT / "assets" / "img" / "publication_preview"
 
-API_URL = "https://export.arxiv.org/api/query"
+API_HOSTS = ["export.arxiv.org", "arxiv.org"]  # alternated on retry
+RETRY_DELAYS = [15, 30, 60, 120, 180, 240]  # seconds between attempts (~10 min total)
+RETRYABLE_STATUS = {403, 406, 408, 425, 429, 500, 502, 503, 504}
+# Plain headers: arXiv's edge is pickier about "bot-looking" clients than about
+# unadorned urllib, and it wants an Accept that admits Atom.
+REQUEST_HEADERS = {"Accept": "application/atom+xml, application/xml;q=0.9, */*;q=0.8"}
 NS = {
     "a": "http://www.w3.org/2005/Atom",
     "arxiv": "http://arxiv.org/schemas/atom",
@@ -148,10 +153,57 @@ def strip_version(arxiv_id: str) -> str:
     return re.sub(r"v\d+$", "", arxiv_id.strip())
 
 
-def fetch(url: str) -> bytes:
-    req = urllib.request.Request(url, headers={"User-Agent": "al-folio-arxiv-updater/1.0 (+https://github.com)"})
-    with urllib.request.urlopen(req, timeout=120) as resp:
-        return resp.read()
+class ArxivUnavailable(RuntimeError):
+    """arXiv kept refusing us (throttling / outage); nothing was changed."""
+
+
+def _parse_feed(data: bytes) -> ET.Element | None:
+    """Return the Atom <feed> root if `data` is a parseable arXiv feed, else None."""
+    try:
+        root = ET.fromstring(data)
+    except ET.ParseError:
+        return None
+    return root if root.tag == f"{{{NS['a']}}}feed" else None
+
+
+def fetch_feed(query: str) -> ET.Element:
+    """
+    GET an arXiv API query and return the parsed feed.
+
+    arXiv's edge intermittently answers 403/406/429/5xx to scripted clients for
+    a few minutes at a time, and a 406 sometimes still carries a valid feed. So:
+    retry with exponential backoff (~10 minutes in total), alternate between the
+    two API hosts, and accept any response body that parses as an Atom feed.
+    """
+    last_error: Exception | None = None
+    for attempt, delay in enumerate(RETRY_DELAYS + [None]):
+        host = API_HOSTS[attempt % len(API_HOSTS)]
+        url = f"https://{host}/api/query?{query}"
+        log(f"GET {url}")
+        try:
+            req = urllib.request.Request(url, headers=REQUEST_HEADERS)
+            with urllib.request.urlopen(req, timeout=120) as resp:
+                body = resp.read()
+            feed = _parse_feed(body)
+            if feed is not None:
+                return feed
+            last_error = RuntimeError("response was not an Atom feed")
+        except urllib.error.HTTPError as e:
+            body = e.read() if e.fp else b""
+            feed = _parse_feed(body)
+            if feed is not None:
+                log(f"  HTTP {e.code} but the body is a valid feed; using it")
+                return feed
+            if e.code not in RETRYABLE_STATUS:
+                raise
+            last_error = e
+        except (urllib.error.URLError, TimeoutError, ConnectionError, OSError) as e:
+            last_error = e
+        if delay is None:
+            break
+        log(f"  attempt {attempt + 1} failed ({last_error}); retrying in {delay}s")
+        time.sleep(delay)
+    raise ArxivUnavailable(f"arXiv API unavailable after {len(RETRY_DELAYS) + 1} attempts: {last_error}")
 
 
 def query_arxiv(search_query: str, max_results: int) -> list[ET.Element]:
@@ -166,9 +218,7 @@ def query_arxiv(search_query: str, max_results: int) -> list[ET.Element]:
             "sortBy": "submittedDate",
             "sortOrder": "descending",
         }
-        url = API_URL + "?" + urllib.parse.urlencode(params)
-        log(f"GET {url}")
-        root = ET.fromstring(fetch(url))
+        root = fetch_feed(urllib.parse.urlencode(params))
         page = root.findall("a:entry", NS)
         total = int(root.findtext("os:totalResults", default="0", namespaces=NS) or 0)
         entries.extend(page)
@@ -182,9 +232,7 @@ def query_arxiv(search_query: str, max_results: int) -> list[ET.Element]:
 def fetch_by_ids(ids: list[str]) -> list[ET.Element]:
     if not ids:
         return []
-    url = API_URL + "?" + urllib.parse.urlencode({"id_list": ",".join(ids), "max_results": len(ids)})
-    log(f"GET {url}")
-    root = ET.fromstring(fetch(url))
+    root = fetch_feed(urllib.parse.urlencode({"id_list": ",".join(ids), "max_results": len(ids)}))
     return root.findall("a:entry", NS)
 
 
@@ -407,16 +455,27 @@ def main() -> int:
 
     cfg = load_config()
 
-    if args.from_file:
-        root = ET.fromstring(Path(args.from_file).read_bytes())
-        raw_entries = root.findall("a:entry", NS)
-    else:
-        raw_entries = query_arxiv(cfg["author_query"], int(cfg["max_results"]))
-        seen_ids = {strip_version(e.findtext("a:id", default="", namespaces=NS).rsplit("/abs/", 1)[-1]) for e in raw_entries}
-        extra = [i for i in cfg["include"] if i not in seen_ids]
-        if extra:
-            time.sleep(PAGE_DELAY_SECONDS)
-            raw_entries.extend(fetch_by_ids(extra))
+    try:
+        if args.from_file:
+            root = ET.fromstring(Path(args.from_file).read_bytes())
+            raw_entries = root.findall("a:entry", NS)
+        else:
+            raw_entries = query_arxiv(cfg["author_query"], int(cfg["max_results"]))
+            seen_ids = {strip_version(e.findtext("a:id", default="", namespaces=NS).rsplit("/abs/", 1)[-1]) for e in raw_entries}
+            extra = [i for i in cfg["include"] if i not in seen_ids]
+            if extra:
+                time.sleep(PAGE_DELAY_SECONDS)
+                raw_entries.extend(fetch_by_ids(extra))
+    except ArxivUnavailable as e:
+        # Transient: leave papers.bib untouched and let the next scheduled run try again.
+        # Printed as a GitHub Actions warning annotation; exit 0 so the run is not marked failed.
+        print(f"::warning title=arXiv unavailable::{e} - papers.bib left unchanged.")
+        log(str(e))
+        return 0
+
+    if not raw_entries and not args.from_file:
+        print("::warning title=arXiv returned no papers::query matched nothing; papers.bib left unchanged.")
+        return 0
 
     records: dict[str, dict] = {}
     skipped: list[str] = []
