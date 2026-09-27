@@ -1,7 +1,7 @@
 ---
 layout: post
 title: New website
-date: 2026-09-27 12:00:00-0500
+date: 2026-09-27 08:00:00-0500
 description: the group website has moved here and now updates itself
 tags: [site]
 categories: [announcements]
