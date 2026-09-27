@@ -1,0 +1,69 @@
+name: Update publications from arXiv
+
+# Regenerates _bibliography/papers.bib from the arXiv API (settings live in
+# _data/arxiv.yml), commits the result if anything changed, and then kicks off
+# the "Deploy site" workflow so the live site picks up the new list.
+
+on:
+  schedule:
+    - cron: "17 6 * * *" # every day at 06:17 UTC
+  workflow_dispatch:
+  push:
+    branches: [main, master]
+    paths:
+      - "_data/arxiv.yml"
+      - "_bibliography/manual.bib"
+      - "bin/update_arxiv.py"
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: update-arxiv
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install pyyaml
+
+      - name: Regenerate papers.bib from arXiv
+        run: python3 bin/update_arxiv.py
+
+      - name: Commit and push if changed
+        id: commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add _bibliography/papers.bib
+          if git diff --staged --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No changes to papers.bib." >> "$GITHUB_STEP_SUMMARY"
+          else
+            git commit -m "chore: update publications from arXiv"
+            git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            echo "papers.bib updated:" >> "$GITHUB_STEP_SUMMARY"
+            git show --stat --oneline HEAD | tail -n +2 >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      # Commits made with GITHUB_TOKEN do not trigger other workflows on their
+      # own, so start the deploy explicitly.
+      - name: Trigger site deploy
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run deploy.yml --ref "${{ github.ref_name }}"

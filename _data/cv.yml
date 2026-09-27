@@ -1,0 +1,69 @@
+# ---------------------------------------------------------------------------
+# CV data, in RenderCV format (https://docs.rendercv.com).
+#   * The /cv/ page renders this file directly.
+#   * .github/workflows/render-cv.yml turns it into a PDF at
+#     assets/rendercv/rendercv_output/Jong_Yeon_Lee_CV.pdf on every push that
+#     touches this file (that is the PDF button on the CV page).
+# Section names are free-form; "Education" and "Experience" get special
+# formatting, everything else renders as a simple list.
+# ---------------------------------------------------------------------------
+cv:
+  name: Jong Yeon Lee
+  label: Assistant Professor of Physics
+  email: jongyeon@illinois.edu
+  location: Urbana, IL
+  website: https://yeon-lee.github.io
+  social_networks:
+    - network: GitHub
+      username: yeon-lee
+    - network: LinkedIn
+      username: jong-yeon-lee-194412154
+    - network: Google Scholar
+      username: fyVphr4AAAAJ
+
+  sections:
+    Experience:
+      - company: University of Illinois Urbana-Champaign
+        position: Assistant Professor, Department of Physics
+        location: Urbana, IL
+        start_date: 2023
+        end_date: present
+      - company: Kavli Institute for Theoretical Physics, UC Santa Barbara
+        position: Moore Postdoctoral Fellow
+        location: Santa Barbara, CA
+        start_date: 2020
+        end_date: 2023
+
+    Education:
+      - institution: Harvard University
+        area: Physics
+        degree: PhD
+        location: Cambridge, MA
+        start_date: 2015
+        end_date: 2020
+        highlights:
+          - "Advisor: Ashvin Vishwanath"
+      - institution: California Institute of Technology
+        area: Physics
+        degree: BS
+        location: Pasadena, CA
+        start_date: 2011
+        end_date: 2015
+        highlights:
+          - "Advisor: John Preskill"
+
+    Research Interests:
+      - bullet: Many-body physics of quantum information; decoherence-induced phases and transitions
+      - bullet: Quantum error correction and high-rate quantum LDPC codes
+      - bullet: Non-equilibrium dynamics, measurement-induced phenomena, and quantum control
+      - bullet: Topological band theory and correlated moiré materials
+      - bullet: Exotic quantum phases and quantum criticality
+
+    Invited Talks:
+      - bullet: "*Many-body Physics of Information: from novel symmetry breaking to topological mixed states*, KITP, Santa Barbara, September 2, 2025. [Recording](https://online.kitp.ucsb.edu/online/stablephases25/lee/)"
+
+    Organized Events:
+      - bullet: "Organizer, [Quantum Information and Dynamics 2025](http://events.kias.re.kr/h/QID2025/), Seoul, Korea, June 23–27, 2025."
+
+    Teaching:
+      - bullet: "Physics 598 — Many-Body Physics of Information, University of Illinois Urbana-Champaign, Spring 2025."

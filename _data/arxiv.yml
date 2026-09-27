@@ -1,0 +1,72 @@
+# ---------------------------------------------------------------------------
+# Settings for bin/update_arxiv.py, which regenerates _bibliography/papers.bib
+# from the arXiv API (run automatically by .github/workflows/update-arxiv.yml).
+#
+# After editing this file, either wait for the nightly run or trigger it from
+# GitHub: Actions -> "Update publications from arXiv" -> Run workflow.
+# ---------------------------------------------------------------------------
+
+# arXiv search query. `au:"..."` is an exact author-name match.
+# See https://info.arxiv.org/help/api/user-manual.html#query_details
+author_query: 'au:"Jong Yeon Lee"'
+
+# Safety net: keep a paper only if one of its authors is spelled like this
+# (hyphens, dots and case are ignored). Leave empty to trust the query alone.
+author_names:
+  - Jong Yeon Lee
+  - Jong-Yeon Lee
+
+# Keep only papers whose PRIMARY category starts with one of these.
+# Leave empty to keep everything the query returns.
+categories:
+  - quant-ph
+  - cond-mat
+  - physics
+  - hep-th
+  - math-ph
+
+# arXiv IDs (without version) to hide from the site, e.g. a false positive.
+exclude: []
+
+# arXiv IDs to always include even if the query or filters miss them.
+include: []
+
+# Show the Dimensions citation badge for papers that have a DOI.
+dimensions_badge: true
+
+# Put the arXiv abstract into each entry (al-folio shows an "Abs" button).
+include_abstract: true
+
+# Which year to file a paper under: "journal" (publication year, falls back to
+# the arXiv year for preprints) or "arxiv" (year of the first arXiv version).
+year_source: journal
+
+# Upper bound on how many results to page through.
+max_results: 1000
+
+# ---------------------------------------------------------------------------
+# Per-paper overrides, keyed by arXiv ID (quote the ID so YAML keeps it a string).
+# Any BibTeX field al-folio understands can go here, for example:
+#   selected: true          -> shown on the home page ("selected publications")
+#   preview: myfig.png      -> thumbnail in assets/img/publication_preview/
+#                              (a file named <arxiv-id>.png there is picked up automatically)
+#   abbr: PRL               -> badge text (auto-derived from the journal otherwise)
+#   award: Editors' Suggestion   award_name: PRL Editors' Suggestion
+#   slides: talk.pdf  poster: poster.pdf  video: https://...  code: https://...
+#   pdf: paper.pdf          -> file in assets/pdf/ (default is the arXiv PDF link)
+#   journal: ...            -> fix a journal reference arXiv got wrong
+# Setting a field to `false` or `null` removes it.
+# ---------------------------------------------------------------------------
+overrides:
+  "2609.30069":
+    selected: true
+  "2607.05386":
+    selected: true
+  "2402.16937":
+    selected: true
+  "2301.05238":
+    selected: true
+  "2310.16881":
+    selected: true
+  "1903.08130":
+    selected: true

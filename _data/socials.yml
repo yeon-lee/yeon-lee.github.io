@@ -1,0 +1,12 @@
+# Social / contact icons shown on the home page and in the footer.
+# Keys are those supported by jekyll-socials: https://github.com/george-gca/jekyll-socials
+# Icons appear in the order defined here. Comment out a line to hide it.
+email: jongyeon@illinois.edu
+scholar_userid: fyVphr4AAAAJ # Google Scholar ID
+# arxiv_id: lee_j_y_1 # arXiv author identifier (https://arxiv.org/a/<id>) - set this once you have claimed an arXiv author ID
+github_username: yeon-lee
+linkedin_username: jong-yeon-lee-194412154
+# orcid_id: 0000-0000-0000-0000
+# x_username:
+# bluesky_url:
+rss_icon: true # comment this line to hide the RSS icon

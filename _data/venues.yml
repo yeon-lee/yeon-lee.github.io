@@ -1,0 +1,57 @@
+# Badge colours / links for the `abbr` field of publications (see _layouts/bib.liquid in al_folio_core).
+# bin/update_arxiv.py assigns these abbreviations automatically from the journal reference.
+"PRL":
+  url: https://journals.aps.org/prl/
+  color: "#1e4b8f"
+
+"PRX":
+  url: https://journals.aps.org/prx/
+  color: "#7d1f6f"
+
+"PRX Quantum":
+  url: https://journals.aps.org/prxquantum/
+  color: "#7d1f6f"
+
+"PRB":
+  url: https://journals.aps.org/prb/
+  color: "#2f6f9f"
+
+"PRA":
+  url: https://journals.aps.org/pra/
+  color: "#2f6f9f"
+
+"PRR":
+  url: https://journals.aps.org/prresearch/
+  color: "#2f6f9f"
+
+"Nature":
+  url: https://www.nature.com/
+  color: "#0b6e4f"
+
+"Nat. Commun.":
+  url: https://www.nature.com/ncomms/
+  color: "#0b6e4f"
+
+"Nat. Phys.":
+  url: https://www.nature.com/nphys/
+  color: "#0b6e4f"
+
+"npj QI":
+  url: https://www.nature.com/npjqi/
+  color: "#0b6e4f"
+
+"Quantum":
+  url: https://quantum-journal.org/
+  color: "#b8561c"
+
+"SciPost":
+  url: https://scipost.org/
+  color: "#b8561c"
+
+"Optica":
+  url: https://opg.optica.org/optica/
+  color: "#b8561c"
+
+"arXiv":
+  url: https://arxiv.org/
+  color: "#b31b1b"

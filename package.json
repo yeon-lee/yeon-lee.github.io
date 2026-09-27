@@ -1,0 +1,5 @@
+{
+  "name": "yeon-lee.github.io",
+  "private": true,
+  "description": "Lee Group @ UIUC website (Jekyll + al-folio). No JS build step; this file only keeps npm tooling happy."
+}
