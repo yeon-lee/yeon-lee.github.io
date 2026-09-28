@@ -1,6 +1,6 @@
-# RenderCV settings (v2 syntax); see https://docs.rendercv.com/user_guide/yaml_input_structure/rendercv_settings/
-# Used by .github/workflows/render-cv.yml:  rendercv render _data/cv.yml --rendercv-settings assets/rendercv/settings.yaml
-rendercv_settings:
+# RenderCV settings; see https://docs.rendercv.com/user_guide/yaml_input_structure/settings/
+# Used by .github/workflows/render-cv.yml:  rendercv render _data/cv.yml --settings assets/rendercv/settings.yaml
+settings:
   render_command:
     # Paths are relative to _data/cv.yml
     design: ../assets/rendercv/design.yaml
@@ -12,6 +12,7 @@ rendercv_settings:
     png_path: ../assets/rendercv/rendercv_output/NAME_IN_SNAKE_CASE_CV.png
     dont_generate_markdown: true
     dont_generate_html: true
+    dont_generate_typst: false # typst generation is required for pdf output
     dont_generate_pdf: false
     dont_generate_png: true
   bold_keywords: []
