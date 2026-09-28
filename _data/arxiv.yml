@@ -16,6 +16,11 @@ author_names:
   - Jong Yeon Lee
   - Jong-Yeon Lee
 
+# Name as the arxiv.org author search wants it ("Last, First"). Used by the
+# fallback path (search page + OAI-PMH) when the query API is blocked, which is
+# the case on GitHub Actions runners. Defaults to author_names[0] rearranged.
+author_search: "Lee, Jong Yeon"
+
 # Keep only papers whose PRIMARY category starts with one of these.
 # Leave empty to keep everything the query returns.
 categories:

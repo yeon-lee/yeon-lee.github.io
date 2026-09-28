@@ -6,7 +6,10 @@ How it works
 ------------
 1. Reads settings from _data/arxiv.yml (author query, allowed categories,
    excluded / extra arXiv IDs, per-paper overrides such as `selected: true`).
-2. Queries the arXiv API for every paper matching the author query.
+2. Queries the arXiv API for every paper matching the author query. When the
+   API is unreachable (arXiv blocks it from cloud IPs such as GitHub Actions),
+   it lists the papers from the arxiv.org author-search page and fetches each
+   record through OAI-PMH instead - same data, different door.
 3. Converts each result to a BibTeX entry in the format al-folio expects
    (journal reference and DOI when arXiv knows them, otherwise "arXiv preprint").
 4. Applies your overrides, appends the hand-written entries from
@@ -52,11 +55,19 @@ MANUAL_PATH = ROOT / "_bibliography" / "manual.bib"
 PREVIEW_DIR = ROOT / "assets" / "img" / "publication_preview"
 
 API_HOSTS = ["export.arxiv.org", "arxiv.org"]  # alternated on retry
-RETRY_DELAYS = [15, 30, 60, 120, 180, 240]  # seconds between attempts (~10 min total)
+RETRY_DELAYS = [10, 20, 40]  # seconds between API attempts before falling back to OAI-PMH
 RETRYABLE_STATUS = {403, 406, 408, 425, 429, 500, 502, 503, 504}
-# Plain headers: arXiv's edge is pickier about "bot-looking" clients than about
-# unadorned urllib, and it wants an Accept that admits Atom.
-REQUEST_HEADERS = {"Accept": "application/atom+xml, application/xml;q=0.9, */*;q=0.8"}
+REQUEST_HEADERS = {
+    "Accept": "application/atom+xml, application/xml;q=0.9, text/html;q=0.8, */*;q=0.7",
+    "User-Agent": "al-folio publication sync (https://github.com/yeon-lee/yeon-lee.github.io)",
+}
+# Fallback path. arXiv blocks the query API from cloud IP ranges such as GitHub
+# Actions runners (HTTP 406), but the author-search page and OAI-PMH still work
+# there, so we list IDs via search and fetch each record via OAI-PMH.
+SEARCH_URL = "https://arxiv.org/search/"
+OAI_URL = "https://oaipmh.arxiv.org/oai"
+OAI_DELAY_SECONDS = 1.5  # politeness delay between OAI-PMH requests
+NS_OAI = {"o": "http://www.openarchives.org/OAI/2.0/", "ax": "http://arxiv.org/OAI/arXiv/"}
 NS = {
     "a": "http://www.w3.org/2005/Atom",
     "arxiv": "http://arxiv.org/schemas/atom",
@@ -140,6 +151,11 @@ def load_config() -> dict:
     cfg.setdefault("include_abstract", True)
     cfg.setdefault("max_results", 1000)
     cfg.setdefault("year_source", "journal")
+    if not cfg.get("author_search"):
+        # arXiv search wants "Last, First"; derive it from the first author_names entry
+        first = (cfg["author_names"] or [""])[0]
+        parts = first.split()
+        cfg["author_search"] = f"{parts[-1]}, {' '.join(parts[:-1])}" if len(parts) > 1 else first
     if not cfg["author_query"]:
         sys.exit("author_query is empty in _data/arxiv.yml")
     # YAML may parse "2609.30069" as a float; normalise everything to strings.
@@ -236,6 +252,113 @@ def fetch_by_ids(ids: list[str]) -> list[ET.Element]:
     return root.findall("a:entry", NS)
 
 
+def _http_get(url: str, tries: int = 4) -> bytes:
+    """GET with a small retry loop honouring Retry-After (OAI-PMH answers 503 when busy)."""
+    last: Exception | None = None
+    for attempt in range(tries):
+        try:
+            req = urllib.request.Request(url, headers=REQUEST_HEADERS)
+            with urllib.request.urlopen(req, timeout=120) as resp:
+                return resp.read()
+        except urllib.error.HTTPError as e:
+            if e.code not in RETRYABLE_STATUS:
+                raise
+            wait = e.headers.get("Retry-After") if e.headers else None
+            delay = int(wait) if wait and wait.isdigit() else 10 * (attempt + 1)
+            last = e
+        except (urllib.error.URLError, TimeoutError, ConnectionError, OSError) as e:
+            delay = 10 * (attempt + 1)
+            last = e
+        if attempt < tries - 1:
+            log(f"  {url[:80]}... failed ({last}); retrying in {delay}s")
+            time.sleep(min(delay, 120))
+    raise ArxivUnavailable(f"{url[:80]}... unavailable: {last}")
+
+
+def search_author_ids(author_search: str, max_results: int) -> list[str]:
+    """List arXiv IDs for an author from the arxiv.org search pages (newest first)."""
+    ids: list[str] = []
+    start = 0
+    total: int | None = None
+    while start < max_results:
+        params = {"searchtype": "author", "query": author_search, "size": 200, "order": "-announced_date_first", "start": start}
+        url = SEARCH_URL + "?" + urllib.parse.urlencode(params)
+        log(f"GET {url}")
+        html = _http_get(url).decode("utf-8", "replace")
+        page = re.findall(r'href="https://arxiv\.org/abs/([^"]+)"\s*>\s*arXiv:', html)
+        page = [strip_version(i) for i in page]
+        if total is None:
+            m = re.search(r"of\s+([\d,]+)\s+results", html)
+            total = int(m.group(1).replace(",", "")) if m else len(page)
+            if re.search(r"Sorry, your query returned no results", html):
+                total = 0
+        ids.extend(i for i in page if i not in ids)
+        start += 200
+        if not page or len(ids) >= total:
+            break
+        time.sleep(OAI_DELAY_SECONDS)
+    log(f"search: {len(ids)} ids for author \"{author_search}\"")
+    return ids
+
+
+def oai_record(arxiv_id: str) -> dict | None:
+    """Fetch one paper's metadata via OAI-PMH and shape it like entry_to_record()."""
+    url = OAI_URL + "?" + urllib.parse.urlencode({"verb": "GetRecord", "identifier": f"oai:arXiv.org:{arxiv_id}", "metadataPrefix": "arXiv"})
+    root = ET.fromstring(_http_get(url))
+    meta = root.find(".//ax:arXiv", NS_OAI)
+    if meta is None:
+        err = root.findtext("o:error", default="", namespaces=NS_OAI)
+        log(f"  OAI: no record for {arxiv_id} ({err.strip()[:80]})")
+        return None
+    def text(tag: str) -> str:
+        return " ".join((meta.findtext(f"ax:{tag}", default="", namespaces=NS_OAI) or "").split())
+    authors = []
+    for a in meta.findall("ax:authors/ax:author", NS_OAI):
+        fore = " ".join((a.findtext("ax:forenames", default="", namespaces=NS_OAI) or "").split())
+        key = " ".join((a.findtext("ax:keyname", default="", namespaces=NS_OAI) or "").split())
+        suffix = " ".join((a.findtext("ax:suffix", default="", namespaces=NS_OAI) or "").split())
+        authors.append(" ".join(x for x in (fore, key, suffix) if x))
+    cats = text("categories").split()
+    return {
+        "arxiv_id": strip_version(text("id") or arxiv_id),
+        "version_id": text("id") or arxiv_id,
+        "title": text("title"),
+        "abstract": text("abstract"),
+        "authors": authors,
+        "published": published_from_id(text("id") or arxiv_id, text("created")),
+        "updated": text("updated") or text("created"),
+        "primary_category": cats[0] if cats else "",
+        "categories": cats,
+        "doi": text("doi") or None,
+        "journal_ref": text("journal-ref") or None,
+        "comment": text("comments") or None,
+    }
+
+
+def published_from_id(arxiv_id: str, fallback: str = "") -> str:
+    """First-submission month from a new-style ID (YYMM.NNNNN); the day is unknown, so use 01."""
+    m = re.match(r"(\d{2})(\d{2})\.\d{4,5}", strip_version(arxiv_id))
+    if m:
+        return f"20{m.group(1)}-{m.group(2)}-01"
+    return fallback[:10] if fallback else ""
+
+
+def records_via_search_and_oai(cfg: dict) -> list[dict]:
+    ids = search_author_ids(cfg["author_search"], int(cfg["max_results"]))
+    ids += [i for i in cfg["include"] if i not in ids]
+    records: list[dict] = []
+    for n, aid in enumerate(ids):
+        if aid in cfg["exclude"]:
+            continue
+        if n:
+            time.sleep(OAI_DELAY_SECONDS)
+        rec = oai_record(aid)
+        if rec:
+            records.append(rec)
+    log(f"OAI-PMH: fetched {len(records)} records")
+    return records
+
+
 def normalise_name(name: str) -> str:
     """'Jong-Yeon Lee' / 'Jong Yeon  Lee' / 'jong yeon lee' -> 'jong yeon lee'."""
     name = unicodedata.normalize("NFKD", name).encode("ascii", "ignore").decode()
@@ -322,7 +445,7 @@ def entry_to_record(entry: ET.Element) -> dict:
     title = " ".join((entry.findtext("a:title", default="", namespaces=NS) or "").split())
     abstract = " ".join((entry.findtext("a:summary", default="", namespaces=NS) or "").split())
     authors = [a.findtext("a:name", default="", namespaces=NS) for a in entry.findall("a:author", NS)]
-    published = entry.findtext("a:published", default="", namespaces=NS)[:10]
+    published = published_from_id(raw_id, entry.findtext("a:published", default="", namespaces=NS)[:10])
     updated = entry.findtext("a:updated", default="", namespaces=NS)[:10]
     primary = entry.find("arxiv:primary_category", NS)
     primary_cat = primary.get("term") if primary is not None else ""
@@ -458,32 +581,38 @@ def main() -> int:
 
     cfg = load_config()
 
-    try:
-        if args.from_file:
-            root = ET.fromstring(Path(args.from_file).read_bytes())
-            raw_entries = root.findall("a:entry", NS)
-        else:
+    fetched: list[dict] = []
+    if args.from_file:
+        root = ET.fromstring(Path(args.from_file).read_bytes())
+        fetched = [entry_to_record(e) for e in root.findall("a:entry", NS)]
+    else:
+        try:
             raw_entries = query_arxiv(cfg["author_query"], int(cfg["max_results"]))
             seen_ids = {strip_version(e.findtext("a:id", default="", namespaces=NS).rsplit("/abs/", 1)[-1]) for e in raw_entries}
             extra = [i for i in cfg["include"] if i not in seen_ids]
             if extra:
                 time.sleep(PAGE_DELAY_SECONDS)
                 raw_entries.extend(fetch_by_ids(extra))
-    except ArxivUnavailable as e:
-        # Transient: leave papers.bib untouched and let the next scheduled run try again.
-        # Printed as a GitHub Actions warning annotation; exit 0 so the run is not marked failed.
-        print(f"::warning title=arXiv unavailable::{e} - papers.bib left unchanged.")
-        log(str(e))
-        return 0
+            fetched = [entry_to_record(e) for e in raw_entries]
+            log(f"API: fetched {len(fetched)} records")
+        except ArxivUnavailable as e:
+            log(f"API unavailable ({e}); falling back to arxiv.org search + OAI-PMH")
+            try:
+                fetched = records_via_search_and_oai(cfg)
+            except ArxivUnavailable as e2:
+                # Leave papers.bib untouched and let the next scheduled run try again.
+                # Printed as a GitHub Actions warning annotation; exit 0 so the run is not marked failed.
+                print(f"::warning title=arXiv unavailable::{e2} - papers.bib left unchanged.")
+                log(str(e2))
+                return 0
 
-    if not raw_entries and not args.from_file:
+    if not fetched and not args.from_file:
         print("::warning title=arXiv returned no papers::query matched nothing; papers.bib left unchanged.")
         return 0
 
     records: dict[str, dict] = {}
     skipped: list[str] = []
-    for e in raw_entries:
-        rec = entry_to_record(e)
+    for rec in fetched:
         aid = rec["arxiv_id"]
         if not aid or not rec["title"]:
             continue

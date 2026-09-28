@@ -19,6 +19,7 @@ profiles:
       <p>Office: ESB 3113</p>
       <p>jongyeon [at] illinois.edu</p>
   - align: right
+    image: people/jintae-kim.jpg
     content: people/jintae-kim.md
     image_circular: false
     more_info: >
@@ -42,6 +43,7 @@ profiles:
     more_info: >
       <p>Graduate Student</p>
   - align: right
+    image: people/yuta-hirasaki.jpg # 128 px from Google Scholar - replace with a larger photo when available
     content: people/yuta-hirasaki.md
     image_circular: false
     more_info: >
