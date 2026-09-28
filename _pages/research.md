@@ -2,12 +2,12 @@
 layout: page
 permalink: /research/
 title: research
-description: what we work on. See the <a href="/publications/">publications</a> page for the full list of papers, or <a href="https://scholar.google.com/citations?user=fyVphr4AAAAJ&hl=en">Google Scholar</a>.
+description: what we work on
 nav: true
 nav_order: 2
 ---
 
-Our group explores the intersection of quantum many-body physics and quantum information science. A recurring theme is that the concepts of quantum information (entanglement, coherent information, error correction) are the right language for describing many-body quantum matter, and in turn that many-body physics provides the tools for understanding what can be done with large, noisy, or dynamically evolving quantum systems.
+Our group explores the intersection of quantum many-body physics and quantum information science. The [publications](/publications/) page has the full list of papers (see also [Google Scholar](https://scholar.google.com/citations?user=fyVphr4AAAAJ&hl=en)). A recurring theme is that the concepts of quantum information (entanglement, coherent information, error correction) are the right language for describing many-body quantum matter, and in turn that many-body physics provides the tools for understanding what can be done with large, noisy, or dynamically evolving quantum systems.
 
 ## Many-body physics of quantum information
 

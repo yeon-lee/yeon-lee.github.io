@@ -36,8 +36,8 @@ exclude: []
 # arXiv IDs to always include even if the query or filters miss them.
 include: []
 
-# Show the Dimensions citation badge for papers that have a DOI.
-dimensions_badge: true
+# Show the Dimensions citation badge for papers that have a DOI (off: the counts were unreliable).
+dimensions_badge: false
 
 # Put the arXiv abstract into each entry (al-folio shows an "Abs" button).
 include_abstract: true
@@ -72,7 +72,6 @@ overrides:
     year: "2023"
     doi: 10.1103/PhysRevLett.131.220403
     html: https://doi.org/10.1103/PhysRevLett.131.220403
-    dimensions: true
   "2105.12112":
     abbr: PRX
     journal: Phys. Rev. X
@@ -81,7 +80,6 @@ overrides:
     year: "2022"
     doi: 10.1103/PhysRevX.12.011061
     html: https://doi.org/10.1103/PhysRevX.12.011061
-    dimensions: true
   "2506.04221":
     abbr: PRX
     journal: Phys. Rev. X (accepted)
