@@ -22,7 +22,8 @@ arXiv automatically every night.
 | hide a paper / add a non-arXiv paper    | `_data/arxiv.yml` → `exclude:` / `_bibliography/manual.bib`                                                               |
 | add a course                            | new file in `_teachings/` (copy `2025-spring-physics-598.md`)                                                             |
 | update the CV / talks                   | `_data/cv.yml` — the PDF is regenerated automatically                                                                     |
-| post news (home page + `/news/`)        | new file in `_news/` (copy an existing one; `inline: true` = one-liner)                                                   |
+| post news (home page + `/news/`)        | new file in `_news/` (copy an existing one; `inline: true` = one-liner). New preprints get a news item automatically — see below |
+| edit the join page                      | `_pages/join.md`                                                                                                          |
 | write a note / blog post                | new file `_posts/YYYY-MM-DD-title.md` (copy `2026-09-27-new-website.md`)                                                  |
 | change contact / social icons           | `_data/socials.yml`                                                                                                       |
 | site title, description, colours, flags | `_config.yml`                                                                                                             |
@@ -52,6 +53,15 @@ _data/arxiv.yml  ──►  bin/update_arxiv.py  ──►  _bibliography/papers
   (`oaipmh.arxiv.org`) for each record. Same data, different door. If arXiv is unreachable altogether the
   run logs a warning and leaves `papers.bib` untouched. `diag-arxiv.yml` (Actions → *Diagnose arXiv
   access* → Run workflow) prints which arXiv endpoints the runner can reach, for debugging.
+- **News items.** For every preprint submitted after `news.since` (in `_data/arxiv.yml`) the script writes
+  `_news/<date>-arxiv-<id>.md`: "New preprint with <group members>: *title* — one-line highlight". The
+  highlight is written by Claude when the repository secret `ANTHROPIC_API_KEY` is set (**Settings → Secrets and
+  variables → Actions → New repository secret**); without it the first sentence of the abstract is used. When a paper
+  later gains a journal reference, a "Published in …" item follows. Existing files are never rewritten, so edit or
+  delete them freely; group members are listed under `news.members`.
+- **Thumbnails.** Figure 1 of each paper is downloaded from its arXiv HTML version into
+  `assets/img/publication_preview/<id>.png` (at most `previews.max_per_run` per run, so the backlog takes a few
+  nights). Papers without an HTML version (before 2024) get none unless you drop a `<id>.png` there yourself.
 - Journal references come from arXiv's `journal-ref` field, which authors fill in themselves — if a
   published paper still shows as a preprint, update the journal-ref on arXiv (or add a `journal:` override
   in `_data/arxiv.yml`).
@@ -63,7 +73,7 @@ To run it locally: `pip install pyyaml && python3 bin/update_arxiv.py --dry-run`
 | Workflow                                   | When                                             | What                                              |
 | ------------------------------------------ | ------------------------------------------------ | ------------------------------------------------- |
 | `deploy.yml` — Deploy site                 | every push to `main`                             | builds the site, publishes to `gh-pages`          |
-| `update-arxiv.yml` — Update publications   | nightly, on demand, when `_data/arxiv.yml` changes | regenerates `papers.bib`, commits, redeploys     |
+| `update-arxiv.yml` — Update publications   | nightly, on demand, when `_data/arxiv.yml` changes | regenerates `papers.bib`, news items and thumbnails, commits, redeploys |
 | `render-cv.yml` — Render a CV              | when `_data/cv.yml` changes                      | renders `assets/rendercv/rendercv_output/Jong_Yeon_Lee_CV.pdf`, commits, redeploys |
 | `diag-arxiv.yml` — Diagnose arXiv access   | on demand                                        | probes arXiv endpoints from the runner (debugging only)   |
 

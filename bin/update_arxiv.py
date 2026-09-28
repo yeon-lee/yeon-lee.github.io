@@ -14,6 +14,10 @@ How it works
    (journal reference and DOI when arXiv knows them, otherwise "arXiv preprint").
 4. Applies your overrides, appends the hand-written entries from
    _bibliography/manual.bib, and writes _bibliography/papers.bib.
+5. Optionally (see `news:` and `previews:` in _data/arxiv.yml) writes a
+   one-line news item into _news/ for every new preprint (and for papers
+   that just got published), and downloads Figure 1 of each paper from its
+   arXiv HTML version into assets/img/publication_preview/ as a thumbnail.
 
 papers.bib is therefore GENERATED. Do not edit it by hand:
   * to tweak a paper (mark it selected, add a thumbnail, slides, award...),
@@ -27,12 +31,16 @@ Usage
     python3 bin/update_arxiv.py --dry-run      # print the result instead of writing it
     python3 bin/update_arxiv.py --from-file feed.xml   # offline: parse a saved Atom feed
 
-Only dependency: PyYAML (pip install pyyaml).
+Dependencies: PyYAML (pip install pyyaml); optionally cairosvg to rasterise
+SVG thumbnails, and an ANTHROPIC_API_KEY environment variable for the
+one-line news highlights (without it the first sentence of the abstract is used).
 """
 
 from __future__ import annotations
 
 import argparse
+import json
+import os
 import re
 import sys
 import time
@@ -53,6 +61,9 @@ CONFIG_PATH = ROOT / "_data" / "arxiv.yml"
 OUTPUT_PATH = ROOT / "_bibliography" / "papers.bib"
 MANUAL_PATH = ROOT / "_bibliography" / "manual.bib"
 PREVIEW_DIR = ROOT / "assets" / "img" / "publication_preview"
+NEWS_DIR = ROOT / "_news"
+HTML_URL = "https://arxiv.org/html/"
+ANTHROPIC_URL = "https://api.anthropic.com/v1/messages"
 
 API_HOSTS = ["export.arxiv.org", "arxiv.org"]  # alternated on retry
 RETRY_DELAYS = [10, 20, 40]  # seconds between API attempts before falling back to OAI-PMH
@@ -151,6 +162,20 @@ def load_config() -> dict:
     cfg.setdefault("include_abstract", True)
     cfg.setdefault("max_results", 1000)
     cfg.setdefault("year_source", "journal")
+    news = cfg.get("news") or {}
+    news.setdefault("enabled", False)
+    news.setdefault("since", "")
+    news.setdefault("members", [])
+    news.setdefault("announce_published", True)
+    news.setdefault("model", "claude-sonnet-5-5")
+    news.setdefault("max_words", 30)
+    cfg["news"] = news
+    previews = cfg.get("previews") or {}
+    previews.setdefault("enabled", False)
+    previews.setdefault("max_per_run", 12)
+    previews.setdefault("max_bytes", 600_000)
+    previews.setdefault("png_width", 900)
+    cfg["previews"] = previews
     if not cfg.get("author_search"):
         # arXiv search wants "Last, First"; derive it from the first author_names entry
         first = (cfg["author_names"] or [""])[0]
@@ -326,6 +351,7 @@ def oai_record(arxiv_id: str) -> dict | None:
         "abstract": text("abstract"),
         "authors": authors,
         "published": published_from_id(text("id") or arxiv_id, text("created")),
+        "submitted": (text("created") or "")[:10],
         "updated": text("updated") or text("created"),
         "primary_category": cats[0] if cats else "",
         "categories": cats,
@@ -437,6 +463,221 @@ def find_preview(arxiv_id: str) -> str | None:
 
 
 # --------------------------------------------------------------------------- #
+# news items and thumbnails
+# --------------------------------------------------------------------------- #
+NEWS_FILE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}-(arxiv|published)-(\d{4}\.\d{4,5})\.md$")
+
+
+def announced(kind: str) -> set[str]:
+    """arXiv IDs that already have a news item of this kind (arxiv|published)."""
+    ids: set[str] = set()
+    if NEWS_DIR.is_dir():
+        for f in NEWS_DIR.iterdir():
+            m = NEWS_FILE_RE.match(f.name)
+            if m and m.group(1) == kind:
+                ids.add(m.group(2))
+    return ids
+
+
+def member_coauthors(rec: dict, members: list[str], pi_names: list[str]) -> list[str]:
+    """Group members (other than the PI) on the paper, in author order, as written on arXiv."""
+    wanted = {normalise_name(m) for m in members} - {normalise_name(p) for p in pi_names}
+    return [a for a in rec["authors"] if normalise_name(a) in wanted]
+
+
+def fallback_highlight(abstract: str, max_words: int) -> str:
+    """First sentence of the abstract, trimmed, used when no API key is available."""
+    text = re.sub(r"\$[^$]*\$", "", abstract)  # drop inline math
+    first = re.split(r"(?<=[.!?])\s+", text.strip(), maxsplit=1)[0]
+    words = first.split()
+    if len(words) > max_words:
+        first = " ".join(words[:max_words]).rstrip(",;:") + "..."
+    return first
+
+
+def llm_highlight(rec: dict, ncfg: dict) -> str | None:
+    """One-sentence plain-language highlight from the abstract via the Anthropic API."""
+    key = os.environ.get("ANTHROPIC_API_KEY", "").strip()
+    if not key:
+        return None
+    prompt = (
+        "Write ONE sentence (at most {n} words) that tells a physicist what this paper's main result is, "
+        "in plain language, no hype, no leading 'This paper' or 'We'. Start with a noun phrase or a verb "
+        "such as 'Shows that ...', 'Introduces ...'. No LaTeX; write math in words. Output only the sentence.\n\n"
+        "Title: {title}\n\nAbstract: {abstract}"
+    ).format(n=ncfg["max_words"], title=rec["title"], abstract=rec["abstract"])
+    body = json.dumps({
+        "model": ncfg["model"],
+        "max_tokens": 200,
+        "messages": [{"role": "user", "content": prompt}],
+    }).encode()
+    req = urllib.request.Request(
+        ANTHROPIC_URL,
+        data=body,
+        headers={"x-api-key": key, "anthropic-version": "2023-06-01", "content-type": "application/json"},
+        method="POST",
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=60) as resp:
+            data = json.loads(resp.read())
+        text = " ".join(part.get("text", "") for part in data.get("content", []) if part.get("type") == "text")
+        text = " ".join(text.split()).strip().strip('"')
+        return text or None
+    except Exception as e:  # network, auth, quota: fall back rather than fail the run
+        log(f"  highlight for {rec['arxiv_id']} failed ({str(e)[:100]}); using the abstract instead")
+        return None
+
+
+def highlight_for(rec: dict, ncfg: dict) -> str:
+    text = llm_highlight(rec, ncfg) or fallback_highlight(rec["abstract"], int(ncfg["max_words"]))
+    return text.rstrip(".") + "."
+
+
+def join_names(names: list[str]) -> str:
+    if len(names) <= 1:
+        return "".join(names)
+    return ", ".join(names[:-1]) + " and " + names[-1]
+
+
+def write_news(path: Path, date: str, body: str) -> None:
+    path.write_text(
+        "---\n"
+        "layout: post\n"
+        f"date: {date} 09:00:00-0500\n"
+        "inline: true\n"
+        "related_posts: false\n"
+        "---\n\n"
+        f"{body}\n",
+        encoding="utf-8",
+    )
+    log(f"wrote {path.relative_to(ROOT)}")
+
+
+def preprint_news(rec: dict, cfg: dict) -> Path | None:
+    ncfg = cfg["news"]
+    date = rec.get("submitted") or rec["published"]
+    if ncfg.get("since") and date < str(ncfg["since"]):
+        return None
+    path = NEWS_DIR / f"{date}-arxiv-{rec['arxiv_id']}.md"
+    with_members = member_coauthors(rec, ncfg["members"], cfg["author_names"])
+    lead = f"New preprint with {join_names(with_members)}" if with_members else "New preprint"
+    body = f"{lead}: [{rec['title']}](https://arxiv.org/abs/{rec['arxiv_id']}) — {highlight_for(rec, ncfg)}"
+    NEWS_DIR.mkdir(exist_ok=True)
+    write_news(path, date, body)
+    return path
+
+
+def published_news(rec: dict, cfg: dict, journal: str, today: str) -> Path | None:
+    url = f"https://doi.org/{rec['doi']}" if rec.get("doi") else f"https://arxiv.org/abs/{rec['arxiv_id']}"
+    path = NEWS_DIR / f"{today}-published-{rec['arxiv_id']}.md"
+    body = f"Published in {journal}: [{rec['title']}]({url})."
+    NEWS_DIR.mkdir(exist_ok=True)
+    write_news(path, today, body)
+    return path
+
+
+def old_bib_published() -> dict[str, bool]:
+    """arXiv ID -> whether the current papers.bib already lists a journal (not 'arXiv preprint') for it."""
+    out: dict[str, bool] = {}
+    if not OUTPUT_PATH.exists():
+        return out
+    for chunk in OUTPUT_PATH.read_text(encoding="utf-8").split("\n@")[1:]:
+        m_id = re.search(r"\barxiv\s*=\s*\{([^}]*)\}", chunk)
+        m_j = re.search(r"\bjournal\s*=\s*\{([^}]*)\}", chunk)
+        if m_id:
+            out[m_id.group(1).strip()] = bool(m_j) and not m_j.group(1).strip().lower().startswith("arxiv preprint")
+    return out
+
+
+def generate_news(ordered: list[dict], cfg: dict, before: dict[str, bool], dry_run: bool) -> int:
+    """Write news items for new preprints and newly published papers. Returns the number written."""
+    ncfg = cfg["news"]
+    if not ncfg.get("enabled") or dry_run:
+        return 0
+    n = 0
+    done_arxiv = announced("arxiv")
+    done_pub = announced("published")
+    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    for rec in ordered:
+        aid = rec["arxiv_id"]
+        if aid not in done_arxiv and preprint_news(rec, cfg):
+            n += 1
+        jr = parse_journal_ref(rec["journal_ref"])
+        if ncfg.get("announce_published") and jr.get("journal") and aid in before and not before[aid] and aid not in done_pub:
+            if published_news(rec, cfg, jr["journal"], today):
+                n += 1
+    return n
+
+
+FIGURE_RE = re.compile(r'<figure[^>]*class="[^"]*ltx_figure[^"]*"[^>]*>(.*?)</figure>', re.S)
+GRAPHIC_RE = re.compile(r'<(?:object|img)[^>]*\b(?:data|src)="([^"]+)"', re.S)
+
+
+def fetch_preview(rec: dict, pcfg: dict) -> Path | None:
+    """Download Figure 1 (falling back to 2, 3) from the paper's arXiv HTML page as its thumbnail."""
+    aid = rec["arxiv_id"]
+    m = re.match(r"(\d{2})(\d{2})\.", aid)
+    if not m or int(m.group(1) + m.group(2)) < 2312:
+        return None  # arXiv only renders HTML for submissions from December 2023 on
+    try:
+        page = _http_get(HTML_URL + aid, tries=1).decode("utf-8", "replace")
+    except Exception as e:
+        log(f"  no HTML version for {aid} ({str(e)[:60]})")
+        return None
+    for fig in FIGURE_RE.findall(page)[:3]:
+        m = GRAPHIC_RE.search(fig)
+        if not m:
+            continue
+        src = m.group(1)
+        url = src if src.startswith("http") else HTML_URL + src.lstrip("/")
+        try:
+            data = _http_get(url, tries=1)
+        except Exception as e:
+            log(f"  figure download failed for {aid} ({str(e)[:60]})")
+            continue
+        if len(data) > int(pcfg["max_bytes"]):
+            log(f"  figure too large for {aid} ({len(data)} bytes); trying the next one")
+            continue
+        ext = src.rsplit(".", 1)[-1].lower()
+        if ext not in ("svg", "png", "jpg", "jpeg", "gif", "webp"):
+            continue
+        PREVIEW_DIR.mkdir(parents=True, exist_ok=True)
+        if ext == "svg":
+            try:
+                import cairosvg  # type: ignore
+
+                png = cairosvg.svg2png(bytestring=data, output_width=int(pcfg["png_width"]), background_color="white")
+                out = PREVIEW_DIR / f"{aid}.png"
+                out.write_bytes(png)
+                log(f"wrote {out.relative_to(ROOT)} (rasterised from SVG)")
+                return out
+            except Exception as e:
+                log(f"  cairosvg unavailable or failed ({str(e)[:60]}); keeping the SVG")
+        out = PREVIEW_DIR / f"{aid}.{'jpg' if ext == 'jpeg' else ext}"
+        out.write_bytes(data)
+        log(f"wrote {out.relative_to(ROOT)}")
+        return out
+    return None
+
+
+def fetch_previews(ordered: list[dict], cfg: dict, dry_run: bool) -> int:
+    pcfg = cfg["previews"]
+    if not pcfg.get("enabled") or dry_run:
+        return 0
+    n = 0
+    for rec in ordered:
+        if n >= int(pcfg["max_per_run"]):
+            log(f"preview limit reached ({n} this run); the rest will follow on later runs")
+            break
+        if find_preview(rec["arxiv_id"]):
+            continue
+        if fetch_preview(rec, pcfg):
+            n += 1
+            time.sleep(OAI_DELAY_SECONDS)
+    return n
+
+
+# --------------------------------------------------------------------------- #
 # conversion
 # --------------------------------------------------------------------------- #
 def entry_to_record(entry: ET.Element) -> dict:
@@ -445,7 +686,8 @@ def entry_to_record(entry: ET.Element) -> dict:
     title = " ".join((entry.findtext("a:title", default="", namespaces=NS) or "").split())
     abstract = " ".join((entry.findtext("a:summary", default="", namespaces=NS) or "").split())
     authors = [a.findtext("a:name", default="", namespaces=NS) for a in entry.findall("a:author", NS)]
-    published = published_from_id(raw_id, entry.findtext("a:published", default="", namespaces=NS)[:10])
+    submitted = entry.findtext("a:published", default="", namespaces=NS)[:10]
+    published = published_from_id(raw_id, submitted)
     updated = entry.findtext("a:updated", default="", namespaces=NS)[:10]
     primary = entry.find("arxiv:primary_category", NS)
     primary_cat = primary.get("term") if primary is not None else ""
@@ -460,6 +702,7 @@ def entry_to_record(entry: ET.Element) -> dict:
         "abstract": abstract,
         "authors": [" ".join(a.split()) for a in authors if a],
         "published": published,
+        "submitted": submitted,
         "updated": updated,
         "primary_category": primary_cat,
         "categories": categories,
@@ -629,6 +872,14 @@ def main() -> int:
         records[aid] = rec  # later duplicates (same id) simply overwrite
 
     ordered = sorted(records.values(), key=lambda r: (r["published"], r["arxiv_id"]), reverse=True)
+
+    # thumbnails first, so that build_fields() sees the new files
+    before = old_bib_published()
+    n_previews = fetch_previews(ordered, cfg, args.dry_run)
+    n_news = generate_news(ordered, cfg, before, args.dry_run)
+    if n_previews or n_news:
+        log(f"{n_previews} thumbnails, {n_news} news items added")
+
     used_keys: set[str] = set()
     entries = [format_entry(make_key(r, used_keys), build_fields(r, cfg)) for r in ordered]
 

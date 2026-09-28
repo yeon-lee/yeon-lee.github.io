@@ -1,8 +1,13 @@
 name: Update publications from arXiv
 
 # Regenerates _bibliography/papers.bib from the arXiv API (settings live in
-# _data/arxiv.yml), commits the result if anything changed, and then kicks off
-# the "Deploy site" workflow so the live site picks up the new list.
+# _data/arxiv.yml), writes a news item for each new preprint (_news/) and a
+# Figure-1 thumbnail for each paper (assets/img/publication_preview/), commits
+# whatever changed, and then kicks off the "Deploy site" workflow.
+#
+# Optional repository secret ANTHROPIC_API_KEY: lets the script write the
+# one-line news highlight with Claude; without it the abstract's first
+# sentence is used.
 
 on:
   schedule:
@@ -38,9 +43,11 @@ jobs:
           python-version: "3.12"
 
       - name: Install dependencies
-        run: pip install pyyaml
+        run: pip install pyyaml cairosvg
 
-      - name: Regenerate papers.bib from arXiv
+      - name: Regenerate papers.bib, news items and thumbnails from arXiv
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python3 bin/update_arxiv.py
 
       - name: Commit and push if changed
@@ -48,15 +55,15 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add _bibliography/papers.bib
+          git add _bibliography/papers.bib _news assets/img/publication_preview
           if git diff --staged --quiet; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
-            echo "No changes to papers.bib." >> "$GITHUB_STEP_SUMMARY"
+            echo "No changes." >> "$GITHUB_STEP_SUMMARY"
           else
             git commit -m "chore: update publications from arXiv"
             git push
             echo "changed=true" >> "$GITHUB_OUTPUT"
-            echo "papers.bib updated:" >> "$GITHUB_STEP_SUMMARY"
+            echo "Updated:" >> "$GITHUB_STEP_SUMMARY"
             git show --stat --oneline HEAD | tail -n +2 >> "$GITHUB_STEP_SUMMARY"
           fi
 

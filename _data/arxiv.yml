@@ -50,6 +50,46 @@ year_source: journal
 max_results: 1000
 
 # ---------------------------------------------------------------------------
+# News items (_news/): one line per new preprint, plus one when a paper gets
+# its journal reference. The highlight sentence is written by Claude when the
+# ANTHROPIC_API_KEY repository secret is set (Settings -> Secrets -> Actions);
+# otherwise the first sentence of the abstract is used. Delete a generated
+# news file to drop that item; the script never re-creates one it already wrote.
+# ---------------------------------------------------------------------------
+news:
+  enabled: true
+  since: "2025-09-28"          # do not announce preprints submitted before this date
+  announce_published: true     # also post "Published in <journal>: ..." items
+  model: claude-sonnet-5-5     # Anthropic model for the highlight sentence
+  max_words: 30
+  # Group members as their names appear on arXiv (the PI is taken from author_names).
+  # Papers with these co-authors are announced as "New preprint with <names>".
+  members:
+    - Jintae Kim
+    - Akash Vijay
+    - Rishi Lohar
+    - Tai-Hsuan Yang
+    - Yuta Hirasaki
+    - Drew Kim
+    - Andrew D. Kim
+    - Bowen Shi
+    - Olumakinde Ogunnaike
+
+# ---------------------------------------------------------------------------
+# Thumbnails: Figure 1 of each paper, taken from its arXiv HTML version, saved
+# to assets/img/publication_preview/<arXiv id>.png (SVG figures are rasterised
+# when cairosvg is installed). Papers without an HTML version (roughly before
+# 2024) get none; drop your own <arXiv id>.png into that folder instead.
+# To replace a thumbnail, overwrite the file; to remove one, delete it and add
+# `preview: false` to the paper's overrides below.
+# ---------------------------------------------------------------------------
+previews:
+  enabled: true
+  max_per_run: 12              # be gentle with arXiv: at most this many downloads per run
+  max_bytes: 600000            # skip figures larger than this
+  png_width: 900
+
+# ---------------------------------------------------------------------------
 # Per-paper overrides, keyed by arXiv ID (quote the ID so YAML keeps it a string).
 # Any BibTeX field al-folio understands can go here, for example:
 #   selected: true          -> shown on the home page ("selected publications")
