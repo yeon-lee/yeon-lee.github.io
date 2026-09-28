@@ -8,6 +8,7 @@ nav_order: 1
 
 # One block per member. `content` points to a markdown file inside _pages/people/,
 # `image` to a photo inside assets/img/ (omit the line if there is no photo yet).
+# Photos are square 500x500 JPEGs; crop new ones the same way so the page stays even.
 # Add a block to add a member; move people to people/alumni.md when they leave.
 profiles:
   - align: right
@@ -43,7 +44,7 @@ profiles:
     more_info: >
       <p>Graduate Student</p>
   - align: right
-    image: people/yuta-hirasaki.jpg # 128 px from Google Scholar - replace with a larger photo when available
+    image: people/yuta-hirasaki.jpg
     content: people/yuta-hirasaki.md
     image_circular: false
     more_info: >
