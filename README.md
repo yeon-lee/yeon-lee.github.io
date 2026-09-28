@@ -16,7 +16,7 @@ arXiv automatically every night.
 | edit the bio                            | `_pages/bio.md` (text) · `assets/img/prof_pic.jpg` (photo)                                                                |
 | add / remove a group member             | `_pages/group.md` (one block per person) · `_pages/people/<name>.md` (their blurb) · `assets/img/people/<name>.jpg`       |
 | edit the research text                  | `_pages/research.md` (one `<section class="topic">` per direction)                                                        |
-| change the research map                 | `bin/make_research_map.py` (topics, keywords, positions) → run `python3 bin/make_research_map.py > _includes/research_map.svg` |
+| change the research map                 | `bin/make_research_map.py` (topics, keywords, positions) → `python3 bin/make_research_map.py --style glow > _includes/research_map.svg` and `--style cards > _includes/research_cards.html` (phone version); other styles: ink, radial, pastel |
 | mark a paper as *selected* (home page)  | `_data/arxiv.yml` → `overrides:` → `"<arXiv id>": {selected: true}`                                                       |
 | add a thumbnail to a paper              | drop `assets/img/publication_preview/<arXiv id>.png` (picked up automatically)                                            |
 | hide a paper / add a non-arXiv paper    | `_data/arxiv.yml` → `exclude:` / `_bibliography/manual.bib`                                                               |

@@ -1,0 +1,20 @@
+
+<style>
+.rmap.rcards{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:.8rem;margin:.5rem 0 .75rem;font-family:Georgia, "Times New Roman", Times, serif}
+@media (max-width:991.98px){.rmap.rcards{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:575.98px){.rmap.rcards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.rmap .rcard{display:block;color:inherit;text-decoration:none;border:1px solid rgba(0,0,0,.1);border-top:5px solid var(--tint);border-radius:6px;padding:.7rem .75rem .8rem;background:#fff;transition:box-shadow .15s ease,transform .15s ease,background .15s ease}
+.rmap .rcard:hover,.rmap .rcard:focus-visible{text-decoration:none;color:inherit;box-shadow:0 4px 14px rgba(0,0,0,.09);transform:translateY(-2px);outline:none}
+.rmap .rcard.is-active{background:var(--tint-light);border-color:var(--tint)}
+.rmap .rcard-title{font-weight:700;font-size:.98rem;line-height:1.25;margin-bottom:.55rem}
+.rmap .rcard-tags{display:flex;flex-wrap:wrap;gap:.3rem}
+.rmap .rcard-tags span{font-size:.76rem;line-height:1.2;padding:.18rem .45rem;border-radius:999px;background:#f1f2f4;color:#444}
+.rmap .rcard.is-active .rcard-tags span{background:#fff}
+</style>
+<div class="rmap rcards">
+<a class="rmap-node rcard" href="#information" data-topic="information" style="--tint:#8dd3c7;--tint-light:#eaf7f5"><div class="rcard-title">many-body physics of quantum information</div><div class="rcard-tags"><span>mixed-state phases</span><span>coherent information</span><span>decoherence</span><span>strong-to-weak SSB</span><span>entanglement bootstrap</span><span>toric code</span></div></a>
+<a class="rmap-node rcard" href="#error-correction" data-topic="error-correction" style="--tint:#fb8072;--tint-light:#fee8e6"><div class="rcard-title">quantum error correction</div><div class="rcard-tags"><span>quantum LDPC codes</span><span>fault tolerance</span><span>addressable logicals</span><span>error thresholds</span></div></a>
+<a class="rmap-node rcard" href="#dynamics" data-topic="dynamics" style="--tint:#fdb462;--tint-light:#fff2e3"><div class="rcard-title">non-equilibrium dynamics &amp; quantum control</div><div class="rcard-tags"><span>measurement-induced phases</span><span>Lindbladian dynamics</span><span>Floquet phases</span><span>Rydberg simulators</span></div></a>
+<a class="rmap-node rcard" href="#criticality" data-topic="criticality" style="--tint:#bebada;--tint-light:#f3f3f8"><div class="rcard-title">exotic quantum phases &amp; criticality</div><div class="rcard-tags"><span>deconfined criticality</span><span>spin liquids</span><span>gauge theories</span><span>symmetry-enriched topological order</span></div></a>
+<a class="rmap-node rcard" href="#topology" data-topic="topology" style="--tint:#80b1d3;--tint-light:#e8f1f7"><div class="rcard-title">topological bands &amp; correlated physics</div><div class="rcard-tags"><span>non-Hermitian topology</span><span>moiré materials</span><span>quantum Monte Carlo</span></div></a>
+</div>

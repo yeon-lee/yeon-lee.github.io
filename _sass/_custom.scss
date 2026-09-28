@@ -3,7 +3,8 @@
  *
  * 1. Serif typography (Georgia) instead of the theme's Roboto.
  * 2. Featured-work grid on the home page (_includes/featured.liquid).
- * 3. Clickable research map + collapsible topics (_pages/research.md).
+ * 3. Research map wrapper + collapsible topics (_pages/research.md); the map's
+ *    own look is embedded in _includes/research_map.svg by bin/make_research_map.py.
  ******************************************************************************/
 
 /* ---- 1. typography ------------------------------------------------------- */
@@ -143,66 +144,22 @@ h3 {
   display: block;
   width: 100%;
   height: auto;
-  font-family: $serif;
   user-select: none;
 }
 
-.rmap-edge {
-  stroke: #d4d4d4;
-  stroke-width: 1.2;
-  transition: stroke 0.15s ease;
+/* the SVG map is unreadable on a phone; show the topic cards instead */
+.rmap-mobile {
+  display: none;
 }
 
-.rmap-edge-hub {
-  stroke: #c4c4c4;
-  stroke-width: 1.4;
-  stroke-dasharray: 4 4;
-}
-
-.rmap-edge.is-active {
-  stroke: #8a8a8a;
-  stroke-width: 1.6;
-}
-
-.rmap-node {
-  cursor: pointer;
-  outline: none;
-
-  text {
-    fill: #222;
-    pointer-events: none;
+@media (max-width: 767.98px) {
+  .rmap-desktop {
+    display: none;
   }
 
-  rect {
-    transition:
-      filter 0.15s ease,
-      stroke 0.15s ease,
-      stroke-width 0.15s ease;
+  .rmap-mobile {
+    display: block;
   }
-
-  &:hover rect,
-  &:focus-visible rect {
-    filter: brightness(0.94);
-  }
-
-  &:focus-visible rect {
-    stroke: #222;
-    stroke-width: 2;
-  }
-}
-
-.rmap-sat text {
-  font-size: 14.5px;
-}
-
-.rmap-hub text {
-  font-size: 17px;
-  font-weight: 700;
-}
-
-.rmap-node.is-active rect {
-  stroke: #222;
-  stroke-width: 2;
 }
 
 .rmap-hint {
