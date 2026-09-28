@@ -4,7 +4,7 @@ permalink: /group/
 title: group
 description: current members and alumni of the Lee group
 nav: true
-nav_order: 1
+nav_order: 2
 
 # One block per member. `content` points to a markdown file inside _pages/people/,
 # `image` to a photo inside assets/img/ (omit the line if there is no photo yet).

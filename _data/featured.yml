@@ -1,0 +1,42 @@
+# Featured work shown on the home page (rendered by _includes/featured.liquid).
+# One block per card, in display order. Images live in assets/img/featured/ and
+# are 1200x800 (3:2) PNGs on a white background; crop new ones the same way so
+# the grid stays even. `link` can be an arXiv/DOI URL or a page on this site.
+# To add a card: add a block here and drop the image into assets/img/featured/.
+# To remove one: delete its block (the image can stay in the folder).
+
+- title: Ultra-high-rate quantum codes
+  caption: Design heuristics for quantum LDPC codes that store many logical qubits per physical qubit — a [[95,22,11]] code beats the distance-11 surface code at low error rates.
+  venue: arXiv 2026
+  link: https://arxiv.org/abs/2609.30069
+  image: ultra-high-rate-codes.png
+
+- title: Logical spectroscopy
+  caption: Lifted-product codes whose logical operators come with an addressable basis, obtained from the spectral decomposition of a group algebra.
+  venue: arXiv 2026
+  link: https://arxiv.org/abs/2607.05386
+  image: logical-spectroscopy.png
+
+- title: Topological mixed states
+  caption: An axiomatic, entanglement-bootstrap definition of phases of matter for mixed states, and what topological order means when a system decoheres.
+  venue: Phys. Rev. X (accepted)
+  link: https://arxiv.org/abs/2506.04221
+  image: topological-mixed-states.png
+
+- title: Error thresholds as phase transitions
+  caption: Exact coherent information of the toric code under decoherence pins down its fundamental error threshold as a genuine phase transition.
+  venue: Phys. Rev. Lett. 2025
+  link: https://arxiv.org/abs/2402.16937
+  image: coherent-information.png
+
+- title: Quantum criticality under decoherence
+  caption: How a critical ground state changes under decoherence or weak measurement, and the new universality classes that appear.
+  venue: PRX Quantum 2023
+  link: https://arxiv.org/abs/2301.05238
+  image: decohered-criticality.png
+
+- title: Hydrodynamics from Lindbladian spectra
+  caption: The low-energy spectrum of a Lindbladian encodes the emergent hydrodynamics of dissipative many-body systems, from diffusion to subdiffusion.
+  venue: Phys. Rev. Lett. 2023
+  link: https://doi.org/10.1103/PhysRevLett.131.220403
+  image: lindbladian-hydrodynamics.png

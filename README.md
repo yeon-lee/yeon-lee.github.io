@@ -11,9 +11,12 @@ arXiv automatically every night.
 
 | I want to…                              | Edit…                                                                                                                     |
 | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| change the bio / home page              | `_pages/about.md` (text) · `assets/img/prof_pic.jpg` (photo)                                                              |
+| edit the home page text                 | `_pages/about.md`                                                                                                         |
+| change the *featured work* cards        | `_data/featured.yml` (one block per card) · `assets/img/featured/<name>.png` (1200×800, white background)                 |
+| edit the bio                            | `_pages/bio.md` (text) · `assets/img/prof_pic.jpg` (photo)                                                                |
 | add / remove a group member             | `_pages/group.md` (one block per person) · `_pages/people/<name>.md` (their blurb) · `assets/img/people/<name>.jpg`       |
-| edit the research page                  | `_pages/research.md`                                                                                                      |
+| edit the research text                  | `_pages/research.md` (one `<section class="topic">` per direction)                                                        |
+| change the research map                 | `bin/make_research_map.py` (topics, keywords, positions) → run `python3 bin/make_research_map.py > _includes/research_map.svg` |
 | mark a paper as *selected* (home page)  | `_data/arxiv.yml` → `overrides:` → `"<arXiv id>": {selected: true}`                                                       |
 | add a thumbnail to a paper              | drop `assets/img/publication_preview/<arXiv id>.png` (picked up automatically)                                            |
 | hide a paper / add a non-arXiv paper    | `_data/arxiv.yml` → `exclude:` / `_bibliography/manual.bib`                                                               |
@@ -23,6 +26,7 @@ arXiv automatically every night.
 | write a note / blog post                | new file `_posts/YYYY-MM-DD-title.md` (copy `2026-09-27-new-website.md`)                                                  |
 | change contact / social icons           | `_data/socials.yml`                                                                                                       |
 | site title, description, colours, flags | `_config.yml`                                                                                                             |
+| fonts, featured grid, map styling       | `_sass/_custom.scss` (loaded last by `assets/css/main.scss`)                                                              |
 
 Do **not** edit `_bibliography/papers.bib` — it is generated and will be overwritten (see below).
 
@@ -82,6 +86,12 @@ Or with Ruby ≥ 3.3: `bundle install && bundle exec jekyll serve` → <http://l
 al-folio v1 keeps all layouts in versioned gems, so upgrading is a matter of bumping the `al_*` gem
 versions in `Gemfile` (they must match the `plugins:` list in `_config.yml`). `bundle exec al-folio upgrade audit`
 reports what would change. See the [al-folio docs](https://github.com/alshedivat/al-folio/tree/main/docs).
+
+Two theme files are overridden locally on purpose: `assets/css/main.scss` (a copy of the gem's file plus
+`@use "custom";`, which pulls in `_sass/_custom.scss` for the serif font, featured grid and research map) and
+`_includes/featured.liquid` / `_includes/research_map*.{liquid,svg}` (site-specific includes, not in the
+theme). After bumping `al_folio_core`, re-copy its `assets/css/main.scss` and re-add the `@use "custom";` line
+if the upgrade audit flags it.
 
 ## License
 

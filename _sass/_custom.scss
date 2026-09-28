@@ -1,0 +1,281 @@
+/*******************************************************************************
+ * Site-specific styles (loaded last from assets/css/main.scss).
+ *
+ * 1. Serif typography (Georgia) instead of the theme's Roboto.
+ * 2. Featured-work grid on the home page (_includes/featured.liquid).
+ * 3. Clickable research map + collapsible topics (_pages/research.md).
+ ******************************************************************************/
+
+/* ---- 1. typography ------------------------------------------------------- */
+
+$serif: Georgia, "Times New Roman", Times, serif;
+
+body,
+.navbar,
+.navbar .nav-link,
+.navbar-brand,
+.post-title,
+.post-description,
+.desc,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.footer,
+.publications,
+.news,
+.profiles,
+.table {
+  font-family: $serif;
+}
+
+body {
+  line-height: 1.6;
+}
+
+.post .post-header .post-title,
+.post .post-header .post-description,
+.post .post-header .desc {
+  font-family: $serif;
+}
+
+h2,
+h3 {
+  letter-spacing: 0.005em;
+}
+
+/* ---- 2. featured-work grid ---------------------------------------------- */
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin: 0.5rem 0 2rem;
+}
+
+@media (max-width: 767.98px) {
+  .featured-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 575.98px) {
+  .featured-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.featured-card {
+  display: flex;
+  flex-direction: column;
+  color: inherit;
+  text-decoration: none;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--global-card-bg-color);
+  transition:
+    box-shadow 0.15s ease,
+    transform 0.15s ease;
+
+  &:hover,
+  &:focus {
+    color: inherit;
+    text-decoration: none;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.09);
+    transform: translateY(-2px);
+  }
+
+  &:hover .featured-title {
+    text-decoration: underline;
+  }
+}
+
+.featured-img {
+  background: #fff;
+  border-bottom: 1px solid var(--global-divider-color);
+
+  figure {
+    margin: 0;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 2;
+    object-fit: contain;
+  }
+}
+
+.featured-body {
+  padding: 0.7rem 0.85rem 0.85rem;
+}
+
+.featured-title {
+  font-weight: 700;
+  font-size: 1.02rem;
+  line-height: 1.3;
+  margin-bottom: 0.3rem;
+}
+
+.featured-caption {
+  font-size: 0.88rem;
+  line-height: 1.45;
+  color: var(--global-text-color-light);
+}
+
+.featured-venue {
+  margin-top: 0.45rem;
+  font-size: 0.8rem;
+  color: var(--global-theme-color);
+}
+
+/* ---- 3. research map ---------------------------------------------------- */
+
+.rmap-wrap {
+  margin: 0.25rem 0 0.5rem;
+}
+
+.rmap {
+  display: block;
+  width: 100%;
+  height: auto;
+  font-family: $serif;
+  user-select: none;
+}
+
+.rmap-edge {
+  stroke: #d4d4d4;
+  stroke-width: 1.2;
+  transition: stroke 0.15s ease;
+}
+
+.rmap-edge-hub {
+  stroke: #c4c4c4;
+  stroke-width: 1.4;
+  stroke-dasharray: 4 4;
+}
+
+.rmap-edge.is-active {
+  stroke: #8a8a8a;
+  stroke-width: 1.6;
+}
+
+.rmap-node {
+  cursor: pointer;
+  outline: none;
+
+  text {
+    fill: #222;
+    pointer-events: none;
+  }
+
+  rect {
+    transition:
+      filter 0.15s ease,
+      stroke 0.15s ease,
+      stroke-width 0.15s ease;
+  }
+
+  &:hover rect,
+  &:focus-visible rect {
+    filter: brightness(0.94);
+  }
+
+  &:focus-visible rect {
+    stroke: #222;
+    stroke-width: 2;
+  }
+}
+
+.rmap-sat text {
+  font-size: 14.5px;
+}
+
+.rmap-hub text {
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.rmap-node.is-active rect {
+  stroke: #222;
+  stroke-width: 2;
+}
+
+.rmap-hint {
+  font-size: 0.85rem;
+  color: var(--global-text-color-light);
+  margin: 0 0 1rem;
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+  }
+}
+
+/* collapsible topics: bodies are hidden only once the script has run */
+.topic {
+  border-top: 1px solid var(--global-divider-color);
+  scroll-margin-top: 72px;
+
+  > h2 {
+    margin: 0;
+    padding: 0.85rem 0;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+
+    &::before {
+      content: "";
+      flex: none;
+      width: 0.8rem;
+      height: 0.8rem;
+      border-radius: 50%;
+      background: var(--tint, #ccc);
+      border: 1px solid rgba(0, 0, 0, 0.15);
+    }
+  }
+}
+
+.js-topics .topic {
+  > h2 {
+    cursor: pointer;
+
+    &::after {
+      content: "+";
+      margin-left: auto;
+      font-weight: 400;
+      color: var(--global-text-color-light);
+      font-size: 1.4rem;
+      line-height: 1;
+    }
+  }
+
+  &.is-open > h2::after {
+    content: "−";
+  }
+
+  .topic-body {
+    display: none;
+  }
+
+  &.is-open .topic-body {
+    display: block;
+  }
+}
+
+.topic-body {
+  padding-bottom: 1rem;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.topic:last-of-type {
+  border-bottom: 1px solid var(--global-divider-color);
+}

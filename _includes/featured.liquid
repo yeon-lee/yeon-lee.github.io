@@ -1,0 +1,24 @@
+{%- comment -%}
+  Featured-work grid for the home page. Reads _data/featured.yml (or a list
+  passed as include.items). Images are expected in assets/img/featured/.
+{%- endcomment -%}
+{% assign items = include.items | default: site.data.featured %}
+<div class="featured-grid">
+  {% for item in items %}
+    {% assign img_path = item.image | prepend: 'assets/img/featured/' %}
+    <a
+      class="featured-card"
+      href="{% if item.link contains '://' %}{{ item.link }}{% else %}{{ item.link | relative_url }}{% endif %}"
+      {% if item.link contains '://' %}target="_blank" rel="external nofollow noopener"{% endif %}
+    >
+      <div class="featured-img">
+        {% include figure.liquid path=img_path alt=item.title sizes="(min-width: 930px) 290px, (min-width: 576px) 45vw, 95vw" %}
+      </div>
+      <div class="featured-body">
+        <div class="featured-title">{{ item.title }}</div>
+        {% if item.caption %}<div class="featured-caption">{{ item.caption }}</div>{% endif %}
+        {% if item.venue %}<div class="featured-venue">{{ item.venue }}</div>{% endif %}
+      </div>
+    </a>
+  {% endfor %}
+</div>

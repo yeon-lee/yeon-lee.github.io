@@ -23,5 +23,10 @@ module.exports = {
     // and page chrome (scroll-progress bar, ToC) bleeds through a zoomed image.
     "medium-zoom-overlay",
     "medium-zoom-image--opened",
+    // research map / collapsible topics (_includes/research_map.liquid): these
+    // classes are toggled by script, so they are not in the static HTML.
+    "js-topics",
+    "is-open",
+    "is-active",
   ],
 };
