@@ -58,6 +58,32 @@ max_results: 1000
 # Setting a field to `false` or `null` removes it.
 # ---------------------------------------------------------------------------
 overrides:
+  # --- journal references that arXiv does not know about (from the CV) ---
+  "2304.13028":
+    abbr: PRL
+    journal: Phys. Rev. Lett.
+    volume: "131"
+    pages: "220403"
+    year: "2023"
+    doi: 10.1103/PhysRevLett.131.220403
+    html: https://doi.org/10.1103/PhysRevLett.131.220403
+    dimensions: true
+  "2105.12112":
+    abbr: PRX
+    journal: Phys. Rev. X
+    volume: "12"
+    pages: "011061"
+    year: "2022"
+    doi: 10.1103/PhysRevX.12.011061
+    html: https://doi.org/10.1103/PhysRevX.12.011061
+    dimensions: true
+  "2506.04221":
+    abbr: PRX
+    journal: Phys. Rev. X (accepted)
+  "1812.10490":
+    award: Editors' Suggestion
+    award_name: PRB Editors' Suggestion
+  # --- selected papers (shown on the home page) ---
   "2609.30069":
     selected: true
   "2607.05386":

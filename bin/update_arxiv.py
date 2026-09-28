@@ -413,7 +413,10 @@ def build_fields(rec: dict, cfg: dict) -> dict:
     fields["bibtex_show"] = "true"
 
     # user overrides win over everything derived above
-    for k, v in (cfg["overrides"].get(rec["arxiv_id"]) or {}).items():
+    ov = cfg["overrides"].get(rec["arxiv_id"]) or {}
+    if "year" in ov and "month" not in ov:
+        fields.pop("month", None)  # the arXiv month would not match an overridden (journal) year
+    for k, v in ov.items():
         if v is None or v is False or v == "":
             fields.pop(k, None)
         elif v is True:

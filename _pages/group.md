@@ -7,7 +7,8 @@ nav: true
 nav_order: 1
 
 # One block per member. `content` points to a markdown file inside _pages/people/,
-# `image` to a photo inside assets/img/. Add a block to add a member.
+# `image` to a photo inside assets/img/ (omit the line if there is no photo yet).
+# Add a block to add a member; move people to people/alumni.md when they leave.
 profiles:
   - align: right
     image: prof_pic.jpg
@@ -18,8 +19,7 @@ profiles:
       <p>Office: ESB 3113</p>
       <p>jongyeon [at] illinois.edu</p>
   - align: right
-    image: people/bowen-shi.jpg
-    content: people/bowen-shi.md
+    content: people/jintae-kim.md
     image_circular: false
     more_info: >
       <p>Postdoctoral Fellow</p>
@@ -38,6 +38,16 @@ profiles:
   - align: right
     image: people/tai-hsuan-yang.jpg
     content: people/tai-hsuan-yang.md
+    image_circular: false
+    more_info: >
+      <p>Graduate Student</p>
+  - align: right
+    content: people/yuta-hirasaki.md
+    image_circular: false
+    more_info: >
+      <p>Graduate Student</p>
+  - align: right
+    content: people/drew-kim.md
     image_circular: false
     more_info: >
       <p>Graduate Student</p>

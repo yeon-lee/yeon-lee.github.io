@@ -5,7 +5,8 @@
 #     assets/rendercv/rendercv_output/Jong_Yeon_Lee_CV.pdf on every push that
 #     touches this file (that is the PDF button on the CV page).
 # Section names are free-form; "Education" and "Experience" get special
-# formatting, everything else renders as a simple list.
+# formatting, everything else renders as a simple list (bullet or label/details).
+# Keep private details (phone, date of birth) out of this file - it is public.
 # ---------------------------------------------------------------------------
 cv:
   name: Jong Yeon Lee
@@ -26,13 +27,25 @@ cv:
       - company: University of Illinois Urbana-Champaign
         position: Assistant Professor, Department of Physics
         location: Urbana, IL
-        start_date: 2023
+        start_date: 2024
         end_date: present
-      - company: Kavli Institute for Theoretical Physics, UC Santa Barbara
-        position: Moore Postdoctoral Fellow
+        highlights:
+          - Anthony Leggett Institute of Condensed Matter Theory
+          - Illinois Quantum Information Science and Technology Center (IQUIST)
+      - company: University of California, Berkeley
+        position: Research Scholar
+        location: Berkeley, CA
+        start_date: 2023
+        end_date: 2024
+        highlights:
+          - "Host: Ehud Altman"
+      - company: Kavli Institute for Theoretical Physics
+        position: Gordon and Betty Moore Postdoctoral Fellow
         location: Santa Barbara, CA
         start_date: 2020
         end_date: 2023
+        highlights:
+          - "Hosts: Matthew Fisher and Cenke Xu"
 
     Education:
       - institution: Harvard University
@@ -42,28 +55,95 @@ cv:
         start_date: 2015
         end_date: 2020
         highlights:
-          - "Advisor: Ashvin Vishwanath"
+          - "Advisor: Ashvin Vishwanath; thesis committee: Subir Sachdev and Philip Kim"
+          - "Thesis: *Fractionalization, Emergent Gauge Dynamics, and Topology in Quantum Matter*"
       - institution: California Institute of Technology
-        area: Physics
-        degree: BS
+        area: Physics and Mathematics
+        degree: BS/MS
         location: Pasadena, CA
         start_date: 2011
         end_date: 2015
         highlights:
-          - "Advisor: John Preskill"
+          - "Academic advisor: John Preskill"
+          - Rank 2 of 239
 
-    Research Interests:
-      - bullet: Many-body physics of quantum information; decoherence-induced phases and transitions
-      - bullet: Quantum error correction and high-rate quantum LDPC codes
-      - bullet: Non-equilibrium dynamics, measurement-induced phenomena, and quantum control
-      - bullet: Topological band theory and correlated moiré materials
-      - bullet: Exotic quantum phases and quantum criticality
+    Awards and Honors:
+      - label: "2026"
+        details: Microsoft Quantum Pioneer Award
+      - label: "2026"
+        details: KSEA Young Investigator Grant Award
+      - label: "2025–2028"
+        details: IBM-IIDAI Research Grant
+      - label: "2022"
+        details: Outstanding Young Researcher Award (for outstanding achievements by junior Korean physicists)
+      - label: "2020–2023"
+        details: Gordon and Betty Moore Fellowship, Kavli Institute of Theoretical Physics
+      - label: "2015"
+        details: Richard P. Feynman Prize in Theoretical Physics, Caltech (awarded annually to a senior who has demonstrated excellence in theoretical physics)
+      - label: "2011–2015"
+        details: Korean Presidential Scholarship (granted annually to exceptional students from Korea to study abroad)
+      - label: "2011"
+        details: Physics Research Tutorial Fellowship, Caltech (granted annually to a small group of freshmen)
+      - label: "2007"
+        details: International Astronomy Olympiad, Gold Medal (top place)
 
-    Invited Talks:
-      - bullet: "*Many-body Physics of Information: from novel symmetry breaking to topological mixed states*, KITP, Santa Barbara, September 2, 2025. [Recording](https://online.kitp.ucsb.edu/online/stablephases25/lee/)"
-
-    Organized Events:
-      - bullet: "Organizer, [Quantum Information and Dynamics 2025](http://events.kias.re.kr/h/QID2025/), Seoul, Korea, June 23–27, 2025."
+    Service:
+      - bullet: "Organizer, [Quantum Information and Dynamics 2026: qLDPC theory and applications](https://symposia.kias.re.kr/QID2026)"
+      - bullet: "Organizer, [Quantum Information and Dynamics 2025: Non-equilibrium Physics](http://events.kias.re.kr/h/QID2025/), Seoul, June 23–27, 2025"
+      - bullet: "Organizer, IQUIST seminar, 2025–2026"
+      - bullet: "Organizer, Institute of Condensed Matter Theory seminar, 2025–2026"
+      - bullet: "Faculty hiring committee for Quantum Information Theory, 2025–26"
+      - bullet: "Organizer, UIUC–UChicago joint workshop, 2025"
+      - bullet: "Referee for *Science*, *Nature*, *Physical Review Letters*, *Physical Review X*, *PRX Quantum*, *Physical Review A*, *Physical Review B*, and *Physical Review E*"
+      - bullet: "Editorial Advisory Board member, APS Open Science"
 
     Teaching:
-      - bullet: "Physics 598 — Many-Body Physics of Information, University of Illinois Urbana-Champaign, Spring 2025."
+      - bullet: "Physics 598 — Many-Body Physics of Information, University of Illinois Urbana-Champaign, Spring 2025"
+
+    Invited Talks:
+      - bullet: "Microsoft Quantum Pioneer Forum, Aug 14, 2026"
+      - bullet: "Yukawa Institute for Theoretical Physics, [Emergent Phenomena in Quantum Matter: From Symmetry to Dynamics](https://indico.yukawa.kyoto-u.ac.jp/event/92/), Jun 30, 2026"
+      - bullet: "Yukawa Institute for Theoretical Physics, [Thermalization and Hydrodynamics](https://indico.yukawa.kyoto-u.ac.jp/event/86/overview), Jun 4, 2026"
+      - bullet: "Simons Center for Geometry and Physics, [Bridging Classic and Contemporary Perspectives on Open Quantum Systems](https://scgp.stonybrook.edu/archives/45381), May 6, 2026"
+      - bullet: "KITP Conference, [Frontiers of Programmable Quantum Dynamics](https://www.kitp.ucsb.edu/activities/finestructure-c25), Oct 30, 2025"
+      - bullet: "Condensed Matter Seminar, California Institute of Technology, Oct 27, 2025"
+      - bullet: "[Ultra Quantum Matter Simons Workshop](https://chicago-workshop.github.io/timetable/), Chicago, Jun 2–3, 2025"
+      - bullet: "Q-farm Seminar, Stanford University, Apr 12, 2025"
+      - bullet: "Kadanoff Seminar, University of Chicago, Feb 24, 2025"
+      - bullet: "Condensed Matter Theory Seminar, Texas A&M University, Feb 14, 2025"
+      - bullet: "Condensed Matter Seminar, University of Texas at Austin, Feb 13, 2025"
+      - bullet: "[Focus Week on Non-equilibrium Quantum Dynamics](https://indico.ipmu.jp/event/432/timetable/#20240930), Kavli IPMU, University of Tokyo, Oct 3, 2024"
+      - bullet: "Simons Center Program, [Non-Hermitian Topology, Geometry and Symmetry across Physical Platforms](https://scgp.stonybrook.edu/archives/42483), Sep 20, 2024"
+      - bullet: "[KIAS Summer School in Quantum Information](http://events.kias.re.kr/h/KIASQI24/), Aug 12, 2024"
+      - bullet: "[Chez Pierre Seminar](https://physics.mit.edu/wp-content/uploads/2024/05/JongYeon-Lee-Chez-Pierre_announcement-poster-copy.pdf), MIT, May 22, 2024"
+      - bullet: "KIAS-IBS-PCS Workshop on Correlation and Topology in Quantum Matter, Dec 18–21, 2023"
+      - bullet: "New Horizons in Condensed Matter Physics 2023, Nov 3–5, 2023"
+      - bullet: "US-Korea Conference 2023 on Science, Technology, and Entrepreneurship, Aug 5, 2023"
+      - bullet: "Quantum Colloquium, Korea University, May 17, 2023"
+      - bullet: "Special Seminar, Korea Institute for Advanced Study, May 10, 2023"
+      - bullet: "Special Seminar, Pohang University of Science and Technology, May 9, 2023"
+      - bullet: "Special Seminar, Seoul National University, May 4, 2023"
+      - bullet: "Special Seminar, Binghamton University, Mar 3, 2023"
+      - bullet: "Quantum Information Seminar, Purdue University, Feb 23, 2023"
+      - bullet: "Special Seminar, University of Pittsburgh, Feb 21, 2023"
+      - bullet: "Special Condensed Matter Physics Seminar, Northwestern University, Feb 15, 2023"
+      - bullet: "Physics and Astronomy Colloquium, Rice University, Feb 13, 2023"
+      - bullet: "Institute of Condensed Matter Physics Seminar, UIUC, Feb 9, 2023"
+      - bullet: "IQUIST Seminar, UIUC, Feb 7, 2023"
+      - bullet: "KAIX Future of Physics Workshop, Dec 27, 2022"
+      - bullet: "KITP Program: Noisy Intermediate-Scale Quantum Systems, Sep 22, 2022"
+      - bullet: "Condensed Matter Seminar, Caltech, Sep 7, 2022"
+      - bullet: "Gordon Research Seminar: Correlated Electron Systems, Jun 26, 2022"
+      - bullet: "AKPA-KPS Symposium, May 15, 2022"
+      - bullet: "Physics Colloquium, Carnegie Mellon University, Feb 7, 2022"
+      - bullet: "Correlated Electrons Virtual International Seminars (CEVIS), May 27, 2021"
+      - bullet: "Center of Mathematical Sciences and Applications, Apr 1, 2020"
+      - bullet: "Condensed Matter Seminar, Institute of Solid State Physics, Japan, Jan 17, 2020"
+      - bullet: "Microsoft Quantum Research Institute, Oct 22, 2019"
+      - bullet: "The 3rd EPiQS-TMS Alliance Workshop on Topological Phenomena in Quantum Materials (TPQM2019), Oct 21, 2019"
+      - bullet: "The 5th Conference on Condensed Matter Physics (CCMP-2019), China, invited session, Jun 29, 2019"
+      - bullet: "Invited Seminar, Perimeter Institute for Theoretical Physics, Apr 16, 2019"
+      - bullet: "Condensed Matter Physics Seminar, Korea Institute for Advanced Study, Jan 11, 2019"
+      - bullet: "Condensed Matter Physics Seminar, Korea Advanced Institute of Science and Technology (KAIST), Jan 7, 2019"
+      - bullet: "Condensed Matter Seminar, Institute of Solid State Physics, Japan, Dec 18, 2018"
+      - bullet: "Condensed Matter Seminar, MIT, Sep 17, 2018"
