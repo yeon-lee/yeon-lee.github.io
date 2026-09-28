@@ -49,6 +49,7 @@ profiles:
     more_info: >
       <p>Graduate Student</p>
   - align: right
+    image: people/drew-kim.jpg
     content: people/drew-kim.md
     image_circular: false
     more_info: >
