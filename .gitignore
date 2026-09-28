@@ -22,3 +22,6 @@ __pycache__/
 
 # scratch folder for files Claude could not delete (safe to remove)
 _to_delete/
+
+# Files the Claude desktop app drops into the connected folder
+Claude outputs/
