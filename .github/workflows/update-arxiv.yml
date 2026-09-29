@@ -61,6 +61,8 @@ jobs:
             echo "No changes." >> "$GITHUB_STEP_SUMMARY"
           else
             git commit -m "chore: update publications from arXiv"
+            # another bot (CV render / arXiv sync) may have pushed meanwhile: rebase, then push
+            git pull --rebase origin "${{ github.ref_name }}"
             git push
             echo "changed=true" >> "$GITHUB_OUTPUT"
             echo "Updated:" >> "$GITHUB_STEP_SUMMARY"

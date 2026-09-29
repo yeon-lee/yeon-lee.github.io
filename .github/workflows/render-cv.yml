@@ -60,6 +60,8 @@ jobs:
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             git commit -m "chore: render the latest CV"
+            # another bot (CV render / arXiv sync) may have pushed meanwhile: rebase, then push
+            git pull --rebase origin "${{ github.ref_name }}"
             git push
             echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
