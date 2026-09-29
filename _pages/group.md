@@ -25,36 +25,42 @@ profiles:
     image_circular: false
     more_info: >
       <p>Postdoctoral Fellow</p>
+      <p>jintae [at] illinois.edu</p>
   - align: right
     image: people/akash-vijay.jpg
     content: people/akash-vijay.md
     image_circular: false
     more_info: >
       <p>Graduate Student</p>
+      <p>akashv2 [at] illinois.edu</p>
   - align: right
     image: people/rishi-lohar.jpg
     content: people/rishi-lohar.md
     image_circular: false
     more_info: >
       <p>Graduate Student</p>
+      <p>rishil2 [at] illinois.edu</p>
   - align: right
     image: people/tai-hsuan-yang.jpg
     content: people/tai-hsuan-yang.md
     image_circular: false
     more_info: >
       <p>Graduate Student</p>
+      <p>ty39 [at] illinois.edu</p>
   - align: right
     image: people/yuta-hirasaki.jpg
     content: people/yuta-hirasaki.md
     image_circular: false
     more_info: >
       <p>Graduate Student</p>
+      <p>yutah2 [at] illinois.edu</p>
   - align: right
     image: people/drew-kim.jpg
     content: people/drew-kim.md
     image_circular: false
     more_info: >
       <p>Graduate Student</p>
+      <p>adk7 [at] illinois.edu</p>
   - align: right
     content: people/alumni.md
 ---
