@@ -43,7 +43,11 @@ jobs:
             echo "Missing RenderCV config file!"
             exit 1
           fi
-          rendercv render $cv_file --settings $settings
+          # RenderCV 2.x reads the design/locale files only from these flags (the
+          # `design:` key inside settings.yaml is ignored), so pass them explicitly.
+          design=$(find $rendercv_dir -maxdepth 1 -type f \( -name "design.yaml" -o -name "design.yml" \))
+          locale=$(find $rendercv_dir -maxdepth 1 -type f \( -name "locale.yaml" -o -name "locale.yml" \))
+          rendercv render $cv_file --settings $settings ${design:+--design $design} ${locale:+--locale-catalog $locale}
           rm -f assets/rendercv/rendercv_output/*.typ
       - name: Upload rendercv_output as an artifact
         uses: actions/upload-artifact@v4
