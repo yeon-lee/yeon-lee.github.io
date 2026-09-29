@@ -5,3 +5,8 @@ design:
     size: a4
     show_footer: false
     show_top_note: false
+  entries:
+    # Let long bullet lists (the invited talks) continue across pages instead of
+    # being kept together, which pushed the whole list to a new page and left the
+    # "Invited Talks" heading alone on an otherwise empty page.
+    allow_page_break: true
