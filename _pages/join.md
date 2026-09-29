@@ -19,10 +19,6 @@ Prospective Ph.D. students apply to the [Illinois Physics graduate program](http
 
 Openings are announced here and on the usual job boards when they are available. If you are interested in a postdoctoral position, email Jong Yeon with a CV and a short description of your research interests. Illinois also has several fellowship programs (through IQUIST and the Anthony Leggett Institute of Condensed Matter Theory, among others); we are happy to support strong candidates who wish to apply.
 
-## undergraduates
-
-Illinois undergraduates interested in research should email Jong Yeon with a transcript, the physics and math courses they have taken, and what they would like to learn. Projects typically start with a reading course or a small numerical study.
-
 ## what to send
 
 A CV, a paragraph on what you would like to work on, and (for postdocs) the names of two or three references, to jongyeon [at] illinois.edu.
