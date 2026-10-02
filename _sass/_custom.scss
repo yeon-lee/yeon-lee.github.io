@@ -166,7 +166,7 @@ h3 {
 .rmap-hint {
   font-size: 0.85rem;
   color: var(--global-text-color-light);
-  margin: 0.25rem 0 90pt; /* breathing room between the map and the topic list */
+  margin: 18pt 0 90pt; /* a little below the map; lots of room before the topic list */
 
   a {
     color: inherit;
@@ -268,5 +268,31 @@ h3 {
 /* keep "netid [at] illinois.edu" on one line in the narrower photo column */
 .post .post article > .profile .more-info {
   font-size: 0.9rem;
+}
+
+/* "Recent papers" under each group member (_includes/member_papers.liquid) */
+.member-papers {
+  margin-top: 0.9rem;
+}
+
+.member-papers-title {
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
+}
+
+.member-papers ul {
+  padding-left: 1.1rem;
+  margin-bottom: 0;
+}
+
+.member-papers li {
+  font-size: 0.92rem;
+  line-height: 1.45;
+  margin-bottom: 0.25rem;
+}
+
+.member-paper-venue {
+  color: var(--global-text-color-light);
 }
 

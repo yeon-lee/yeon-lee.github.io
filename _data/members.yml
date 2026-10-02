@@ -1,0 +1,40 @@
+# Group members' "Recent papers" on the group page.
+#
+# bin/update_arxiv.py (nightly GitHub Action) searches arXiv for each name below
+# and writes the member's three most recent papers to _data/member_papers.yml,
+# which _includes/member_papers.liquid shows under the member's blurb.
+#
+#   key          -> must match the person's file name in _pages/people/ (without .md)
+#   arxiv_names  -> the spellings the person uses on arXiv (all are searched; a
+#                   paper counts only if one of these appears in its author list)
+#   exclude      -> arXiv IDs that belong to someone else with the same name
+#   count        -> how many papers to show (default 3)
+#
+# Papers are limited to the physics categories in _data/arxiv.yml. To add a
+# member, add a block here and `{% include member_papers.liquid key="..." %}`
+# at the end of their _pages/people/<key>.md. Google Scholar links live in
+# _pages/group.md (more_info under each photo).
+
+jintae-kim:
+  arxiv_names: [Jintae Kim]
+  exclude: []
+
+akash-vijay:
+  arxiv_names: [Akash Vijay]
+  exclude: []
+
+rishi-lohar:
+  arxiv_names: [Rishi P. Lohar, Rishi Lohar]
+  exclude: []
+
+tai-hsuan-yang:
+  arxiv_names: [Tai-Hsuan Yang, Tai Hsuan Yang]
+  exclude: []
+
+yuta-hirasaki:
+  arxiv_names: [Yuta Hirasaki]
+  exclude: []
+
+drew-kim:
+  arxiv_names: [Andrew D. Kim, Drew Kim]
+  exclude: []

@@ -62,6 +62,8 @@ OUTPUT_PATH = ROOT / "_bibliography" / "papers.bib"
 MANUAL_PATH = ROOT / "_bibliography" / "manual.bib"
 PREVIEW_DIR = ROOT / "assets" / "img" / "publication_preview"
 NEWS_DIR = ROOT / "_news"
+MEMBERS_PATH = ROOT / "_data" / "members.yml"
+MEMBER_PAPERS_PATH = ROOT / "_data" / "member_papers.yml"
 HTML_URL = "https://arxiv.org/html/"
 ANTHROPIC_URL = "https://api.anthropic.com/v1/messages"
 
@@ -678,6 +680,167 @@ def fetch_previews(ordered: list[dict], cfg: dict, dry_run: bool) -> int:
 
 
 # --------------------------------------------------------------------------- #
+# group members' recent papers (_data/members.yml -> _data/member_papers.yml)
+# --------------------------------------------------------------------------- #
+DOI_PHYSREV_RE = re.compile(r"^10\.1103/(PhysRev[A-Za-z]*|RevModPhys)\.(\d+)\.(\d+)$")
+PHYSREV_NAMES = {
+    "PhysRevLett": "Phys. Rev. Lett.", "PhysRevX": "Phys. Rev. X", "PhysRevB": "Phys. Rev. B",
+    "PhysRevA": "Phys. Rev. A", "PhysRevE": "Phys. Rev. E", "PhysRevD": "Phys. Rev. D",
+    "PhysRevResearch": "Phys. Rev. Research", "PhysRevApplied": "Phys. Rev. Applied",
+    "PRXQuantum": "PRX Quantum", "RevModPhys": "Rev. Mod. Phys.",
+}
+
+
+def load_members() -> dict:
+    if not MEMBERS_PATH.exists():
+        return {}
+    with MEMBERS_PATH.open(encoding="utf-8") as fh:
+        raw = yaml.safe_load(fh) or {}
+    members = {}
+    for key, m in raw.items():
+        m = m or {}
+        names = [n for n in (m.get("arxiv_names") or []) if n]
+        if not names:
+            continue
+        members[str(key)] = {
+            "names": names,
+            "exclude": {strip_version(str(x)) for x in (m.get("exclude") or [])},
+            "count": int(m.get("count") or 3),
+        }
+    return members
+
+
+def member_venue(rec: dict, cfg: dict) -> str:
+    """Journal reference for display: site override > arXiv journal-ref > Phys. Rev. DOI > 'arXiv:<id>'."""
+    ov = cfg["overrides"].get(rec["arxiv_id"]) or {}
+    if ov.get("journal") and "accepted" not in str(ov["journal"]).lower():
+        parts = str(ov["journal"])
+        if ov.get("volume"):
+            parts += f" {ov['volume']}"
+        if ov.get("pages"):
+            parts += f", {ov['pages']}"
+        if ov.get("year"):
+            parts += f" ({ov['year']})"
+        return parts
+    if rec.get("journal_ref"):
+        return " ".join(str(rec["journal_ref"]).split())
+    m = DOI_PHYSREV_RE.match(rec.get("doi") or "")
+    if m:
+        return f"{PHYSREV_NAMES.get(m.group(1), m.group(1))} {m.group(2)}, {m.group(3)}"
+    return f"arXiv:{rec['arxiv_id']}"
+
+
+def member_entry(rec: dict, cfg: dict) -> dict:
+    return {
+        "id": rec["arxiv_id"],
+        "title": rec["title"],
+        "venue": member_venue(rec, cfg),
+        "date": rec.get("submitted") or rec.get("published") or "",
+        "url": f"https://arxiv.org/abs/{rec['arxiv_id']}",
+        "authors": rec["authors"],
+        "primary": rec.get("primary_category", ""),
+    }
+
+
+def entry_to_member_rec(e: dict) -> dict:
+    """Turn a cached member_papers.yml entry back into the minimal record shape."""
+    return {
+        "arxiv_id": str(e["id"]), "title": e["title"], "authors": e.get("authors") or [],
+        "submitted": str(e.get("date") or ""), "published": str(e.get("date") or ""),
+        "primary_category": e.get("primary") or "", "journal_ref": None, "doi": None,
+        "_venue": e.get("venue"),
+    }
+
+
+def member_candidate_ids(names: list[str], api_ok: bool) -> tuple[list[str], dict[str, dict]]:
+    """arXiv IDs (newest first) for a member, plus any full records the API returned."""
+    recs: dict[str, dict] = {}
+    if api_ok:
+        query = " OR ".join(f'au:"{n}"' for n in names)
+        for e in query_arxiv(query, 30):
+            r = entry_to_record(e)
+            recs[r["arxiv_id"]] = r
+        ids = list(recs)
+    else:
+        ids = []
+        for n in names:
+            last, first = split_name(n)
+            for i in search_author_ids(f"{last}, {first}", 30):
+                if i not in ids:
+                    ids.append(i)
+            time.sleep(OAI_DELAY_SECONDS)
+    # new-style IDs sort chronologically (YYMM.NNNNN)
+    ids.sort(key=lambda i: tuple(int(x) for x in re.findall(r"\d+", i)[:2]) if re.match(r"\d{4}\.\d{4,5}$", i) else (0, 0), reverse=True)
+    return ids, recs
+
+
+def update_member_papers(cfg: dict, pi_records: dict[str, dict], api_ok: bool, seed: list[dict] | None, dry_run: bool) -> int:
+    """Refresh _data/member_papers.yml. Returns the number of members whose list changed."""
+    members = load_members()
+    if not members:
+        return 0
+    old = {}
+    if MEMBER_PAPERS_PATH.exists():
+        old = yaml.safe_load(MEMBER_PAPERS_PATH.read_text(encoding="utf-8")) or {}
+    cache: dict[str, dict] = {}
+    for entries in old.values():
+        for e in entries or []:
+            cache[str(e["id"])] = entry_to_member_rec(e)
+    seed_recs = {r["arxiv_id"]: r for r in (seed or [])}
+
+    new: dict[str, list] = {}
+    for key, m in members.items():
+        try:
+            if seed is not None:
+                ids = sorted((i for i, r in seed_recs.items() if author_matches(r["authors"], m["names"])), reverse=True)
+                api_recs = {}
+            else:
+                ids, api_recs = member_candidate_ids(m["names"], api_ok)
+            picked: list[dict] = []
+            for aid in ids:
+                if len(picked) >= m["count"]:
+                    break
+                if aid in m["exclude"]:
+                    continue
+                rec = api_recs.get(aid) or seed_recs.get(aid) or pi_records.get(aid) or cache.get(aid)
+                if rec is None:
+                    rec = oai_record(aid)
+                    time.sleep(OAI_DELAY_SECONDS)
+                    if rec is None:
+                        continue
+                if not author_matches(rec["authors"], m["names"]):
+                    continue  # the search matched a different person
+                if not category_allowed(rec.get("primary_category", ""), cfg["categories"]):
+                    continue
+                entry = member_entry(rec, cfg)
+                if rec.get("_venue") and entry["venue"].startswith("arXiv:"):
+                    entry["venue"] = rec["_venue"]  # keep a venue from the cache when nothing better is known
+                picked.append(entry)
+            new[key] = picked
+            log(f"member {key}: {', '.join(p['id'] for p in picked) or 'no papers'}")
+        except Exception as e:  # one member failing must not break the nightly run
+            log(f"member {key}: lookup failed ({str(e)[:120]}); keeping the previous list")
+            new[key] = old.get(key) or []
+
+    changed = sum(1 for k in new if new[k] != (old.get(k) or []))
+    if dry_run:
+        sys.stdout.write(yaml.safe_dump(new, allow_unicode=True, sort_keys=False, width=1000))
+        return changed
+    if new == old:
+        log("member_papers.yml unchanged")
+        return 0
+    header = (
+        "# GENERATED by bin/update_arxiv.py from _data/members.yml - do not edit by hand.\n"
+        "# Each member's most recent arXiv papers, shown on the group page by\n"
+        "# _includes/member_papers.liquid. To hide a paper, add its arXiv ID to the\n"
+        "# member's `exclude:` list in _data/members.yml.\n"
+    )
+    MEMBER_PAPERS_PATH.write_text(header + yaml.safe_dump(new, allow_unicode=True, sort_keys=False, width=1000), encoding="utf-8")
+    log(f"wrote {MEMBER_PAPERS_PATH.relative_to(ROOT)} ({changed} member(s) changed)")
+    return changed
+
+
+# --------------------------------------------------------------------------- #
 # conversion
 # --------------------------------------------------------------------------- #
 def entry_to_record(entry: ET.Element) -> dict:
@@ -820,11 +983,21 @@ def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--dry-run", action="store_true", help="print papers.bib to stdout instead of writing it")
     ap.add_argument("--from-file", metavar="FEED.xml", help="parse a saved arXiv Atom feed instead of querying the API")
+    ap.add_argument("--members-seed", metavar="RECORDS.json", help="offline: build _data/member_papers.yml from a JSON list of arXiv records")
+    ap.add_argument("--members-only", action="store_true", help="only refresh _data/member_papers.yml")
     args = ap.parse_args()
 
     cfg = load_config()
 
     fetched: list[dict] = []
+    api_ok = True
+    if args.members_only and args.members_seed:
+        seed = json.loads(Path(args.members_seed).read_text(encoding="utf-8"))
+        seed = [{"arxiv_id": strip_version(r["id"]), "title": r["title"], "authors": r["authors"], "submitted": r.get("submitted", ""),
+                 "published": r.get("submitted", ""), "primary_category": r.get("primary", ""), "journal_ref": r.get("journal_ref") or None,
+                 "doi": r.get("doi") or None} for r in seed]
+        update_member_papers(cfg, {}, False, seed, args.dry_run)
+        return 0
     if args.from_file:
         root = ET.fromstring(Path(args.from_file).read_bytes())
         fetched = [entry_to_record(e) for e in root.findall("a:entry", NS)]
@@ -839,6 +1012,7 @@ def main() -> int:
             fetched = [entry_to_record(e) for e in raw_entries]
             log(f"API: fetched {len(fetched)} records")
         except ArxivUnavailable as e:
+            api_ok = False
             log(f"API unavailable ({e}); falling back to arxiv.org search + OAI-PMH")
             try:
                 fetched = records_via_search_and_oai(cfg)
@@ -879,6 +1053,11 @@ def main() -> int:
     n_news = generate_news(ordered, cfg, before, args.dry_run)
     if n_previews or n_news:
         log(f"{n_previews} thumbnails, {n_news} news items added")
+    if not args.from_file:
+        try:
+            update_member_papers(cfg, records, api_ok, None, args.dry_run)
+        except Exception as e:  # never let the members' lists break the publication update
+            log(f"member papers skipped ({str(e)[:120]})")
 
     used_keys: set[str] = set()
     entries = [format_entry(make_key(r, used_keys), build_fields(r, cfg)) for r in ordered]

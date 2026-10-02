@@ -1,0 +1,16 @@
+{% comment %}
+  "Recent papers" for a group member on the group page.
+  Usage (at the end of _pages/people/<key>.md):  {% include member_papers.liquid key="<key>" %}
+  The list comes from _data/member_papers.yml, which bin/update_arxiv.py
+  regenerates every night from _data/members.yml. The HTML is kept unindented
+  because the people files are run through Markdown afterwards.
+{% endcomment %}
+{% assign papers = site.data.member_papers[include.key] %}
+{% if papers and papers.size > 0 %}
+<div class="member-papers">
+<div class="member-papers-title">Recent papers</div>
+<ul>
+{% for p in papers %}<li><a href="{{ p.url }}">{{ p.title }}</a><span class="member-paper-venue">, {{ p.venue }}</span></li>
+{% endfor %}</ul>
+</div>
+{% endif %}

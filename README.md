@@ -15,6 +15,7 @@ arXiv automatically every night.
 | change the *featured work* cards        | `_data/featured.yml` (one block per card) · `assets/img/featured/<name>.png` (1200×800, white background)                 |
 | edit the bio                            | `_pages/bio.md` (text) · `assets/img/prof_pic.jpg` (photo)                                                                |
 | add / remove a group member             | `_pages/group.md` (one block per person) · `_pages/people/<name>.md` (their blurb) · `assets/img/people/<name>.jpg`       |
+| member's "Recent papers" / Scholar link | `_data/members.yml` (arXiv name, wrong-person exclusions; lists refresh nightly) · Scholar link in `_pages/group.md` |
 | edit the research text                  | `_pages/research.md` (one `<section class="topic">` per direction)                                                        |
 | change the research map                 | `bin/make_research_map.py` (topics, keywords, positions) → `python3 bin/make_research_map.py --style glow > _includes/research_map.svg` and `--style cards > _includes/research_cards.html` (phone version); other styles: ink, radial, pastel |
 | mark a paper as *selected* (home page)  | `_data/arxiv.yml` → `overrides:` → `"<arXiv id>": {selected: true}`                                                       |

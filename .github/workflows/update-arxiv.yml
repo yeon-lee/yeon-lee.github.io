@@ -2,7 +2,8 @@ name: Update publications from arXiv
 
 # Regenerates _bibliography/papers.bib from the arXiv API (settings live in
 # _data/arxiv.yml), writes a news item for each new preprint (_news/) and a
-# Figure-1 thumbnail for each paper (assets/img/publication_preview/), commits
+# Figure-1 thumbnail for each paper (assets/img/publication_preview/), refreshes
+# group members' recent papers (_data/member_papers.yml), commits
 # whatever changed, and then kicks off the "Deploy site" workflow.
 #
 # Optional repository secret ANTHROPIC_API_KEY: lets the script write the
@@ -17,6 +18,7 @@ on:
     branches: [main, master]
     paths:
       - "_data/arxiv.yml"
+      - "_data/members.yml"
       - "_bibliography/manual.bib"
       - "bin/update_arxiv.py"
 
@@ -55,7 +57,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add _bibliography/papers.bib _news assets/img/publication_preview
+          git add _bibliography/papers.bib _news assets/img/publication_preview _data/member_papers.yml
           if git diff --staged --quiet; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
             echo "No changes." >> "$GITHUB_STEP_SUMMARY"
