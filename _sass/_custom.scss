@@ -5,6 +5,7 @@
  * 2. Featured-work grid on the home page (_includes/featured.liquid).
  * 3. Research map wrapper + collapsible topics (_pages/research.md); the map's
  *    own look is embedded in _includes/research_map.svg by bin/make_research_map.py.
+ * 4. Spacing: room above section headings; group page spacing and photo size.
  ******************************************************************************/
 
 /* ---- 1. typography ------------------------------------------------------- */
@@ -165,7 +166,7 @@ h3 {
 .rmap-hint {
   font-size: 0.85rem;
   color: var(--global-text-color-light);
-  margin: 0 0 1rem;
+  margin: 0.25rem 0 30pt; /* breathing room between the map and the topic list */
 
   a {
     color: inherit;
@@ -236,3 +237,31 @@ h3 {
 .topic:last-of-type {
   border-bottom: 1px solid var(--global-divider-color);
 }
+
+/* ---- 4. spacing ---------------------------------------------------------- */
+
+/* 30pt above section headings in page content (home: featured work / news /
+   selected publications; bio: timeline; join; ...). Not for a heading that
+   opens its block (research topics, group member names), and not for the
+   publication-year headings, which have their own spacing. */
+.post article h2:not(:first-child):not(.bibliography) {
+  margin-top: 30pt;
+}
+
+/* Group page (the profiles layout nests .post inside .post, which no other
+   page does): more room between people, photos 10% smaller (30% -> 27%). */
+.post .post article > hr {
+  margin: 1.5rem 0;
+}
+
+@media (min-width: 576px) {
+  .post .post article > .profile {
+    width: 27%;
+  }
+}
+
+/* keep "netid [at] illinois.edu" on one line in the narrower photo column */
+.post .post article > .profile .more-info {
+  font-size: 0.9rem;
+}
+
