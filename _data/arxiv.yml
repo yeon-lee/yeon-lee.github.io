@@ -122,7 +122,15 @@ overrides:
     html: https://doi.org/10.1103/PhysRevX.12.011061
   "2506.04221":
     abbr: PRX
-    journal: Phys. Rev. X (accepted)
+    journal: Phys. Rev. X
+    volume: "16"
+    pages: "041002"
+    year: "2026"
+    doi: 10.1103/3bpt-f9pd
+    html: https://doi.org/10.1103/3bpt-f9pd
+    selected: true
+    award_name: In the news
+    award: "Featured by Illinois Physics: [Classifying non-equilibrium phases of matter](https://physics.illinois.edu/news/Jong-Yeon_Lee-classifying-non-equilibrium-phases) (Oct. 2, 2026)."
   "1812.10490":
     award: Editors' Suggestion
     award_name: PRB Editors' Suggestion
