@@ -32,6 +32,11 @@ cv:
         highlights:
           - Anthony Leggett Institute of Condensed Matter Theory
           - Illinois Quantum Information Science and Technology Center (IQUIST)
+      - company: Korea Institute for Advanced Study
+        position: Quantum Universe Scholar
+        location: Seoul, Korea
+        start_date: 2025
+        end_date: present
       - company: University of California, Berkeley
         position: Research Scholar
         location: Berkeley, CA

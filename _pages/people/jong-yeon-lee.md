@@ -7,3 +7,4 @@ Assistant Professor of Physics, University of Illinois Urbana-Champaign (Anthony
 - 2020 – 2023: Kavli Institute for Theoretical Physics, Gordon and Betty Moore Postdoctoral Fellow
 - 2023 – 2024: University of California, Berkeley, Research Scholar
 - 2024 – present: University of Illinois Urbana-Champaign, Assistant Professor
+- 2025 – present: Korea Institute for Advanced Study (Seoul, Korea), Quantum Universe Scholar
