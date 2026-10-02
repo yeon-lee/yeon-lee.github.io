@@ -2,7 +2,6 @@
 layout: about
 title: home
 permalink: /
-subtitle: Quantum many-body physics, quantum information, and quantum error correction at the <a href="https://physics.illinois.edu/">Department of Physics</a>, University of Illinois Urbana-Champaign.
 
 # Group-first landing page: no profile block here (it lives on /bio/).
 selected_papers: true # includes a list of papers marked as "selected={true}"
