@@ -1,6 +1,6 @@
 ---
 layout: about
-title: home
+title: Home
 permalink: /
 
 # Group-first landing page: no profile block here (it lives on /bio/).

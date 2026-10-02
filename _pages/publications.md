@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /publications/
-title: publications
+title: Publications
 description: kept in sync with arXiv automatically
 nav: true
 nav_order: 3

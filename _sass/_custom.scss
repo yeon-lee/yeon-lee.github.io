@@ -166,7 +166,7 @@ h3 {
 .rmap-hint {
   font-size: 0.85rem;
   color: var(--global-text-color-light);
-  margin: 0.25rem 0 30pt; /* breathing room between the map and the topic list */
+  margin: 0.25rem 0 90pt; /* breathing room between the map and the topic list */
 
   a {
     color: inherit;
@@ -246,6 +246,11 @@ h3 {
    publication-year headings, which have their own spacing. */
 .post article h2:not(:first-child):not(.bibliography) {
   margin-top: 30pt;
+}
+
+/* home page: extra room between the group intro and "Featured work" */
+.post article h2#featured-work {
+  margin-top: 60pt;
 }
 
 /* Group page (the profiles layout nests .post inside .post, which no other

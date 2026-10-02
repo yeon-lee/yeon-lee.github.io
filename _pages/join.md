@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /join/
-title: join
+title: Join
 description: for prospective students and postdocs
 nav: true
 nav_order: 8

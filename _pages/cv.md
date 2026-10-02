@@ -1,7 +1,7 @@
 ---
 layout: cv
 permalink: /cv/
-title: CV & talks
+title: CV & Talks
 nav: true
 nav_order: 6
 cv_pdf: /assets/rendercv/rendercv_output/Jong_Yeon_Lee_CV.pdf # generated from _data/cv.yml by the render-cv workflow

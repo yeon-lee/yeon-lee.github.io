@@ -1,7 +1,7 @@
 ---
 layout: default
 permalink: /blog/
-title: notes
+title: Notes
 description: research notes, lecture notes, and announcements
 nav: true
 nav_order: 7

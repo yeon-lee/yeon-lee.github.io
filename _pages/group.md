@@ -1,7 +1,7 @@
 ---
 layout: profiles
 permalink: /group/
-title: group
+title: Group
 description: current members and alumni of the Lee group
 nav: true
 nav_order: 2
