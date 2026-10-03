@@ -3,7 +3,7 @@ layout: about
 title: Home
 permalink: /
 hero: group-photo.jpg # banner photo above the title (assets/img/); 2:1, about 2000x1000
-hero_alt: Members of the Lee group in front of a chalkboard
+hero_alt: Members of the Lee group talking around a table in front of a chalkboard
 
 # Group-first landing page: no profile block here (it lives on /bio/).
 selected_papers: true # includes a list of papers marked as "selected={true}"
