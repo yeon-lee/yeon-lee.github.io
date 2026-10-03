@@ -166,7 +166,7 @@ h3 {
 .rmap-hint {
   font-size: 0.85rem;
   color: var(--global-text-color-light);
-  margin: 40pt 0 65pt; /* below the map, then room before the topic list */
+  margin: 27pt 0 43pt; /* below the map, then room before the topic list */
 
   a {
     color: inherit;
@@ -296,7 +296,8 @@ h3 {
   color: var(--global-text-color-light);
 }
 
-/* home page banner photo (front matter `hero:` in _pages/about.md; _layouts/about.liquid) */
+/* banner photo above a page title (front matter `hero:`; _includes/hero.liquid),
+   used on the home and group pages */
 .hero-photo {
   margin: 0.5rem 0 1.75rem;
 

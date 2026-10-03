@@ -3,12 +3,7 @@ layout: default
 ---
 <div class="post">
   {% comment %} Local addition to al_folio_core's about layout: optional banner photo above the title (front matter: hero / hero_alt). {% endcomment %}
-  {% if page.hero %}
-    <div class="hero-photo">
-      {% assign hero_path = page.hero | prepend: 'assets/img/' %}
-      {% include figure.liquid loading="eager" path=hero_path class="img-fluid rounded" sizes="(min-width: 930px) 900px, 95vw" alt=page.hero_alt %}
-    </div>
-  {% endif %}
+  {% include hero.liquid %}
   <header class="post-header">
     <h1 class="post-title">
       {% if site.title == 'blank' %}

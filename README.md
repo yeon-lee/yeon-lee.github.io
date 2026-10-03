@@ -12,7 +12,7 @@ arXiv automatically every night.
 | I want to…                              | Edit…                                                                                                                     |
 | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
 | edit the home page text                 | `_pages/about.md`                                                                                                         |
-| change the home banner photo            | replace `assets/img/group-photo.jpg` (2:1, about 2000×1000) or point `hero:` in `_pages/about.md` at another file |
+| change a banner photo (home, group)     | replace `assets/img/group-photo.jpg` (home) or `assets/img/group-chalkboard.jpg` (group), 2:1, about 2000×1000 · or point `hero:` in `_pages/about.md` / `_pages/group.md` at another file; any page can get one by adding `hero:` + `hero_alt:` |
 | change the *featured work* cards        | `_data/featured.yml` (one block per card) · `assets/img/featured/<name>.png` (1200×800, white background)                 |
 | edit the bio                            | `_pages/bio.md` (text) · `assets/img/prof_pic.jpg` (photo)                                                                |
 | add / remove a group member             | `_pages/group.md` (one block per person) · `_pages/people/<name>.md` (their blurb) · `assets/img/people/<name>.jpg`       |
@@ -104,9 +104,10 @@ Two theme files are overridden locally on purpose: `assets/css/main.scss` (a cop
 `_includes/featured.liquid` / `_includes/research_map*.{liquid,svg}` (site-specific includes, not in the
 theme). After bumping `al_folio_core`, re-copy its `assets/css/main.scss` and re-add the `@use "custom";` line
 if the upgrade audit flags it.
-`_layouts/about.liquid` is also a local copy of the gem's home-page layout with one addition: the optional
-banner photo (`hero:` / `hero_alt:` in `_pages/about.md`, image in `assets/img/`). Re-apply that block if an upgrade
-changes the gem's layout.
+`_layouts/about.liquid` (home) and `_layouts/page.liquid` (every other page, including the group page) are also
+local copies of the gem's layouts with one added line, `{% include hero.liquid %}`, for the optional banner photo
+(`hero:` / `hero_alt:` in a page's front matter, image in `assets/img/`). Re-apply that line if an upgrade changes the
+gem's layouts.
 
 ## License
 

@@ -5,6 +5,8 @@ title: Group
 description: current members and alumni of the Lee group
 nav: true
 nav_order: 2
+hero: group-chalkboard.jpg # banner photo above the title (assets/img/); 2:1, about 2000x1000
+hero_alt: Members of the Lee group in front of a chalkboard
 
 # One block per member. `content` points to a markdown file inside _pages/people/,
 # `image` to a photo inside assets/img/ (omit the line if there is no photo yet).

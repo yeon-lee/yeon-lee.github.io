@@ -1,0 +1,15 @@
+{% comment %}
+  Optional banner photo above a page title (site-specific, not part of the theme).
+  Set in a page's front matter:
+    hero: group-photo.jpg        # file inside assets/img/; 2:1, about 2000x1000
+    hero_alt: what the photo shows
+  Used by _layouts/about.liquid (home) and _layouts/page.liquid (every other page,
+  including the group page, whose profiles layout sits inside the page layout).
+  Styling: .hero-photo in _sass/_custom.scss.
+{% endcomment %}
+{% if page.hero %}
+  <div class="hero-photo">
+    {% assign hero_path = page.hero | prepend: 'assets/img/' %}
+    {% include figure.liquid loading="eager" path=hero_path class="img-fluid rounded" sizes="(min-width: 930px) 900px, 95vw" alt=page.hero_alt %}
+  </div>
+{% endif %}
