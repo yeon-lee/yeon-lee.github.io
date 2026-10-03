@@ -166,3 +166,13 @@ drew-kim:
   - Andrew D. Kim
   - Michael Widom
   primary: cond-mat.mtrl-sci
+shashwat-chakraborty:
+- id: '2512.19809'
+  title: Preparation of a Quantum Spin Liquid in Non-Hermitian Quantum Dimer Models and Rydberg Arrays
+  venue: arXiv:2512.19809
+  date: '2025-12-22'
+  url: https://arxiv.org/abs/2512.19809
+  authors:
+  - Shashwat Chakraborty
+  - Taylor L. Hughes
+  primary: cond-mat.str-el

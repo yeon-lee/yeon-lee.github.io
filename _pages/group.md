@@ -69,5 +69,12 @@ profiles:
       <p>Graduate Student</p>
       <p>adk7 [at] illinois.edu</p>
   - align: right
+    content: people/shashwat-chakraborty.md
+    image_circular: false
+    more_info: >
+      <p>Graduate Student</p>
+      <p>sc152 [at] illinois.edu</p>
+      <p><a href="https://scholar.google.com/citations?user=vbmFhc4AAAAJ">Google Scholar</a></p>
+  - align: right
     content: people/alumni.md
 ---
