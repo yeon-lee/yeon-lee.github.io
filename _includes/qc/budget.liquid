@@ -1,0 +1,33 @@
+{%- comment -%}
+  Top figure of _pages/quantum-computing.md: our codes next to surface codes of
+  the same distance. One button per entry in _data/qc_codes.yml; the drawing is
+  made by assets/js/quantum-computing.js. Without JavaScript the caption still
+  gives the numbers for the first code.
+{%- endcomment -%}
+{%- assign codes = site.data.qc_codes -%}
+{%- assign c = codes[0] -%}
+{%- assign surf = c.d | times: c.d | times: c.k -%}
+{%- assign ratio = surf | divided_by: c.n -%}
+{%- assign thousands = surf | divided_by: 1000 -%}
+{%- if thousands > 0 -%}
+  {%- assign rest = surf | modulo: 1000 | prepend: "00" | slice: -3, 3 -%}
+  {%- capture surf_text -%}{{ thousands }},{{ rest }}{%- endcapture -%}
+{%- else -%}
+  {%- assign surf_text = surf -%}
+{%- endif -%}
+<div class="qc-figure qc-budget" data-qc-budget>
+<p class="qc-budget-lead" data-qc-lead>{{ ratio }} times fewer qubits at the same code distance</p>
+<div class="qc-budget-controls" role="group" aria-label="Code distance">
+<span class="qc-budget-controls-label" aria-hidden="true">Code distance</span>
+{%- for code in codes %}
+<button type="button" class="qc-chip" data-qc-choice="{{ forloop.index0 }}" aria-pressed="{% if forloop.first %}true{% else %}false{% endif %}" aria-label="distance {{ code.d }}">{{ code.d }}</button>
+{%- endfor %}
+</div>
+<div class="qc-budget-plot" data-qc-plot role="img" aria-label="At code distance {{ c.d }}, our [[{{ c.n }},{{ c.k }},{{ c.d }}]] code stores {{ c.k }} logical qubits in {{ c.n }} data qubits; surface codes need {{ surf_text }}."></div>
+<div class="qc-budget-key">
+<p class="qc-key qc-key--ours"><span class="qc-swatch" aria-hidden="true"></span><span data-qc-ours>Our <a href="{{ c.link }}">[[{{ c.n }},{{ c.k }},{{ c.d }}]] code</a>: {{ c.n }} data qubits hold {{ c.k }} logical qubits.</span></p>
+<p class="qc-key qc-key--base"><span class="qc-swatch" aria-hidden="true"></span><span data-qc-base>Surface code at the same distance {{ c.d }}: one {{ c.d }} × {{ c.d }} patch per logical qubit, {{ surf_text }} data qubits in all.</span></p>
+<p class="qc-budget-note">Data qubits only: each design needs roughly as many extra qubits again to measure its checks. A code of distance <i>d</i> can correct any (<i>d</i> − 1)/2 errors, rounded down. Distance is a first measure of protection; the full comparison under realistic noise is in the papers.</p>
+</div>
+<script type="application/json" data-qc-codes>{{ codes | jsonify }}</script>
+</div>

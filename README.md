@@ -20,6 +20,7 @@ arXiv automatically every night.
 | edit the research text                  | `_pages/research.md` (one `<section class="topic">` per direction)                                                        |
 | change the research map                 | `bin/make_research_map.py` (topics, keywords, positions) → `python3 bin/make_research_map.py --style glow > _includes/research_map.svg` and `--style cards > _includes/research_cards.html` (phone version); other styles: ink, radial, pastel |
 | mark a paper as *selected* (home page)  | `_data/arxiv.yml` → `overrides:` → `"<arXiv id>": {selected: true}`                                                       |
+| edit the quantum computing tab          | `_pages/quantum-computing.md` (text) · `_data/qc_codes.yml` (top figure) · `_data/qc_estimates.yml` (qubit-estimate chart) · `_data/qc_architecture.yml` (blueprint) · `_data/qc_timeline.yml` (milestones) · drawing in `assets/js/quantum-computing.js` · styles in `_sass/_quantum-computing.scss` |
 | add a thumbnail to a paper              | drop `assets/img/publication_preview/<arXiv id>.png` (picked up automatically)                                            |
 | hide a paper / add a non-arXiv paper    | `_data/arxiv.yml` → `exclude:` / `_bibliography/manual.bib`                                                               |
 | add a course                            | new file in `_teachings/` (copy `2025-spring-physics-598.md`)                                                             |

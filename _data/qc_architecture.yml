@@ -1,0 +1,269 @@
+# Blueprint on /quantum-computing/ (_includes/qc/blueprint.liquid).
+# One block per part of the machine; `id` also places the box in the drawing
+# (compiler, memory, logic, factory, decoder, hardware, foundations).
+#   stage     how far the field has come, in four steps (leave out for theory):
+#             1 proposed, 2 simulated at full scale, 3 shown on small devices,
+#             4 running at useful scale
+#   progress  results from the community; kind is theory or experiment
+#   ours      our related work; topic is the id of the section further down,
+#             section is that section's heading
+#   open      open problems, in plain words
+# Status as of October 2026. Use “curly quotes” inside text.
+
+- id: compiler
+  name: "Compiler"
+  role: "Turns a program into a schedule of logical operations."
+  stage: 2
+  stage_note: "Full designs and resource estimates exist; compilers for qLDPC machines are just appearing."
+  what: "Decides which logical qubits meet, in what order, and when to call for magic states, so that a program runs in as little time and space as possible."
+  progress:
+    - text: "A complete qLDPC architecture compiled for RSA-2048"
+      who: "Iceberg Quantum"
+      year: 2026
+      kind: theory
+      link: https://arxiv.org/abs/2602.11457
+    - text: "A logical instruction set for a modular machine built on bivariate bicycle codes"
+      who: "IBM"
+      year: 2025
+      kind: theory
+      link: https://arxiv.org/abs/2506.03094
+    - text: "A retargetable compiler for fault-tolerant machines"
+      who: "CUDA-Q Logical (NVIDIA)"
+      year: 2026
+      kind: theory
+      link: https://arxiv.org/abs/2609.13388
+    - text: "A roadmap for finding applications worth a fault-tolerant machine"
+      who: "Babbush et al. (Google)"
+      year: 2025
+      kind: theory
+      link: https://arxiv.org/abs/2511.09124
+  ours:
+    text: "With support from Microsoft's Quantum Pioneers Program, we are building on logical spectroscopy toward hardware-aware compilation for qLDPC codes."
+    topic: logic
+    section: "Logical operations"
+  open:
+    - "Compile real programs onto high-rate code blocks: which logical qubits share a block, and when they move."
+    - "Report qubits and runtime together, under common assumptions, so that designs can be compared."
+    - "Find useful applications beyond factoring that fit early fault-tolerant machines."
+
+- id: memory
+  name: "Memory"
+  role: "Stores logical qubits in high-rate qLDPC code blocks."
+  stage: 3
+  stage_note: "Small qLDPC codes run on superconducting and trapped-ion hardware; no large qLDPC memory exists yet."
+  what: "Holds most logical qubits most of the time, correcting errors every cycle. High-rate codes make it the cheapest part of the machine per logical qubit."
+  progress:
+    - text: "The gross code: 12 logical qubits in 288 physical qubits"
+      who: "IBM"
+      year: 2023
+      kind: theory
+      link: https://arxiv.org/abs/2308.07915
+    - text: "Codes with rate above one half that approach the hashing bound"
+      who: "Komoto and Kasai"
+      year: 2024
+      kind: theory
+      link: https://arxiv.org/abs/2412.21171
+    - text: "Ultra-high-rate codes co-designed with the way atom arrays move"
+      who: "QuEra, Harvard and MIT"
+      year: 2026
+      kind: theory
+      link: https://arxiv.org/abs/2604.16209
+    - text: "Two qLDPC codes on a superconducting chip with long-range couplers"
+      who: "Zhejiang University"
+      year: 2026
+      kind: experiment
+      link: https://doi.org/10.1038/s41567-025-03157-4
+    - text: "qLDPC codes at breakeven on trapped ions"
+      who: "IonQ"
+      year: 2026
+      kind: experiment
+      link: https://arxiv.org/abs/2606.06455
+  ours:
+    text: "Design rules for compact ultra-high-rate codes, codes with a complete basis of light logical operators, and families of codes built by lifting."
+    topic: codes
+    section: "Error-correcting codes"
+  open:
+    - "Find the best codes at realistic sizes, where rate, distance, check weight and block size pull against each other."
+    - "Certify the distance of large codes, a computationally hard problem in general."
+    - "Keep the full distance during measurement circuits, and cope with atom loss and leakage."
+    - "Fit long-range checks onto chips and atom arrays without slowing the cycle."
+
+- id: logic
+  name: "Logic unit"
+  role: "Measures, entangles and teleports logical qubits."
+  stage: 2
+  stage_note: "Logic on hardware so far uses surface codes or small codes."
+  what: "Carries out logical operations, mostly by code surgery: temporarily attaching extra qubits that measure chosen logical operators. In a high-rate block it must reach one logical qubit without disturbing the rest."
+  progress:
+    - text: "Lower-overhead surgery for qLDPC codes, with bridges that join gadgets for joint measurements"
+      who: "IBM"
+      year: 2024
+      kind: theory
+      link: https://arxiv.org/abs/2407.18393
+    - text: "Logical measurements by gauging logical operators"
+      who: "Williamson and Yoder"
+      year: 2024
+      kind: theory
+      link: https://arxiv.org/abs/2410.02213
+    - text: "Extractors: one fixed gadget that can measure any logical Pauli product"
+      who: "He, Cowtan, Williamson and Yoder"
+      year: 2025
+      kind: theory
+      link: https://arxiv.org/abs/2503.10390
+    - text: "Many logical measurements in parallel by code surgery"
+      who: "Cowtan, He, Williamson and Yoder"
+      year: 2025
+      kind: theory
+      link: https://arxiv.org/abs/2503.05003
+    - text: "Reusable surgery gadgets, tested on 15 billion simulated operations"
+      who: "Caltech and Oratomic"
+      year: 2026
+      kind: theory
+      link: https://arxiv.org/abs/2607.28795
+    - text: "Logical entanglement by transversal gates and lattice surgery, on up to 448 atoms"
+      who: "Harvard-led team"
+      year: 2025
+      kind: experiment
+      link: https://arxiv.org/abs/2506.20661
+  ours:
+    text: "Logical spectroscopy gives every logical qubit a label and an explicit operator; frame width measures how light a complete set of them can be; lifting carries surgery gadgets across code families."
+    topic: logic
+    section: "Logical operations"
+  open:
+    - "Measure any chosen logical qubits cheaply, quickly and in parallel. Surgery costs grow with the weight of the logical operator, and each measurement takes about d rounds."
+    - "Verify that large gadgets are fault tolerant; estimating their fault distance becomes prohibitive for big blocks."
+    - "Find fast logic for qLDPC codes: transversal, single-shot or symmetry-based gates."
+
+- id: factory
+  name: "Magic-state factory"
+  role: "Supplies the magic states that make the machine universal."
+  stage: 3
+  stage_note: "Logical distillation and cultivation have run on neutral-atom and superconducting hardware."
+  what: "Easy operations alone cannot run every algorithm. The factory prepares special magic states and feeds the logic unit one for each hard gate, such as a T gate."
+  progress:
+    - text: "Magic state cultivation: magic states nearly as cheap as two-qubit gates"
+      who: "Gidney, Shutty and Jones (Google)"
+      year: 2024
+      kind: theory
+      link: https://arxiv.org/abs/2409.17595
+    - text: "Logical magic state distillation on neutral atoms"
+      who: "QuEra"
+      year: 2024
+      kind: experiment
+      link: https://arxiv.org/abs/2412.15165
+    - text: "Cultivation tested on a superconducting processor"
+      who: "Rosenfeld et al."
+      year: 2025
+      kind: experiment
+      link: https://arxiv.org/abs/2512.13908
+    - text: "Magic states made directly inside finite qLDPC codes"
+      who: "Menon et al."
+      year: 2025
+      kind: theory
+      link: https://arxiv.org/abs/2508.10714
+    - text: "Magic states injected into every logical qubit of a block at once"
+      who: "Caltech and Oratomic"
+      year: 2026
+      kind: theory
+      link: https://arxiv.org/abs/2607.28795
+  open:
+    - "Make magic states as fast as a high-rate processor consumes them, without a factory larger than the memory."
+    - "Get them into qLDPC blocks efficiently and in parallel."
+    - "Turn constant-overhead distillation and transversal non-Clifford gates for qLDPC codes from theory into practical protocols."
+
+- id: decoder
+  name: "Decoder"
+  role: "Reads the check results and infers corrections, in real time."
+  stage: 3
+  stage_note: "Real-time decoding has run on hardware for surface codes; qLDPC decoders look fast enough on paper."
+  what: "A classical co-processor that receives check results every cycle and infers which errors occurred. It has to keep pace with the machine, or the computation stalls."
+  progress:
+    - text: "Real-time decoding during a below-threshold surface-code experiment"
+      who: "Google Quantum AI"
+      year: 2024
+      kind: experiment
+      link: https://arxiv.org/abs/2408.13687
+    - text: "Relay-BP: belief propagation accurate enough for real-time qLDPC memory"
+      who: "IBM"
+      year: 2025
+      kind: theory
+      link: https://arxiv.org/abs/2506.01779
+    - text: "A staged decoder reaching about 10<sup>−11</sup> logical errors per round in simulation"
+      who: "Caltech and Oratomic"
+      year: 2026
+      kind: theory
+      link: https://arxiv.org/abs/2607.28795
+  open:
+    - "Decode during logical operations, not just storage, faster than the machine's reaction time."
+    - "Scale to tens of thousands of qubits on practical classical hardware."
+    - "Handle realistic noise: correlated errors, leakage and atom loss."
+
+- id: hardware
+  name: "Physical qubits and connectivity"
+  role: "The qubits themselves, and the links that let distant qubits interact."
+  stage: 3
+  stage_note: "Hundreds of qubits run below threshold, thousands can be held, and long-range links work on small chips."
+  what: "High-rate codes need checks that connect distant qubits. Atom arrays move atoms, superconducting chips route long couplers through extra layers, and ion traps shuttle ions between zones."
+  progress:
+    - text: "Error rates below the surface-code threshold on a superconducting chip"
+      who: "Google Quantum AI"
+      year: 2024
+      kind: experiment
+      link: https://arxiv.org/abs/2408.13687
+    - text: "A universal fault-tolerant architecture on up to 448 atoms"
+      who: "Harvard-led team"
+      year: 2025
+      kind: experiment
+      link: https://arxiv.org/abs/2506.20661
+    - text: "Over 6,100 coherent atoms held in one array"
+      who: "Caltech"
+      year: 2024
+      kind: experiment
+      link: https://arxiv.org/abs/2403.12021
+    - text: "Two cryogenic modules joined, toward IBM's 2029 machine"
+      who: "IBM"
+      year: 2026
+      kind: experiment
+      link: https://newsroom.ibm.com/2026-08-19-ibm-connects-its-first-modular-cryogenic-systems-in-milestone-toward-fault-tolerant-quantum-computing
+  ours:
+    text: "With Jacob Covey's group, two qubits stored in each ytterbium atom; and Floquet codes that protect qubits with simple repeated measurements."
+    topic: hardware
+    section: "Hardware and dynamics"
+  open:
+    - "Grow from hundreds to tens of thousands of qubits while keeping error rates near 0.1% or lower."
+    - "Make long-range connectivity fast and reliable: atom-array cycles of milliseconds must shrink, and multilayer chips must be built at scale."
+    - "Understand noise beyond simple models, including correlated bursts and leakage."
+
+- id: foundations
+  name: "Foundations"
+  role: "Theory of what is possible: thresholds, limits and overheads."
+  what: "Why fault tolerance works at all, how much noise each code can survive in principle, and how small the overhead can be."
+  progress:
+    - text: "Thresholds as phase transitions of disordered statistical models"
+      who: "Dennis, Kitaev, Landahl and Preskill"
+      year: 2001
+      kind: theory
+      link: https://arxiv.org/abs/quant-ph/0110143
+    - text: "Good qLDPC codes: logical qubits and distance both grow in proportion to size"
+      who: "Panteleev and Kalachev"
+      year: 2021
+      kind: theory
+      link: https://arxiv.org/abs/2111.03654
+    - text: "Constant qubit overhead with only about logarithmic time overhead"
+      who: "Nguyen and Pattison"
+      year: 2024
+      kind: theory
+      link: https://arxiv.org/abs/2411.03632
+    - text: "Constant overhead in space and time together is impossible"
+      who: "Bharti, Haug and Tanggara"
+      year: 2026
+      kind: theory
+      link: https://arxiv.org/abs/2608.26272
+  ours:
+    text: "Exact coherent information for noisy codes, a hierarchy of Rényi measures, and new mixed-state phases, which together characterize the best any decoder could do."
+    topic: limits
+    section: "Noise and thresholds"
+  open:
+    - "Pin down thresholds and decodability under realistic circuit-level and coherent noise."
+    - "Close the gap between optimal decoding and what fast decoders achieve."
+    - "Define code families with a well-defined large-size limit for algebraic qLDPC codes."

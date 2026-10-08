@@ -28,5 +28,9 @@ module.exports = {
     "js-topics",
     "is-open",
     "is-active",
+    // Quantum Computing tab (assets/js/quantum-computing.js): the script builds
+    // some class names at runtime (e.g. qc-pt-surface / qc-pt-qldpc on chart
+    // points), so keep every qc- rule.
+    /^qc-/,
   ],
 };

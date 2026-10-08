@@ -1,0 +1,688 @@
+/*******************************************************************************
+ * Quantum Computing tab: _pages/quantum-computing.md and _includes/qc/*, drawn
+ * by assets/js/quantum-computing.js. Loaded from assets/css/main.scss after
+ * _custom.scss; the collapsible .topic sections reuse the styles there.
+ *
+ * Colour means the same thing everywhere on the page:
+ *   coral  our group's work            grey   the surface-code baseline
+ *   blue   theory by others            amber  experiments and hardware
+ * The coral is the research map's error-correction hub (#fb8072), deepened so
+ * text stays above 4.5:1 and marks above 3:1 contrast on white.
+ ******************************************************************************/
+
+:root {
+  --qc-ours: #d9473b;
+  --qc-ours-ink: #b2392e;
+  --qc-ours-soft: #fdeceb;
+  --qc-base: #87929f;
+  --qc-base-flat: #b9c1ca;
+  --qc-base-soft: #f1f3f5;
+  --qc-theory: #3c74a4;
+  --qc-exp: #9e5d07;
+  --qc-exp-mark: #cf7f12;
+  --qc-ink: var(--global-text-color, #212529);
+  --qc-muted: var(--global-text-color-light, #6c757d);
+  --qc-rule: var(--global-divider-color, rgba(0, 0, 0, 0.12));
+}
+
+/* ---- shared ----------------------------------------------------------------- */
+
+.qc-lede {
+  font-size: 1.12rem;
+  line-height: 1.65;
+}
+
+.qc-figure {
+  margin: 1.5rem 0 1.25rem;
+}
+
+.qc-chip {
+  font: inherit;
+  font-size: 0.9rem;
+  line-height: 1.2;
+  padding: 0.32rem 0.8rem;
+  border: 1px solid var(--qc-rule);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--qc-ink);
+  cursor: pointer;
+}
+
+.qc-chip:hover {
+  border-color: var(--qc-base);
+}
+
+.qc-chip[aria-pressed="true"] {
+  background: var(--qc-ink);
+  border-color: var(--qc-ink);
+  color: #fff;
+}
+
+.qc-chip:focus-visible,
+.qc-tl-more:focus-visible {
+  outline: 2px solid var(--qc-theory);
+  outline-offset: 2px;
+}
+
+.qc-dot {
+  display: inline-block;
+  width: 0.55rem;
+  height: 0.55rem;
+  margin-right: 0.4rem;
+  border-radius: 50%;
+  vertical-align: 0.05em;
+}
+
+.qc-dot--ours { background: var(--qc-ours); }
+.qc-dot--theory { background: var(--qc-theory); }
+.qc-dot--experiment { background: var(--qc-exp-mark); }
+
+/* ---- 1. same distance, fewer qubits ------------------------------------------ */
+
+.qc-budget {
+  margin: 2rem 0 1.5rem;
+  padding-top: 1.4rem;
+  border-top: 1px solid var(--qc-rule);
+}
+
+.qc-budget-lead {
+  margin: 0 0 0.9rem;
+  font-size: 1.75rem;
+  line-height: 1.2;
+}
+
+.qc-budget-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0 0 1.25rem;
+}
+
+.qc-budget-controls-label {
+  margin-right: 0.3rem;
+  font-size: 0.9rem;
+  color: var(--qc-muted);
+}
+
+.qc-budget-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.qc-budget-svg.is-entering {
+  animation: qc-fade-in 0.35s ease-out;
+}
+
+@keyframes qc-fade-in {
+  from { opacity: 0.2; }
+  to { opacity: 1; }
+}
+
+.qc-patch-bg { fill: var(--qc-base-soft); }
+.qc-patch-flat { fill: var(--qc-base-flat); }
+
+.qc-patch-outline {
+  fill: none;
+  stroke: var(--qc-ink);
+  stroke-width: 1.5;
+  vector-effect: non-scaling-stroke;
+}
+
+.qc-budget-key {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.4rem 1.75rem;
+  margin-top: 1.1rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.qc-key {
+  display: flex;
+  align-items: baseline;
+  gap: 0.55rem;
+  margin: 0;
+}
+
+.qc-swatch {
+  flex: none;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 2px;
+}
+
+.qc-key--ours .qc-swatch { background: var(--qc-ours); }
+.qc-key--base .qc-swatch { background: var(--qc-base); }
+
+.qc-budget-note {
+  grid-column: 1 / -1;
+  margin: 0.5rem 0 0;
+  font-size: 0.85rem;
+  color: var(--qc-muted);
+}
+
+/* ---- 2. qubit-estimate chart -------------------------------------------------- */
+
+.qc-chart-title {
+  margin: 0 0 0.4rem;
+  font-size: 0.9rem;
+  color: var(--qc-muted);
+}
+
+.qc-chart {
+  display: block;
+  overflow: visible;
+}
+
+.qc-chart text { font-family: inherit; fill: var(--qc-ink); }
+.qc-chart .qc-axis { font-size: 12px; fill: var(--qc-muted); }
+.qc-chart .qc-grid { stroke: var(--qc-rule); stroke-width: 1; }
+.qc-chart .qc-pt { stroke: #fff; stroke-width: 2; }
+.qc-chart .qc-pt-surface { fill: var(--qc-base); }
+.qc-chart .qc-pt-qldpc { fill: var(--qc-theory); }
+.qc-chart .qc-pt-value { font-size: 14px; font-weight: 700; }
+.qc-chart .qc-pt-who { font-size: 12px; fill: var(--qc-muted); }
+.qc-chart a:hover .qc-pt-value { text-decoration: underline; }
+.qc-chart .qc-ref { stroke: var(--qc-exp-mark); stroke-width: 1.5; stroke-dasharray: 3 4; }
+.qc-chart .qc-ref-label { font-size: 12px; fill: var(--qc-exp); }
+.qc-chart.is-narrow .qc-pt-value { font-size: 13px; }
+.qc-chart.is-narrow .qc-pt-who,
+.qc-chart.is-narrow .qc-axis,
+.qc-chart.is-narrow .qc-ref-label { font-size: 11px; }
+
+.qc-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem 1.25rem;
+  margin: 0.4rem 0 0;
+  font-size: 0.88rem;
+  color: var(--qc-muted);
+}
+
+.qc-legend span::before {
+  content: "";
+  display: inline-block;
+  width: 0.65rem;
+  height: 0.65rem;
+  margin-right: 0.4rem;
+  border-radius: 50%;
+  vertical-align: 0.02em;
+}
+
+.qc-legend .qc-legend-surface::before { background: var(--qc-base); }
+.qc-legend .qc-legend-qldpc::before { background: var(--qc-theory); }
+
+.qc-legend .qc-legend-ref::before {
+  width: 1.1rem;
+  height: 0;
+  border-radius: 0;
+  border-top: 2px dashed var(--qc-exp-mark);
+  vertical-align: 0.3em;
+}
+
+.qc-sources {
+  margin-top: 0.75rem;
+  font-size: 0.88rem;
+}
+
+.qc-sources summary {
+  cursor: pointer;
+  color: var(--qc-muted);
+}
+
+.qc-sources summary:hover { color: var(--qc-ink); }
+.qc-sources-wrap { overflow-x: auto; }
+
+.qc-sources table {
+  width: 100%;
+  margin: 0.6rem 0;
+  border-collapse: collapse;
+}
+
+.qc-sources th,
+.qc-sources td {
+  padding: 0.35rem 0.75rem 0.35rem 0;
+  border-bottom: 1px solid var(--qc-rule);
+  text-align: left;
+  vertical-align: top;
+}
+
+.qc-sources p {
+  margin: 0.4rem 0 0;
+  color: var(--qc-muted);
+}
+
+/* ---- 3. blueprint ------------------------------------------------------------- */
+
+.qc-blueprint { margin: 1.25rem 0 1.75rem; }
+
+.qc-bp-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 4.75rem minmax(0, 1fr) 4.75rem minmax(0, 1fr);
+  grid-template-areas:
+    "compiler compiler compiler compiler compiler"
+    "ctop ctop ctop ctop ctop"
+    "memory cmem logic cmagic factory"
+    "cdec cdec cdec cdec cdec"
+    "decoder decoder decoder decoder decoder"
+    "hardware hardware hardware hardware hardware"
+    "foundations foundations foundations foundations foundations";
+  row-gap: 0.4rem;
+  padding: 0.9rem;
+  border: 1px solid var(--qc-rule);
+  border-radius: 6px;
+  background-color: #f9fbfc;
+  background-image:
+    linear-gradient(rgba(60, 116, 164, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(60, 116, 164, 0.07) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.qc-bp-compiler { grid-area: compiler; }
+.qc-bp-memory { grid-area: memory; }
+.qc-bp-logic { grid-area: logic; }
+.qc-bp-factory { grid-area: factory; }
+.qc-bp-decoder { grid-area: decoder; }
+.qc-bp-hardware { grid-area: hardware; }
+.qc-bp-foundations { grid-area: foundations; }
+.qc-bp-conn--top { grid-area: ctop; }
+.qc-bp-conn--teleport { grid-area: cmem; }
+.qc-bp-conn--magic { grid-area: cmagic; }
+.qc-bp-conn--decode { grid-area: cdec; }
+
+.qc-bp-conn {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem 3rem;
+  margin: 0;
+  font-size: 0.75rem;
+  line-height: 1.3;
+  color: var(--qc-muted);
+}
+
+.qc-bp-conn--teleport,
+.qc-bp-conn--magic {
+  flex-direction: column;
+  gap: 0.1rem;
+  text-align: center;
+}
+
+.qc-bp-arrow {
+  font-size: 1.15rem;
+  color: var(--qc-ink);
+}
+
+.qc-bp-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.5rem;
+  min-width: 0;
+  padding: 0.65rem 0.8rem 0.7rem;
+  border: 1px solid var(--qc-rule);
+  border-radius: 4px;
+  background: #fff;
+  color: inherit;
+  text-decoration: none;
+}
+
+a.qc-bp-box:hover,
+a.qc-bp-box:focus-visible {
+  border-color: var(--qc-base);
+  color: inherit;
+  text-decoration: none;
+}
+
+a.qc-bp-box:focus-visible {
+  outline: 2px solid var(--qc-theory);
+  outline-offset: 2px;
+}
+
+.qc-bp-box.is-active {
+  border-color: var(--qc-ink);
+  box-shadow: inset 0 0 0 1px var(--qc-ink);
+}
+
+.qc-bp-box--wide {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 1.25rem;
+}
+
+.qc-bp-box--theory {
+  border-style: dashed;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.qc-bp-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  min-width: 0;
+}
+
+.qc-bp-box--wide .qc-bp-text {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: baseline;
+  column-gap: 0.75rem;
+}
+
+.qc-bp-name {
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.qc-bp-role {
+  font-size: 0.85rem;
+  line-height: 1.35;
+  color: var(--qc-muted);
+}
+
+.qc-bp-foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 0.55rem;
+}
+
+.qc-meter {
+  display: inline-flex;
+  gap: 2px;
+}
+
+.qc-meter span {
+  width: 0.85rem;
+  height: 0.4rem;
+  border-radius: 1px;
+  background: #e1e5e9;
+}
+
+.qc-meter span.on { background: #4a5560; }
+
+.qc-meter-label {
+  font-size: 0.75rem;
+  color: var(--qc-muted);
+}
+
+.qc-ours-pill {
+  padding: 0.08rem 0.45rem;
+  border-radius: 999px;
+  background: var(--qc-ours-soft);
+  color: var(--qc-ours-ink);
+  font-size: 0.72rem;
+  line-height: 1.3;
+}
+
+.qc-bp-legend {
+  margin: 0.55rem 0 1rem;
+  font-size: 0.85rem;
+  color: var(--qc-muted);
+}
+
+.qc-part {
+  padding: 1rem 1.15rem 1.15rem;
+  border: 1px solid var(--qc-rule);
+  border-radius: 6px;
+}
+
+.qc-part + .qc-part { margin-top: 1rem; }
+.qc-part[hidden] { display: none; }
+
+.qc-part-title {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.qc-part-stage {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.25rem 0.6rem;
+  margin: 0.3rem 0 0.75rem;
+  font-size: 0.88rem;
+  color: var(--qc-muted);
+}
+
+.qc-part-what { margin: 0 0 0.9rem; }
+
+.qc-part-cols {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 1.5rem;
+}
+
+.qc-part-col h4 {
+  margin: 0 0 0.45rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.qc-progress,
+.qc-open {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.qc-progress li {
+  margin: 0 0 0.55rem;
+  padding: 0.05rem 0 0.05rem 0.7rem;
+  border-left: 3px solid var(--qc-theory);
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+.qc-progress li.qc-pr-experiment { border-left-color: var(--qc-exp-mark); }
+
+.qc-progress a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: rgba(0, 0, 0, 0.25);
+  text-underline-offset: 2px;
+}
+
+.qc-progress a:hover { text-decoration-color: currentColor; }
+
+.qc-pr-meta {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--qc-muted);
+}
+
+.qc-pr-kind {
+  margin-left: 0.4rem;
+  color: var(--qc-theory);
+}
+
+.qc-pr-experiment .qc-pr-kind { color: var(--qc-exp); }
+
+.qc-open li {
+  position: relative;
+  margin: 0 0 0.55rem;
+  padding-left: 1.15rem;
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+.qc-open li::before {
+  content: "";
+  position: absolute;
+  top: 0.45em;
+  left: 0.1rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  border: 1.5px solid var(--qc-base);
+  border-radius: 50%;
+}
+
+.qc-part-ours {
+  margin: 1rem 0 0;
+  padding: 0.6rem 0.85rem;
+  border-left: 3px solid var(--qc-ours);
+  border-radius: 0 4px 4px 0;
+  background: var(--qc-ours-soft);
+  font-size: 0.93rem;
+  line-height: 1.5;
+}
+
+.qc-ours-label {
+  margin-right: 0.45rem;
+  font-weight: 700;
+  color: var(--qc-ours-ink);
+}
+
+.qc-hint {
+  margin: 0 0 1rem;
+  font-size: 0.85rem;
+  color: var(--qc-muted);
+}
+
+.qc-hint a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+/* ---- 4. milestones ------------------------------------------------------------ */
+
+.qc-timeline { margin: 1rem 0 1.5rem; }
+
+.qc-tl-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0 0 1rem;
+}
+
+.qc-tl-year {
+  display: grid;
+  grid-template-columns: 4.5rem minmax(0, 1fr);
+  column-gap: 1rem;
+  margin-top: 0.6rem;
+  padding-top: 0.7rem;
+  border-top: 1px solid var(--qc-rule);
+}
+
+.qc-tl-yearlabel {
+  margin: 0.05rem 0 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.qc-tl-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.qc-tl-item {
+  display: grid;
+  grid-template-columns: 2.4rem minmax(0, 1fr);
+  column-gap: 0.75rem;
+  padding: 0.2rem 0 0.75rem;
+}
+
+.qc-tl-when {
+  padding-top: 0.15rem;
+  font-size: 0.85rem;
+  color: var(--qc-muted);
+}
+
+.qc-tl-body {
+  padding-left: 0.75rem;
+  border-left: 3px solid var(--qc-theory);
+}
+
+.qc-tl-ours .qc-tl-body { border-left-color: var(--qc-ours); }
+.qc-tl-experiment .qc-tl-body { border-left-color: var(--qc-exp-mark); }
+
+.qc-tl-title {
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.qc-tl-title a { color: inherit; }
+
+.qc-tl-kind {
+  margin-left: 0.3rem;
+  font-size: 0.78rem;
+  font-weight: 400;
+  color: var(--qc-theory);
+  white-space: nowrap;
+}
+
+.qc-tl-ours .qc-tl-kind { color: var(--qc-ours-ink); }
+.qc-tl-experiment .qc-tl-kind { color: var(--qc-exp); }
+
+.qc-tl-text {
+  margin: 0.15rem 0 0;
+  font-size: 0.93rem;
+  line-height: 1.5;
+}
+
+.qc-tl-more {
+  margin-top: 1rem;
+  padding: 0.45rem 0.9rem;
+  border: 1px solid var(--qc-rule);
+  border-radius: 4px;
+  background: #fff;
+  color: var(--qc-ink);
+  font: inherit;
+  font-size: 0.92rem;
+  cursor: pointer;
+}
+
+.qc-tl-filters[hidden],
+.qc-tl-year[hidden],
+.qc-tl-item[hidden],
+.qc-tl-more[hidden] { display: none; }
+
+/* ---- key terms --------------------------------------------------------------- */
+
+.qc-terms {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem 2rem;
+  margin: 1rem 0 1.5rem;
+}
+
+.qc-terms dt { font-weight: 700; }
+
+.qc-terms dd {
+  margin: 0.15rem 0 0;
+  font-size: 0.95rem;
+}
+
+/* ---- small screens and reduced motion ----------------------------------------- */
+
+@media (max-width: 767.98px) {
+  .qc-terms,
+  .qc-part-cols { grid-template-columns: minmax(0, 1fr); }
+  .qc-part-cols { gap: 1rem; }
+
+  .qc-bp-grid {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "compiler" "memory" "logic" "factory" "decoder" "hardware" "foundations";
+  }
+
+  .qc-bp-conn { display: none; }
+}
+
+@media (max-width: 575.98px) {
+  .qc-lede { font-size: 1.05rem; }
+  .qc-budget-lead { font-size: 1.4rem; }
+  .qc-budget-key,
+  .qc-tl-year { grid-template-columns: minmax(0, 1fr); }
+  .qc-tl-yearlabel { margin-bottom: 0.3rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .qc-budget-svg.is-entering { animation: none; }
+}

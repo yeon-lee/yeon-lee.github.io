@@ -1,0 +1,45 @@
+{%- comment -%}
+  Milestones for _pages/quantum-computing.md, from _data/qc_timeline.yml,
+  newest first and grouped by year. assets/js/quantum-computing.js adds the
+  filter buttons and folds entries before recent_from behind a button; without
+  JavaScript every entry is shown.
+{%- endcomment -%}
+{%- assign recent_from = 2025 -%}
+{%- assign items = site.data.qc_timeline | sort: "date" | reverse -%}
+{%- assign months = "Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec" | split: "," -%}
+{%- assign oldest = items.last.date | slice: 0, 4 -%}
+<div class="qc-timeline" data-qc-timeline data-recent-from="{{ recent_from }}">
+<div class="qc-tl-filters" role="group" aria-label="Show milestones by type" data-qc-filters hidden>
+<button type="button" class="qc-chip" data-qc-filter="all" aria-pressed="true">All</button>
+<button type="button" class="qc-chip" data-qc-filter="ours" aria-pressed="false"><span class="qc-dot qc-dot--ours" aria-hidden="true"></span>Our group</button>
+<button type="button" class="qc-chip" data-qc-filter="theory" aria-pressed="false"><span class="qc-dot qc-dot--theory" aria-hidden="true"></span>Theory and architecture</button>
+<button type="button" class="qc-chip" data-qc-filter="experiment" aria-pressed="false"><span class="qc-dot qc-dot--experiment" aria-hidden="true"></span>Experiments</button>
+</div>
+{%- assign year_open = "" -%}
+{%- for item in items -%}
+{%- assign year = item.date | slice: 0, 4 -%}
+{%- if year != year_open -%}
+{%- unless forloop.first %}
+</ol>
+</div>
+{%- endunless %}
+<div class="qc-tl-year" data-year="{{ year }}">
+<h3 class="qc-tl-yearlabel">{{ year }}</h3>
+<ol class="qc-tl-list">
+{%- assign year_open = year -%}
+{%- endif -%}
+{%- assign mm = item.date | slice: 5, 2 %}
+<li class="qc-tl-item qc-tl-{{ item.kind }}" data-kind="{{ item.kind }}" data-year="{{ year }}">
+<span class="qc-tl-when">{% if mm.size == 2 %}{% assign mi = mm | plus: 0 | minus: 1 %}{{ months[mi] }}{% endif %}</span>
+<div class="qc-tl-body">
+<p class="qc-tl-title"><a href="{{ item.link }}">{{ item.title }}</a> <span class="qc-tl-kind">{% case item.kind %}{% when "ours" %}Our group{% when "experiment" %}Experiment{% else %}Theory{% endcase %}</span></p>
+<p class="qc-tl-text">{{ item.text }}</p>
+</div>
+</li>
+{%- if forloop.last %}
+</ol>
+</div>
+{%- endif -%}
+{%- endfor %}
+<button type="button" class="qc-tl-more" data-qc-more hidden>Show earlier milestones ({{ oldest }}–{{ recent_from | minus: 1 }})</button>
+</div>

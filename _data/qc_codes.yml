@@ -1,0 +1,32 @@
+# Codes in the "same distance, fewer qubits" figure at the top of
+# /quantum-computing/ (_includes/qc/budget.liquid). One button per block, in
+# display order. n = data qubits, k = logical qubits, d = code distance,
+# w = check weight. The surface-code side of the figure is computed, not
+# stored: k separate patches of d x d data qubits.
+- n: 90
+  k: 21
+  d: 11
+  w: 10
+  paper: Design principles for ultra-high-rate quantum codes
+  link: https://arxiv.org/abs/2609.30069
+
+- n: 140
+  k: 31
+  d: 15
+  w: 10
+  paper: Design principles for ultra-high-rate quantum codes
+  link: https://arxiv.org/abs/2609.30069
+
+- n: 200
+  k: 43
+  d: 20
+  w: 10
+  paper: Design principles for ultra-high-rate quantum codes
+  link: https://arxiv.org/abs/2609.30069
+
+- n: 1024
+  k: 256
+  d: 24
+  w: 10
+  paper: Designing group-valued codes with full regular low-weight bases
+  link: https://arxiv.org/abs/2610.06820

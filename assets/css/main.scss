@@ -33,5 +33,7 @@
 @use "typograms";
 
 // Site-specific overrides (this file is a local copy of al_folio_core's
-// assets/css/main.scss with this one extra line; see _sass/_custom.scss).
+// assets/css/main.scss with the extra lines below; see _sass/_custom.scss).
 @use "custom";
+// Quantum Computing tab (_pages/quantum-computing.md).
+@use "quantum-computing";

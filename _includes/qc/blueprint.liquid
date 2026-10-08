@@ -1,0 +1,57 @@
+{%- comment -%}
+  Blueprint of a fault-tolerant quantum computer for _pages/quantum-computing.md,
+  from _data/qc_architecture.yml. Each box opens its panel underneath
+  (assets/js/quantum-computing.js); without JavaScript every panel is shown.
+{%- endcomment -%}
+{%- assign parts = site.data.qc_architecture -%}
+{%- assign stages = "proposed,simulated at full scale,shown on small devices,running at useful scale" | split: "," -%}
+<div class="qc-blueprint" data-qc-blueprint data-default="memory">
+<div class="qc-bp-grid">
+<p class="qc-bp-conn qc-bp-conn--top" aria-hidden="true"><span>↓ logical instructions</span><span>↑ measurement results</span></p>
+<p class="qc-bp-conn qc-bp-conn--teleport" aria-hidden="true"><span class="qc-bp-arrow">⇄</span><span>teleport</span></p>
+<p class="qc-bp-conn qc-bp-conn--magic" aria-hidden="true"><span class="qc-bp-arrow">←</span><span>magic states</span></p>
+<p class="qc-bp-conn qc-bp-conn--decode" aria-hidden="true"><span>↓ check results, every cycle</span><span>↑ inferred errors</span></p>
+{%- for part in parts %}
+{%- if part.stage %}{% assign si = part.stage | minus: 1 %}{% endif %}
+{%- if part.id == "memory" or part.id == "logic" or part.id == "factory" %}{% assign wide = "" %}{% else %}{% assign wide = " qc-bp-box--wide" %}{% endif %}
+<a class="qc-bp-box qc-bp-{{ part.id }}{{ wide }}{% unless part.stage %} qc-bp-box--theory{% endunless %}" href="#qc-part-{{ part.id }}" data-qc-part="{{ part.id }}" aria-controls="qc-part-{{ part.id }}">
+<span class="qc-bp-text"><span class="qc-bp-name">{{ part.name }}</span><span class="qc-bp-role">{{ part.role }}</span></span>
+<span class="qc-bp-foot">{% if part.stage %}<span class="qc-meter" aria-hidden="true">{% for s in (1..4) %}<span{% if s <= part.stage %} class="on"{% endif %}></span>{% endfor %}</span><span class="qc-meter-label">{{ stages[si] }}</span>{% else %}<span class="qc-meter-label">theory</span>{% endif %}{% if part.ours %}<span class="qc-ours-pill">our work</span>{% endif %}</span>
+</a>
+{%- endfor %}
+</div>
+<p class="qc-bp-legend">Bars fill in four steps: proposed, simulated at full scale, shown on small devices, running at useful scale. Select a part to see who is filling it in and what is still open. Status as of October 2026.</p>
+<div class="qc-parts">
+{%- for part in parts %}
+{%- if part.stage %}{% assign si = part.stage | minus: 1 %}{% endif %}
+<div class="qc-part" id="qc-part-{{ part.id }}" data-qc-part-panel="{{ part.id }}">
+<h3 class="qc-part-title">{{ part.name }}</h3>
+{%- if part.stage %}
+<p class="qc-part-stage"><span class="qc-meter" aria-hidden="true">{% for s in (1..4) %}<span{% if s <= part.stage %} class="on"{% endif %}></span>{% endfor %}</span><span>{{ stages[si] | capitalize }}. {{ part.stage_note }}</span></p>
+{%- endif %}
+<p class="qc-part-what">{{ part.what }}</p>
+<div class="qc-part-cols">
+<div class="qc-part-col">
+<h4>Progress across the field</h4>
+<ul class="qc-progress">
+{%- for item in part.progress %}
+<li class="qc-pr-{{ item.kind }}"><a href="{{ item.link }}">{{ item.text }}</a><span class="qc-pr-meta">{{ item.who }}, {{ item.year }}<span class="qc-pr-kind">{% if item.kind == "experiment" %}Experiment{% else %}Theory{% endif %}</span></span></li>
+{%- endfor %}
+</ul>
+</div>
+<div class="qc-part-col">
+<h4>Open problems</h4>
+<ul class="qc-open">
+{%- for q in part.open %}
+<li>{{ q }}</li>
+{%- endfor %}
+</ul>
+</div>
+</div>
+{%- if part.ours %}
+<p class="qc-part-ours"><span class="qc-ours-label">Our work</span>{{ part.ours.text }} <a href="#{{ part.ours.topic }}" data-qc-topic="{{ part.ours.topic }}">Details under “{{ part.ours.section }}”</a></p>
+{%- endif %}
+</div>
+{%- endfor %}
+</div>
+</div>

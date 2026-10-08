@@ -1,0 +1,26 @@
+{%- comment -%}
+  Chart of published qubit estimates for factoring RSA-2048, from
+  _data/qc_estimates.yml, drawn by assets/js/quantum-computing.js. The table
+  under "Sources and assumptions" lists the same points without JavaScript.
+{%- endcomment -%}
+{%- assign est = site.data.qc_estimates -%}
+<div class="qc-figure qc-estimates" data-qc-estimates>
+<p class="qc-chart-title">Physical qubits needed to factor a 2048-bit RSA number, by year of the estimate</p>
+<div class="qc-estimates-plot" data-qc-plot role="img" aria-label="Published estimates fall from about 1 billion physical qubits in 2012 to about 13,000 in 2026."></div>
+<p class="qc-legend"><span class="qc-legend-surface">surface code</span><span class="qc-legend-qldpc">high-rate qLDPC codes</span>{% if est.reference %}<span class="qc-legend-ref">hardware that exists today</span>{% endif %}</p>
+<details class="qc-sources">
+<summary>Sources and assumptions</summary>
+<div class="qc-sources-wrap">
+<table>
+<thead><tr><th>Year</th><th>Qubits</th><th>Runtime</th><th>Code</th><th>Paper</th></tr></thead>
+<tbody>
+{%- for p in est.points %}
+<tr><td>{{ p.year | floor }}</td><td>{{ p.value }}</td><td>{{ p.runtime }}</td><td>{% if p.code == "qldpc" %}qLDPC{% else %}surface{% endif %}</td><td><a href="{{ p.link }}">{{ p.who }}</a></td></tr>
+{%- endfor %}
+</tbody>
+</table>
+</div>
+<p>All are designs on paper. They assume physical error rates near 0.1% and differ in what they assume about connectivity and speed: the superconducting-style designs assume 1 µs error-correction cycles, while Cain et al. assume 1 ms cycles for atoms, which is why their smallest design runs for decades.{% if est.reference %} The dashed line marks <a href="{{ est.reference.link }}">{{ est.reference.label }}</a>, held but not yet used for computation.{% endif %}</p>
+</details>
+<script type="application/json" data-qc-estimates-data>{{ est | jsonify }}</script>
+</div>

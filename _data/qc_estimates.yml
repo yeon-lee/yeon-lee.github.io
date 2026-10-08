@@ -1,0 +1,59 @@
+# Published estimates of the physical qubits needed to factor a 2048-bit RSA
+# integer with Shor's algorithm: the chart on /quantum-computing/
+# (_includes/qc/estimates.liquid). `year` is a decimal year that places the
+# point; `code` (surface or qldpc) sets its colour; `side` puts the label left
+# or right of the point and `dy` nudges it up (negative) or down in pixels.
+# `chart_who` (optional) replaces `who` on the chart, e.g. to flag a runtime.
+points:
+  - year: 2012.6
+    qubits: 1000000000
+    value: "about 1 billion"
+    who: "Fowler et al."
+    runtime: "about a day"
+    code: surface
+    side: right
+    link: https://arxiv.org/abs/1208.0928
+  - year: 2019.4
+    qubits: 20000000
+    value: "20 million"
+    who: "Gidney & Ekerå"
+    runtime: "8 hours"
+    code: surface
+    side: right
+    link: https://arxiv.org/abs/1905.09749
+  - year: 2025.4
+    qubits: 1000000
+    value: "under 1 million"
+    who: "Gidney"
+    runtime: "under a week"
+    code: surface
+    side: left
+    link: https://arxiv.org/abs/2505.15917
+  - year: 2026.1
+    qubits: 98000
+    value: "under 100,000"
+    who: "Webster et al. (Iceberg Quantum)"
+    who_short: "Iceberg Quantum"
+    runtime: "about a month"
+    code: qldpc
+    side: left
+    link: https://arxiv.org/abs/2602.11457
+  - year: 2026.25
+    qubits: 13255
+    value: "about 13,000"
+    who: "Cain et al. (Oratomic, Caltech)"
+    who_short: "Oratomic, Caltech"
+    chart_who: "Cain et al.; runs for decades"
+    chart_who_short: "Oratomic; runs for decades"
+    runtime: "decades at 1 ms cycles; about 100 days with ~100,000 atoms"
+    code: qldpc
+    side: left
+    dy: -6
+    link: https://arxiv.org/abs/2603.28627
+
+# Dashed reference line: hardware that exists today.
+reference:
+  qubits: 6100
+  label: "6,100 atoms held in one array (Caltech, 2025)"
+  short: "6,100-atom array, 2025"
+  link: https://arxiv.org/abs/2403.12021
