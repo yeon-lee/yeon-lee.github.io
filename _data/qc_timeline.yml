@@ -18,6 +18,12 @@
   text: "Codes whose complete basis of logical operators is about as light as the distance allows (exactly as light for [[1088,128,22]]), and a new code parameter, the frame width, that measures this."
   link: https://arxiv.org/abs/2610.06820
 
+- date: "2026-10"
+  kind: experiment
+  title: "DARPA's quantum benchmark enters final stage"
+  text: "Atom Computing, Diraq, IBM and IonQ join Microsoft and PsiQuantum in Stage C of DARPA's Quantum Benchmarking Initiative, where government experts test whether their machines can reach utility scale by 2033."
+  link: https://www.darpa.mil/news/2026/four-more-teams-enter-quantum-benchmarking-initiative-final-stage
+
 - date: "2026-09"
   kind: ours
   title: "Design principles for ultra-high-rate codes"
@@ -31,22 +37,16 @@
   link: https://arxiv.org/abs/2609.11930
 
 - date: "2026-08"
-  kind: experiment
-  title: "IBM joins its first cryogenic modules"
-  text: "Two cooled modules linked into one environment, a step toward Starling, IBM's planned 2029 fault-tolerant machine built on qLDPC codes."
-  link: https://newsroom.ibm.com/2026-08-19-ibm-connects-its-first-modular-cryogenic-systems-in-milestone-toward-fault-tolerant-quantum-computing
-
-- date: "2026-08"
   kind: ours
   title: "Error correction at chiral topological edges"
   text: "The gapless edges of two-dimensional topological phases act as approximate error-correcting codes. With Y. Song, Z. Liu, Z. Wang and B. Shi."
   link: https://arxiv.org/abs/2608.06258
 
-- date: "2026-07"
-  kind: theory
-  title: "High-rate qLDPC processors"
-  text: "Caltech and Oratomic's mitten codes (rate 20%, check weight 9) come with a symmetric logical basis, so a few reusable gadgets reach every logical qubit."
-  link: https://arxiv.org/abs/2607.28795
+- date: "2026-08"
+  kind: experiment
+  title: "IBM joins its first cryogenic modules"
+  text: "IBM cools two linked modules as one system, with processors to be installed later in 2026, a step toward Starling, its planned 2029 fault-tolerant machine built on qLDPC codes."
+  link: https://newsroom.ibm.com/2026-08-19-ibm-connects-its-first-modular-cryogenic-systems-in-milestone-toward-fault-tolerant-quantum-computing
 
 - date: "2026-07"
   kind: ours
@@ -66,6 +66,18 @@
   text: "A complete, labeled set of logical operators for Abelian lifted-product codes, found by splitting the code's algebra into small finite-field pieces."
   link: https://arxiv.org/abs/2607.05386
 
+- date: "2026-07"
+  kind: theory
+  title: "High-rate qLDPC processors"
+  text: "Caltech and Oratomic's mitten codes (rate 20%, check weight 9) come with a symmetric logical basis, so a few reusable gadgets reach every logical qubit."
+  link: https://arxiv.org/abs/2607.28795
+
+- date: "2026-06"
+  kind: experiment
+  title: "Lattice surgery on superconducting chips"
+  text: "Zhejiang University entangles two distance-3 surface-code logical qubits by lattice surgery on a superconducting chip; weeks later USTC shows a logical CNOT and other Clifford gates without postselection."
+  link: https://arxiv.org/abs/2606.06598
+
 - date: "2026-06"
   kind: experiment
   title: "qLDPC codes reach breakeven"
@@ -74,7 +86,7 @@
 
 - date: "2026-04"
   kind: theory
-  title: "Rates above one half, built for atom arrays"
+  title: "Rates above one half for atom arrays"
   text: "QuEra, Harvard and MIT adapt Kasai's ultra-high-rate codes, such as 580 logical qubits in 1,152 physical ones, to the way atom arrays move."
   link: https://arxiv.org/abs/2604.16209
 
@@ -85,22 +97,28 @@
   link: https://arxiv.org/abs/2603.28627
 
 - date: "2026-02"
+  kind: experiment
+  title: "Dozens of logical qubits beyond break-even"
+  text: "Quantinuum computes with 48 error-corrected and up to 94 error-detected logical qubits on its 98-qubit Helios, beating unencoded circuits, though many runs rely on discarding flagged results."
+  link: https://arxiv.org/abs/2602.22211
+
+- date: "2026-02"
   kind: theory
   title: "RSA-2048 with under 100,000 qubits"
-  text: "Iceberg Quantum's Pinnacle architecture swaps the surface code for qLDPC codes and cuts the estimate about tenfold."
+  text: "Iceberg Quantum's Pinnacle architecture swaps the surface code for qLDPC codes and cuts the estimate about tenfold, with a runtime of about a month."
   link: https://arxiv.org/abs/2602.11457
 
-- date: "2026-01"
-  kind: experiment
-  title: "qLDPC codes on a superconducting chip"
-  text: "Zhejiang University runs two qLDPC codes, including a bivariate bicycle code, on a processor with long-range couplers."
-  link: https://doi.org/10.1038/s41567-025-03157-4
-
-- date: "2024-10"
+- date: "2025-12"
   kind: ours
-  title: "Error threshold of SYK codes"
-  text: "Black-hole-inspired SYK models store information like a code; under parity-preserving noise, their threshold coincides with strong-to-weak symmetry breaking (Phys. Rev. B 2026). With J. Kim and E. Altman."
-  link: https://doi.org/10.1103/srf2-1f6d
+  title: "Information critical phases"
+  text: "In noisy Z<sub>N</sub> toric codes with N > 4, a whole intermediate phase in which a fraction of the stored information survives. With Ph.D. student A. Vijay."
+  link: https://arxiv.org/abs/2512.22121
+
+- date: "2025-12"
+  kind: experiment
+  title: "A second chip below threshold"
+  text: "USTC's Zuchongzhi 3.2 runs a distance-7 surface code below threshold, with errors falling 1.4-fold per step, using microwave-only leakage control; it is the second superconducting team to do so."
+  link: https://doi.org/10.1103/rqkg-dw31
 
 - date: "2025-12"
   kind: experiment
@@ -108,11 +126,11 @@
   text: "Magic state cultivation, a cheap way to make the extra ingredient that universal logic needs, is tested on a superconducting processor."
   link: https://arxiv.org/abs/2512.13908
 
-- date: "2025-12"
-  kind: ours
-  title: "Information critical phases"
-  text: "In noisy Z<sub>N</sub> toric codes with N > 4, a whole intermediate phase in which a fraction of the stored information survives. With Ph.D. student A. Vijay."
-  link: https://arxiv.org/abs/2512.22121
+- date: "2025-06"
+  kind: experiment
+  title: "Quantum Echoes, a contested advantage claim"
+  text: "Google's Willow measures an echo-like signal (out-of-time-order correlators) on up to 103 qubits; Google estimates a 65-qubit case would take a supercomputer 13,000 times longer. Some experts question the “verifiable advantage” label."
+  link: https://arxiv.org/abs/2506.10191
 
 - date: "2025-06"
   kind: experiment
@@ -127,16 +145,22 @@
   link: https://arxiv.org/abs/2506.03094
 
 - date: "2025-05"
+  kind: experiment
+  title: "qLDPC codes on a superconducting chip"
+  text: "Zhejiang University runs two qLDPC codes, including a bivariate bicycle code, on a processor with long-range couplers; logical errors, about 8–9% per cycle, are still high."
+  link: https://arxiv.org/abs/2505.09684
+
+- date: "2025-05"
   kind: theory
   title: "RSA-2048 with under a million qubits"
-  text: "Gidney cuts the surface-code estimate twentyfold with better arithmetic, yoked codes and magic state cultivation."
+  text: "Gidney cuts the surface-code estimate twentyfold with better arithmetic, yoked codes and magic state cultivation, though the run takes under a week instead of 8 hours."
   link: https://arxiv.org/abs/2505.15917
 
-- date: "2024-07"
-  kind: ours
-  title: "Coherent information for all CSS codes"
-  text: "Extends the exact calculation to general CSS codes under incoherent Pauli noise, showing the optimal decoder reaches the fundamental threshold (Phys. Rev. A 2025). With R. Niwa."
-  link: https://doi.org/10.1103/PhysRevA.111.032402
+- date: "2024-12"
+  kind: theory
+  title: "Codes near the hashing bound"
+  text: "Komoto and Kasai find qLDPC codes with rates from one half to three quarters that approach the hashing bound, a long-standing benchmark, with decoding cost linear in size (in a simplified noise model)."
+  link: https://arxiv.org/abs/2412.21171
 
 - date: "2024-12"
   kind: experiment
@@ -144,11 +168,17 @@
   text: "QuEra distills magic states encoded in color codes on a neutral-atom computer, a first on any platform."
   link: https://arxiv.org/abs/2412.15165
 
-- date: "2024-12"
-  kind: theory
-  title: "Codes near the hashing bound"
-  text: "Komoto and Kasai find qLDPC codes with rate above one half that approach the hashing bound, a long-standing benchmark, with decoding cost linear in size."
-  link: https://arxiv.org/abs/2412.21171
+- date: "2024-10"
+  kind: ours
+  title: "Error threshold of SYK codes"
+  text: "Black-hole-inspired SYK models store information like a code; under parity-preserving noise, their threshold coincides with strong-to-weak symmetry breaking (Phys. Rev. B 2026). With J. Kim and E. Altman."
+  link: https://doi.org/10.1103/srf2-1f6d
+
+- date: "2024-09"
+  kind: experiment
+  title: "Cat qubits in a repetition code"
+  text: "AWS links bit-flip-resistant “cat” qubits into a repetition code, and going from distance 3 to 5 lowers the logical error slightly; the chip was announced as Ocelot in 2025."
+  link: https://arxiv.org/abs/2409.13025
 
 - date: "2024-09"
   kind: theory
@@ -163,6 +193,12 @@
   link: https://arxiv.org/abs/2408.13687
 
 - date: "2024-07"
+  kind: ours
+  title: "Coherent information for all CSS codes"
+  text: "Extends the exact calculation to general CSS codes under incoherent Pauli noise, showing the optimal decoder reaches the fundamental threshold (Phys. Rev. A 2025). With R. Niwa."
+  link: https://doi.org/10.1103/PhysRevA.111.032402
+
+- date: "2024-07"
   kind: theory
   title: "Surgery for qLDPC codes"
   text: "Better ways to measure logical qubits inside high-rate codes, such as improved surgery and gauging logical operators, bring computation on them within reach."
@@ -173,6 +209,12 @@
   title: "Faster logic with transversal gates"
   text: "QuEra and Harvard researchers show that logical gates can be followed by a few rounds of checks instead of d rounds, speeding up computation."
   link: https://arxiv.org/abs/2406.17653
+
+- date: "2024-04"
+  kind: experiment
+  title: "Logical qubits beat physical ones"
+  text: "Microsoft and Quantinuum run trapped-ion logical qubits with error rates up to 800 times below physical ones, depending on how many flagged runs are discarded; 12 logical qubits followed in September."
+  link: https://arxiv.org/abs/2404.02280
 
 - date: "2024-03"
   kind: experiment
@@ -185,12 +227,6 @@
   title: "Exact coherent information for the toric code"
   text: "The first exact formula for the toric code's coherent information under noise, tying its threshold to the random-bond Ising model (Phys. Rev. Lett. 2025)."
   link: https://doi.org/10.1103/hlfh-86yz
-
-- date: "2023-03"
-  kind: ours
-  title: "Stable Floquet codes"
-  text: "Floquet codes build protected qubits from a repeating cycle of two-qubit measurements; their dynamical topological order survives perturbations (Phys. Rev. Lett. 2024). With D. Vu, A. Lavasani and M. P. A. Fisher."
-  link: https://doi.org/10.1103/PhysRevLett.132.070401
 
 - date: "2024-02"
   kind: ours
@@ -216,6 +252,18 @@
   text: "Xu et al. show that reconfigurable atom arrays can run high-rate qLDPC codes, toward constant-overhead fault tolerance."
   link: https://arxiv.org/abs/2308.08648
 
+- date: "2023-03"
+  kind: ours
+  title: "Stable Floquet codes"
+  text: "Floquet codes build protected qubits from a repeating cycle of two-qubit measurements; their dynamical topological order survives perturbations (Phys. Rev. Lett. 2024). With D. Vu, A. Lavasani and M. P. A. Fisher."
+  link: https://doi.org/10.1103/PhysRevLett.132.070401
+
+- date: "2022-11"
+  kind: experiment
+  title: "Bosonic qubits pass break-even"
+  text: "Yale's real-time-corrected GKP qubit in a microwave cavity lives 2.3 times longer than the system's best uncorrected qubit; a SUSTech binomial-code qubit also passes break-even."
+  link: https://arxiv.org/abs/2211.09116
+
 - date: "2022-08"
   kind: ours
   title: "Decoding measurement-prepared states"
@@ -235,10 +283,22 @@
   link: https://arxiv.org/abs/2111.03654
 
 - date: "2021-07"
+  kind: experiment
+  title: "Real-time fault-tolerant error correction"
+  text: "Honeywell (now Quantinuum) repeatedly measures, decodes and corrects errors on a seven-qubit Steane-code logical qubit in trapped ions while the computation runs."
+  link: https://arxiv.org/abs/2107.07505
+
+- date: "2021-07"
   kind: theory
   title: "Floquet codes"
   text: "Hastings and Haah create protected qubits from a repeating schedule of two-qubit measurements."
   link: https://arxiv.org/abs/2107.02194
+
+- date: "2020-12"
+  kind: experiment
+  title: "Jiuzhang: an advantage claim with light"
+  text: "USTC's Jiuzhang detects up to 76 photons in Gaussian boson sampling and claims to run about 100 trillion times faster than a supercomputer simulation, the first advantage claim made with photons."
+  link: https://arxiv.org/abs/2012.01625
 
 - date: "2020-12"
   kind: theory
@@ -246,11 +306,77 @@
   text: "Panteleev and Kalachev introduce lifted-product codes, the family much of our recent work builds on."
   link: https://arxiv.org/abs/2012.04068
 
+- date: "2019-10"
+  kind: experiment
+  title: "Google's quantum supremacy claim"
+  text: "Google's 53-qubit Sycamore samples random circuits in about 200 seconds, a task it estimated would take a supercomputer 10,000 years; in 2021 classical GPUs matched it in about 15 hours."
+  link: https://doi.org/10.1038/s41586-019-1666-5
+
 - date: "2019-05"
   kind: theory
   title: "RSA-2048 with 20 million qubits"
   text: "Gidney and Ekerå's surface-code estimate, with 8 hours of runtime, becomes the field's benchmark."
   link: https://arxiv.org/abs/1905.09749
+
+- date: "2018-01"
+  kind: theory
+  title: "The NISQ era"
+  text: "Preskill names the “noisy intermediate-scale quantum” era, separating today's error-prone devices from the fault-tolerant machines that error correction will enable."
+  link: https://arxiv.org/abs/1801.00862
+
+- date: "2017-07"
+  kind: experiment
+  title: "Quantum simulators pass 50 qubits"
+  text: "Harvard and MIT with 51 Rydberg atoms, and Maryland with 53 trapped ions, run programmable simulators of many-body physics, in back-to-back Nature papers."
+  link: https://arxiv.org/abs/1707.04344
+
+- date: "2016-07"
+  kind: experiment
+  title: "Atom arrays assembled one by one"
+  text: "Groups at Institut d'Optique and Harvard use movable laser tweezers to sort atoms into gap-free arrays, the foundation of today's neutral-atom quantum computers."
+  link: https://arxiv.org/abs/1607.03042
+
+- date: "2016-05"
+  kind: experiment
+  title: "A quantum computer on the cloud"
+  text: "IBM puts a five-qubit superconducting processor online as the IBM Quantum Experience, letting anyone run experiments on real quantum hardware."
+  link: https://uk.newsroom.ibm.com/2016-May-04-IBM-Makes-Quantum-Computing-Available-on-IBM-Cloud-to-Accelerate-Innovation
+
+- date: "2016-02"
+  kind: experiment
+  title: "Error correction reaches break-even"
+  text: "Ofek, Schoelkopf and colleagues at Yale store a qubit in “cat” states of microwave light and correct it in real time, so it outlives the best uncorrected encoding in the same system."
+  link: https://arxiv.org/abs/1602.04768
+
+- date: "2015-12"
+  kind: experiment
+  title: "Two-qubit gates reach 99.9%"
+  text: "Ion-trap groups at Oxford and NIST push two-qubit gates to about 99.9% fidelity, an error rate roughly ten times below what surface-code error correction requires."
+  link: https://arxiv.org/abs/1512.04600
+
+- date: "2014-11"
+  kind: experiment
+  title: "First two-qubit gate in silicon"
+  text: "Veldhorst, Dzurak and colleagues at UNSW perform a controlled-NOT between two electron spins in a silicon device much like an ordinary transistor."
+  link: https://arxiv.org/abs/1411.5760
+
+- date: "2014-11"
+  kind: experiment
+  title: "Repeated error detection on a chip"
+  text: "Kelly, Martinis and colleagues at Google and UC Santa Barbara protect stored states with a repetition code of up to nine superconducting qubits; the larger code suppresses errors more."
+  link: https://arxiv.org/abs/1411.7403
+
+- date: "2014-03"
+  kind: experiment
+  title: "A color code on seven ions"
+  text: "Nigg, Blatt and colleagues at Innsbruck spread one logical qubit over seven trapped ions with the smallest color code, a topological code, and compute with it."
+  link: https://arxiv.org/abs/1403.5426
+
+- date: "2014-02"
+  kind: experiment
+  title: "Gates at the surface-code threshold"
+  text: "Barends, Martinis and colleagues at UC Santa Barbara reach 99.4% two-qubit gate fidelity across five superconducting qubits, good enough for surface-code error correction."
+  link: https://arxiv.org/abs/1402.4848
 
 - date: "2013-10"
   kind: theory
@@ -264,11 +390,83 @@
   text: "Fowler et al. lay out how to build a surface-code quantum computer, and estimate about a billion qubits for RSA-2048."
   link: https://arxiv.org/abs/1208.0928
 
+- date: "2012-02"
+  kind: experiment
+  title: "Topological error correction with photons"
+  text: "Pan Jian-Wei's group at USTC entangles photons into a cluster state and demonstrates topological error correction, a measurement-based relative of the surface code."
+  link: https://arxiv.org/abs/1202.5459
+
+- date: "2011-11"
+  kind: theory
+  title: "Lattice surgery"
+  text: "Horsman, Fowler, Devitt and Van Meter compute between surface-code patches by merging and splitting their edges; this cut overhead and became the standard way to compute with surface codes."
+  link: https://arxiv.org/abs/1111.4022
+
+- date: "2011-09"
+  kind: experiment
+  title: "Error correction on a superconducting chip"
+  text: "Reed, Schoelkopf and colleagues at Yale run a three-qubit code on superconducting transmons, correcting single bit-flip or phase-flip errors, the first error correction on a superconducting chip."
+  link: https://arxiv.org/abs/1109.4948
+
+- date: "2009-09"
+  kind: theory
+  title: "Flat codes hit a limit"
+  text: "Bravyi, Poulin and Terhal prove that codes with only local checks in a plane face a strict trade-off between logical qubits and distance, so beating the surface code needs long-range connections."
+  link: https://arxiv.org/abs/0909.5200
+
+- date: "2009-07"
+  kind: experiment
+  title: "Atoms linked by Rydberg blockade"
+  text: "Groups in Wisconsin and at Institut d'Optique near Paris use the Rydberg blockade, where one highly excited atom blocks its neighbor, to make a CNOT gate and entangle two atoms."
+  link: https://arxiv.org/abs/0907.5552
+
+- date: "2009-03"
+  kind: theory
+  title: "Hypergraph product codes"
+  text: "Tillich and Zémor turn any two classical LDPC codes into a quantum LDPC code with constant rate and distance growing like √n, seeding modern qLDPC constructions such as lifted-product codes."
+  link: https://arxiv.org/abs/0903.0566
+
+- date: "2007-02"
+  kind: theory
+  title: "The transmon qubit"
+  text: "Koch, Schoelkopf, Girvin and colleagues at Yale design the transmon, a superconducting qubit insensitive to stray electric charge; it became the standard qubit of IBM, Google and others."
+  link: https://arxiv.org/abs/cond-mat/0703002
+
+- date: "2006-10"
+  kind: theory
+  title: "A surface-code threshold near one percent"
+  text: "Raussendorf and Harrington show fault-tolerant computing with only nearest-neighbor gates on a 2D lattice, tolerating about 0.75% error per operation; this made surface-code architectures the leading plan."
+  link: https://arxiv.org/abs/quant-ph/0610082
+
+- date: "2006-05"
+  kind: theory
+  title: "Color codes"
+  text: "Bombin and Martin-Delgado introduce color codes, topological codes in which all Clifford gates act qubit by qubit, which makes many logical operations simple."
+  link: https://arxiv.org/abs/quant-ph/0605138
+
+- date: "2004-12"
+  kind: experiment
+  title: "Error correction with trapped ions"
+  text: "Chiaverini, Wineland and colleagues at NIST use three beryllium ions to protect one qubit against spin-flip errors, the first quantum error correction with trapped ions."
+  link: https://doi.org/10.1038/nature03074
+
+- date: "2004-07"
+  kind: experiment
+  title: "Circuit QED: qubit meets photon"
+  text: "Wallraff, Schoelkopf and colleagues at Yale couple a superconducting qubit strongly to a single microwave photon on a chip, the wiring and readout scheme of today's superconducting processors."
+  link: https://arxiv.org/abs/cond-mat/0407325
+
 - date: "2004-03"
   kind: theory
   title: "Magic state distillation"
   text: "Bravyi and Kitaev show how noisy “magic” states can be purified to complete a universal set of fault-tolerant gates."
   link: https://arxiv.org/abs/quant-ph/0403025
+
+- date: "2001-12"
+  kind: experiment
+  title: "Shor's algorithm factors 15"
+  text: "Vandersypen, Chuang and colleagues at IBM Almaden and Stanford use Shor's algorithm to factor 15 into 3 × 5 with nuclear spins in a custom-made molecule."
+  link: https://arxiv.org/abs/quant-ph/0112176
 
 - date: "2001-10"
   kind: theory
@@ -276,20 +474,134 @@
   text: "Dennis, Kitaev, Landahl and Preskill map the surface code's threshold onto a random-bond Ising model, an idea at the heart of our threshold work."
   link: https://arxiv.org/abs/quant-ph/0110143
 
+- date: "2000-10"
+  kind: theory
+  title: "Computing by measurement alone"
+  text: "Raussendorf and Briegel show that a computation can run as single-qubit measurements on a pre-made entangled “cluster state”, the model behind photonic fault-tolerant architectures."
+  link: https://arxiv.org/abs/quant-ph/0010033
+
+- date: "2000-08"
+  kind: theory
+  title: "A qubit inside an oscillator"
+  text: "Gottesman, Kitaev and Preskill encode a qubit in an oscillator, such as a microwave cavity mode, so that small shifts can be detected and corrected, founding bosonic error correction."
+  link: https://arxiv.org/abs/quant-ph/0008040
+
+- date: "2000-06"
+  kind: theory
+  title: "Quantum computing with linear optics"
+  text: "Knill, Laflamme and Milburn show that single photons, beam splitters and detectors suffice for scalable quantum computing when measurement results steer later steps, founding photonic quantum computing."
+  link: https://arxiv.org/abs/quant-ph/0006088
+
+- date: "1999-04"
+  kind: experiment
+  title: "A circuit behaves like a qubit"
+  text: "Nakamura, Pashkin and Tsai at NEC make a tiny superconducting island oscillate coherently between two charge states, the first sign that an electrical circuit can serve as a qubit."
+  link: https://arxiv.org/abs/cond-mat/9904003
+
+- date: "1998-11"
+  kind: theory
+  title: "The planar surface code"
+  text: "Bravyi and Kitaev cut the toric code down to a flat patch with boundaries; this “surface code” needs only neighboring checks on a chip and is what most hardware teams pursue."
+  link: https://arxiv.org/abs/quant-ph/9811052
+
+- date: "1998-02"
+  kind: experiment
+  title: "First quantum error correction experiment"
+  text: "Cory and colleagues at MIT and Los Alamos use three nuclear spins in a molecule to encode one qubit and undo phase errors on it."
+  link: https://arxiv.org/abs/quant-ph/9802018
+
+- date: "1998-01"
+  kind: experiment
+  title: "First quantum algorithms on hardware"
+  text: "Groups at Oxford and at IBM, Berkeley and MIT solve Deutsch's problem with nuclear spins in liquid molecules; Grover search follows in April."
+  link: https://arxiv.org/abs/quant-ph/9801037
+
 - date: "1997-07"
   kind: theory
   title: "Topological codes"
   text: "Kitaev's toric code stores information in the global topology of a lattice, where local errors cannot read or change it unless they pile up."
   link: https://arxiv.org/abs/quant-ph/9707021
 
-- date: "1996-11"
+- date: "1997-01"
+  kind: theory
+  title: "Qubits from single electron spins"
+  text: "Loss and DiVincenzo propose using the spin of one electron trapped in a semiconductor quantum dot as a qubit, with gates made by letting neighboring electrons interact."
+  link: https://arxiv.org/abs/cond-mat/9701055
+
+- date: "1996-10"
   kind: theory
   title: "The threshold theorem"
-  text: "If each operation fails rarely enough, arbitrarily long quantum computations are possible (Aharonov and Ben-Or; Knill, Laflamme and Zurek; Kitaev)."
-  link: https://arxiv.org/abs/quant-ph/9611025
+  text: "If each operation fails rarely enough, arbitrarily long quantum computations are possible (Knill, Laflamme and Zurek; Aharonov and Ben-Or; Kitaev)."
+  link: https://arxiv.org/abs/quant-ph/9610011
+
+- date: "1996-08"
+  kind: theory
+  title: "Universal quantum simulators"
+  text: "Lloyd proves Feynman's conjecture: a quantum computer can efficiently simulate any quantum system with local interactions, still a leading use for error-corrected machines."
+  link: https://doi.org/10.1126/science.273.5278.1073
+
+- date: "1996-05"
+  kind: theory
+  title: "Grover's search algorithm"
+  text: "Grover shows how to search N unsorted items in about √N steps instead of N, a quadratic speedup that applies to a huge range of problems."
+  link: https://arxiv.org/abs/quant-ph/9605043
+
+- date: "1996-04"
+  kind: theory
+  title: "Stabilizer codes"
+  text: "Gottesman, and independently Calderbank, Rains, Shor and Sloane, describe codes by the set of checks they satisfy, the common language of nearly all codes used today."
+  link: https://arxiv.org/abs/quant-ph/9604038
+
+- date: "1996-04"
+  kind: theory
+  title: "When errors can be undone"
+  text: "Knill and Laflamme give the exact conditions under which a code can reverse a set of errors, the test that every quantum code must pass."
+  link: https://arxiv.org/abs/quant-ph/9604034
+
+- date: "1995-12"
+  kind: theory
+  title: "Quantum codes from classical ones"
+  text: "Calderbank and Shor, and independently Steane, build quantum codes from pairs of classical codes, including Steane's seven-qubit code, and show that good quantum codes exist."
+  link: https://arxiv.org/abs/quant-ph/9512032
+
+- date: "1995-12"
+  kind: experiment
+  title: "The first quantum logic gate"
+  text: "Monroe, Wineland and colleagues at NIST run a controlled-NOT, the basic two-qubit gate, on two qubits stored in a single trapped beryllium ion."
+  link: https://doi.org/10.1103/PhysRevLett.75.4714
 
 - date: "1995-10"
   kind: theory
   title: "The first quantum code"
   text: "Shor protects one qubit from any single error by spreading it over nine."
   link: https://doi.org/10.1103/PhysRevA.52.R2493
+
+- date: "1995-05"
+  kind: theory
+  title: "Blueprint for a trapped-ion computer"
+  text: "Cirac and Zoller show how a row of laser-cooled ions, linked through their shared vibration, could run any quantum computation, launching experimental quantum computing."
+  link: https://doi.org/10.1103/PhysRevLett.74.4091
+
+- date: "1994-11"
+  kind: theory
+  title: "Shor's factoring algorithm"
+  text: "Shor shows that a quantum computer could factor large numbers and compute discrete logarithms exponentially faster than known classical methods, threatening RSA and turning quantum computing into a major field."
+  link: https://doi.org/10.1109/SFCS.1994.365700
+
+- date: "1985-07"
+  kind: theory
+  title: "The universal quantum computer"
+  text: "Deutsch defines a universal quantum computer that can simulate any physical process, and gives the first task where quantum parallelism helps."
+  link: https://doi.org/10.1098/rspa.1985.0070
+
+- date: "1982-06"
+  kind: theory
+  title: "Simulating physics with quantum computers"
+  text: "Feynman argues that ordinary computers cannot efficiently simulate quantum physics but computers made of quantum parts could, the founding motivation of the field (from his 1981 MIT talk)."
+  link: https://doi.org/10.1007/BF02650179
+
+- date: "1980-05"
+  kind: theory
+  title: "A quantum model of a computer"
+  text: "Benioff describes a Turing machine that runs entirely by quantum mechanics, the first model of a computer built from quantum parts."
+  link: https://doi.org/10.1007/BF01011339

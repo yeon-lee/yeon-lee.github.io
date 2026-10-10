@@ -101,7 +101,7 @@ Code families typically have an error threshold: below a certain noise level, bi
 
 ## Milestones
 
-Selected results in theory, architecture and experiment, newest first, with our group's work marked.
+Selected results in theory, architecture and experiment since 1980, newest first, with our group's work marked.
 
 {% include qc/timeline.liquid %}
 
