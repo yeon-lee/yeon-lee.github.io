@@ -4,7 +4,7 @@ permalink: /quantum-computing/
 title: Quantum Computing
 description: error-corrected quantum computers with far fewer qubits, and where the field stands
 nav: true
-nav_order: 1.5
+nav_order: 9
 og_image: /assets/img/qc/quantum-computing-card.png
 ---
 
