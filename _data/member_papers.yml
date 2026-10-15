@@ -107,6 +107,15 @@ tai-hsuan-yang:
   - Tai Hsuan Yang
   primary: quant-ph
 yuta-hirasaki:
+- id: '2610.20591'
+  title: Logical CCZ state cultivation
+  venue: arXiv:2610.20591
+  date: '2026-10-14'
+  url: https://arxiv.org/abs/2610.20591
+  authors:
+  - Yuta Hirasaki
+  - Jong Yeon Lee
+  primary: quant-ph
 - id: '2607.28621'
   title: Lifting Lifted Product Codes
   venue: arXiv:2607.28621
@@ -127,16 +136,6 @@ yuta-hirasaki:
   - Naoki Kanazawa
   - Eiji Saitoh
   primary: quant-ph
-- id: '2409.02009'
-  title: Inverse magneto-conductance design by automatic differentiation
-  venue: Phys. Rev. B 110, 214201
-  date: '2024-09-03'
-  url: https://arxiv.org/abs/2409.02009
-  authors:
-  - Yuta Hirasaki
-  - Koji Inui
-  - Eiji Saitoh
-  primary: cond-mat.mtrl-sci
 drew-kim:
 - id: '2602.03234'
   title: Liouvillian Gap in Dissipative Haar-Doped Clifford Circuits
