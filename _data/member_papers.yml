@@ -37,6 +37,17 @@ jintae-kim:
   - Jung Hoon Han
   primary: cond-mat.str-el
 akash-vijay:
+- id: '2610.22357'
+  title: Stability of Quantum LDPC States under Local Pauli Noise
+  venue: arXiv:2610.22357
+  date: '2026-10-15'
+  url: https://arxiv.org/abs/2610.22357
+  authors:
+  - Tai-Hsuan Yang
+  - Andrew D. Kim
+  - Akash Vijay
+  - Jong Yeon Lee
+  primary: quant-ph
 - id: '2610.12441'
   title: 'Short-Range Vector Spin Glasses: Parisi Hierarchies and Real-Space Ultrametricity'
   venue: arXiv:2610.12441
@@ -58,16 +69,6 @@ akash-vijay:
   - Hong-Chen Jiang
   - Laimei Nie
   primary: quant-ph
-- id: '2609.11930'
-  title: Hierarchy of Rényi Coherent Information in Stabilizer Codes
-  venue: arXiv:2609.11930
-  date: '2026-09-10'
-  url: https://arxiv.org/abs/2609.11930
-  authors:
-  - Akash Vijay
-  - Luis Colmenarez
-  - Jong Yeon Lee
-  primary: quant-ph
 rishi-lohar:
 - id: '2502.09293'
   title: Collective magnetism of atomic momentum states
@@ -82,6 +83,17 @@ rishi-lohar:
   - Bryce Gadway
   primary: cond-mat.quant-gas
 tai-hsuan-yang:
+- id: '2610.22357'
+  title: Stability of Quantum LDPC States under Local Pauli Noise
+  venue: arXiv:2610.22357
+  date: '2026-10-15'
+  url: https://arxiv.org/abs/2610.22357
+  authors:
+  - Tai-Hsuan Yang
+  - Andrew D. Kim
+  - Akash Vijay
+  - Jong Yeon Lee
+  primary: quant-ph
 - id: '2609.38007'
   title: Improved estimate of local Markovianity for quantum Gibbs states
   venue: arXiv:2609.38007
@@ -97,14 +109,6 @@ tai-hsuan-yang:
   url: https://arxiv.org/abs/2609.33815
   authors:
   - Tai-Hsuan Yang
-  primary: quant-ph
-- id: '2609.09019'
-  title: Modular commutator as a robust topological invariant and approximate Markovianity
-  venue: arXiv:2609.09019
-  date: '2026-09-08'
-  url: https://arxiv.org/abs/2609.09019
-  authors:
-  - Tai Hsuan Yang
   primary: quant-ph
 yuta-hirasaki:
 - id: '2610.20591'
@@ -137,6 +141,17 @@ yuta-hirasaki:
   - Eiji Saitoh
   primary: quant-ph
 drew-kim:
+- id: '2610.22357'
+  title: Stability of Quantum LDPC States under Local Pauli Noise
+  venue: arXiv:2610.22357
+  date: '2026-10-15'
+  url: https://arxiv.org/abs/2610.22357
+  authors:
+  - Tai-Hsuan Yang
+  - Andrew D. Kim
+  - Akash Vijay
+  - Jong Yeon Lee
+  primary: quant-ph
 - id: '2602.03234'
   title: Liouvillian Gap in Dissipative Haar-Doped Clifford Circuits
   venue: arXiv:2602.03234
@@ -157,15 +172,6 @@ drew-kim:
   - Ahmed Khalifa
   - Shubhayu Chatterjee
   primary: cond-mat.str-el
-- id: '2212.02470'
-  title: Interaction models and configurational entropies of binary MoTa and the MoNbTaW high entropy alloy
-  venue: arXiv:2212.02470
-  date: '2022-12-05'
-  url: https://arxiv.org/abs/2212.02470
-  authors:
-  - Andrew D. Kim
-  - Michael Widom
-  primary: cond-mat.mtrl-sci
 shashwat-chakraborty:
 - id: '2512.19809'
   title: Preparation of a Quantum Spin Liquid in Non-Hermitian Quantum Dimer Models and Rydberg Arrays
