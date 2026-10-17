@@ -94,21 +94,26 @@ tai-hsuan-yang:
   - Akash Vijay
   - Jong Yeon Lee
   primary: quant-ph
-- id: '2609.38007'
-  title: Improved estimate of local Markovianity for quantum Gibbs states
-  venue: arXiv:2609.38007
-  date: '2026-09-29'
-  url: https://arxiv.org/abs/2609.38007
-  authors:
-  - Tai Hsuan Yang
-  primary: quant-ph
-- id: '2609.33815'
-  title: Quantum data processing equality
-  venue: arXiv:2609.33815
-  date: '2026-09-27'
-  url: https://arxiv.org/abs/2609.33815
+- id: '2506.04221'
+  title: 'Topological Mixed States: Phases of Matter from Axiomatic Approaches'
+  venue: Phys. Rev. X 16, 041002 (2026)
+  date: '2025-06-04'
+  url: https://arxiv.org/abs/2506.04221
   authors:
   - Tai-Hsuan Yang
+  - Bowen Shi
+  - Jong Yeon Lee
+  primary: cond-mat.str-el
+- id: '2410.23152'
+  title: When can classical neural networks represent quantum states?
+  venue: arXiv:2410.23152
+  date: '2024-10-30'
+  url: https://arxiv.org/abs/2410.23152
+  authors:
+  - Tai-Hsuan Yang
+  - Mehdi Soleimanifar
+  - Thiago Bergamaschi
+  - John Preskill
   primary: quant-ph
 yuta-hirasaki:
 - id: '2610.20591'

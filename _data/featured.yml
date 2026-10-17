@@ -23,11 +23,11 @@
   link: https://doi.org/10.1103/3bpt-f9pd
   image: topological-mixed-states.png
 
-- title: Error thresholds as phase transitions
-  caption: Exact coherent information of the toric code under decoherence pins down its fundamental error threshold as a genuine phase transition.
-  venue: Phys. Rev. Lett. 2025
-  link: https://arxiv.org/abs/2402.16937
-  image: coherent-information.png
+- title: Logical CCZ state cultivation
+  caption: A factory that makes logical CCZ states — the resource behind Toffoli gates — directly inside high-rate qLDPC codes, at lower cost than cultivating T states and converting them.
+  venue: arXiv 2026
+  link: https://arxiv.org/abs/2610.20591
+  image: ccz-cultivation.png
 
 - title: Quantum criticality under decoherence
   caption: How a critical ground state changes under decoherence or weak measurement, and the new universality classes that appear.

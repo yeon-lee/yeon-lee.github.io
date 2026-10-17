@@ -8,6 +8,12 @@
 
 - date: "2026-10"
   kind: ours
+  title: "Logical CCZ state cultivation"
+  text: "Magic states for Toffoli gates, the workhorse of quantum arithmetic, made directly inside high-rate qLDPC codes at lower cost than converting cultivated T states. With Ph.D. student Y. Hirasaki."
+  link: https://arxiv.org/abs/2610.20591
+
+- date: "2026-10"
+  kind: ours
   title: "Microsoft Quantum Pioneers award"
   text: "One of five Software Track winners, for the project “From Logical Spectroscopy to Hardware-Aware qLDPC Compilation.”"
   link: https://quantum.microsoft.com/en-us/insights/blogs/announcing-latest-winners-and-finalists-of-the-quantum-pioneers-program

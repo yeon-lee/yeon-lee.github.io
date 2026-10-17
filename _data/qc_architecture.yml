@@ -166,6 +166,10 @@
       year: 2026
       kind: theory
       link: https://arxiv.org/abs/2607.28795
+  ours:
+    text: "CCZ state cultivation makes the magic states behind Toffoli gates directly inside high-rate qLDPC codes, at lower cost per state than converting cultivated T states."
+    topic: magic
+    section: "Magic states and universal computation"
   open:
     - "Make magic states as fast as a high-rate processor consumes them, without a factory larger than the memory."
     - "Get them into qLDPC blocks efficiently and in parallel."

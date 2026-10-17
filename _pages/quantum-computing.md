@@ -13,7 +13,7 @@ og_image: /assets/img/qc/quantum-computing-card.png
   Figures come from _includes/qc/, with data in _data/qc_codes.yml (top
   figure), _data/qc_estimates.yml (qubit-estimate chart),
   _data/qc_architecture.yml (blueprint) and _data/qc_timeline.yml
-  (milestones); assets/js/quantum-computing.js draws them. The four
+  (milestones); assets/js/quantum-computing.js draws them. The five
   <section class="topic"> blocks collapse like the research page, and the
   "Our work" links in the blueprint open the section with the matching id.
   Styles: _sass/_quantum-computing.scss.
@@ -72,6 +72,17 @@ Next, with support from a [Microsoft Quantum Pioneers award](https://quantum.mic
 </div>
 </section>
 
+<section class="topic" id="magic" style="--tint: #d9473b" markdown="1">
+<h2>Magic states and universal computation</h2>
+<div class="topic-body" markdown="1">
+
+The operations that come cheaply in an error-correcting code, the Clifford gates, cannot run every algorithm on their own. A universal machine also needs non-Clifford gates such as the T gate or the three-qubit Toffoli gate, which are usually made by preparing special *magic states* and consuming one per gate. The cost of many of the most valuable algorithms, from Shor's factoring to simulating molecules, is counted in Toffoli gates, so cheaper Toffoli resources make the whole computation cheaper.
+
+- [Logical CCZ state cultivation](https://arxiv.org/abs/2610.20591) (2026, with Ph.D. student Yuta Hirasaki) makes CCZ states, the magic states behind Toffoli gates, directly inside high-rate qLDPC codes. Bivariate tricycle codes, which have CCZ gates built in, prepare two CCZ states at once, and lifting moves them into bivariate bicycle memories with larger distance. In circuit-level simulations with neutral-atom-like noise, output errors reach about 2 × 10<sup>−5</sup> while keeping 22% of attempts, or 4 × 10<sup>−7</sup> while keeping 9%, and the smallest factory costs less per CCZ state than cultivating T states and converting them.
+
+</div>
+</section>
+
 <section class="topic" id="hardware" style="--tint: #d9473b" markdown="1">
 <h2>Hardware and dynamics</h2>
 <div class="topic-body" markdown="1">
@@ -119,6 +130,7 @@ Selected results in theory, architecture and experiment since 1980, newest first
 <div><dt>Decoder</dt><dd>The classical algorithm that reads the check results and infers a correction. In a real machine it has to keep up with the stream of results.</dd></div>
 <div><dt>Code surgery</dt><dd>Measuring logical qubits by temporarily attaching extra qubits and checks to a code; a leading way to compute with qLDPC codes.</dd></div>
 <div><dt>Magic state</dt><dd>A special resource state that, combined with the easy operations, makes a quantum computer universal.</dd></div>
+<div><dt>Toffoli gate and CCZ state</dt><dd>The Toffoli gate flips a target qubit only when two control qubits are both 1, the basic step of quantum arithmetic. Error-corrected machines usually run it by consuming a CCZ magic state.</dd></div>
 </dl>
 
 ## Get involved

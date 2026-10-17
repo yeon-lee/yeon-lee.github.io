@@ -29,7 +29,7 @@ rishi-lohar:
 
 tai-hsuan-yang:
   arxiv_names: [Tai-Hsuan Yang, Tai Hsuan Yang]
-  exclude: []
+  exclude: ["2609.38007", "2609.33815", "2609.09019"]  # single-author papers, not shown
 
 yuta-hirasaki:
   arxiv_names: [Yuta Hirasaki]
