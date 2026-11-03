@@ -69,6 +69,7 @@ profiles:
       <p>Graduate Student</p>
       <p>adk7 [at] illinois.edu</p>
   - align: right
+    image: people/shashwat-chakraborty.jpg
     content: people/shashwat-chakraborty.md
     image_circular: false
     more_info: >
