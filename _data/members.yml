@@ -9,6 +9,8 @@
 #                   paper counts only if one of these appears in its author list)
 #   exclude      -> arXiv IDs that belong to someone else with the same name
 #   count        -> how many papers to show (default 3)
+#   with_pi      -> true: only papers co-authored with the PI (author_names in
+#                   _data/arxiv.yml); other papers are skipped automatically
 #
 # Papers are limited to the physics categories in _data/arxiv.yml. To add a
 # member, add a block here and `{% include member_papers.liquid key="..." %}`
@@ -29,7 +31,8 @@ rishi-lohar:
 
 tai-hsuan-yang:
   arxiv_names: [Tai-Hsuan Yang, Tai Hsuan Yang]
-  exclude: ["2609.38007", "2609.33815", "2609.09019"]  # single-author papers, not shown
+  with_pi: true  # only papers co-authored with Jong Yeon
+  exclude: ["2609.38007", "2609.33815", "2609.09019", "2611.01520"]
 
 yuta-hirasaki:
   arxiv_names: [Yuta Hirasaki]
