@@ -83,6 +83,14 @@ rishi-lohar:
   - Bryce Gadway
   primary: cond-mat.quant-gas
 tai-hsuan-yang:
+- id: '2611.01520'
+  title: Near-Optimal Learning of Quantum Many-Body Systems from Gibbs and Thermal Metastable States via the Stationarity Test
+  venue: arXiv:2611.01520
+  date: '2026-11-01'
+  url: https://arxiv.org/abs/2611.01520
+  authors:
+  - Tai Hsuan Yang
+  primary: quant-ph
 - id: '2610.22357'
   title: Stability of Quantum LDPC States under Local Pauli Noise
   venue: arXiv:2610.22357
@@ -104,17 +112,6 @@ tai-hsuan-yang:
   - Bowen Shi
   - Jong Yeon Lee
   primary: cond-mat.str-el
-- id: '2410.23152'
-  title: When can classical neural networks represent quantum states?
-  venue: arXiv:2410.23152
-  date: '2024-10-30'
-  url: https://arxiv.org/abs/2410.23152
-  authors:
-  - Tai-Hsuan Yang
-  - Mehdi Soleimanifar
-  - Thiago Bergamaschi
-  - John Preskill
-  primary: quant-ph
 yuta-hirasaki:
 - id: '2610.20591'
   title: Logical CCZ state cultivation
