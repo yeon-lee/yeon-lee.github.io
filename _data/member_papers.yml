@@ -104,6 +104,17 @@ tai-hsuan-yang:
   - Bowen Shi
   - Jong Yeon Lee
   primary: cond-mat.str-el
+- id: '2410.23152'
+  title: When can classical neural networks represent quantum states?
+  venue: arXiv:2410.23152
+  date: '2024-10-30'
+  url: https://arxiv.org/abs/2410.23152
+  authors:
+  - Tai-Hsuan Yang
+  - Mehdi Soleimanifar
+  - Thiago Bergamaschi
+  - John Preskill
+  primary: quant-ph
 yuta-hirasaki:
 - id: '2610.20591'
   title: Logical CCZ state cultivation

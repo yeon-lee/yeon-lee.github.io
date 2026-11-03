@@ -707,6 +707,7 @@ def load_members() -> dict:
             "exclude": {strip_version(str(x)) for x in (m.get("exclude") or [])},
             "count": int(m.get("count") or 3),
             "with_pi": bool(m.get("with_pi")),
+            "include": {strip_version(str(x)) for x in (m.get("include") or [])},
         }
     return members
 
@@ -811,8 +812,8 @@ def update_member_papers(cfg: dict, pi_records: dict[str, dict], api_ok: bool, s
                         continue
                 if not author_matches(rec["authors"], m["names"]):
                     continue  # the search matched a different person
-                if m["with_pi"] and not author_matches(rec["authors"], cfg["author_names"]):
-                    continue  # member opted into papers co-authored with the PI only
+                if m["with_pi"] and aid not in m["include"] and not author_matches(rec["authors"], cfg["author_names"]):
+                    continue  # member opted into papers co-authored with the PI only (`include` lists exceptions)
                 if not category_allowed(rec.get("primary_category", ""), cfg["categories"]):
                     continue
                 entry = member_entry(rec, cfg)
