@@ -40,3 +40,21 @@
   venue: Phys. Rev. Lett. 2023
   link: https://doi.org/10.1103/PhysRevLett.131.220403
   image: lindbladian-hydrodynamics.png
+
+- title: Short-range vector spin glasses
+  caption: A short-range lattice model in which Parisi's replica-symmetry-breaking hierarchy survives in finite dimensions and shows up directly as real-space correlation lengths.
+  venue: arXiv 2026
+  link: https://arxiv.org/abs/2610.12441
+  image: vector-spin-glasses.png
+
+- title: Memory without synchronization
+  caption: A spacetime renormalization framework proving that memories built from competing local rules stay stable even when every site updates at its own random time.
+  venue: arXiv 2026
+  link: https://arxiv.org/abs/2610.40651
+  image: robust-memory.png
+
+- title: Stability of qLDPC code states
+  caption: The code states of any qLDPC code stay stable under local Pauli noise — their conditional mutual information decays exponentially, at both weak and strong noise.
+  venue: arXiv 2026
+  link: https://arxiv.org/abs/2610.22357
+  image: qldpc-stability.png

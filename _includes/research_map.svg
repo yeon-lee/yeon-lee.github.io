@@ -24,6 +24,7 @@
 <line x1="690" y1="268" x2="888" y2="322" class="rmap-edge" data-topic="error-correction"/>
 <line x1="690" y1="268" x2="862" y2="392" class="rmap-edge" data-topic="error-correction"/>
 <line x1="690" y1="268" x2="772" y2="190" class="rmap-edge" data-topic="error-correction"/>
+<line x1="690" y1="268" x2="735" y2="360" class="rmap-edge" data-topic="error-correction"/>
 <line x1="612" y1="486" x2="842" y2="472" class="rmap-edge" data-topic="dynamics"/>
 <line x1="612" y1="486" x2="826" y2="556" class="rmap-edge" data-topic="dynamics"/>
 <line x1="612" y1="486" x2="665" y2="600" class="rmap-edge" data-topic="dynamics"/>
@@ -32,6 +33,7 @@
 <line x1="346" y1="486" x2="108" y2="455" class="rmap-edge" data-topic="criticality"/>
 <line x1="346" y1="486" x2="228" y2="604" class="rmap-edge" data-topic="criticality"/>
 <line x1="346" y1="486" x2="445" y2="588" class="rmap-edge" data-topic="criticality"/>
+<line x1="346" y1="486" x2="440" y2="395" class="rmap-edge" data-topic="criticality"/>
 <line x1="268" y1="268" x2="100" y2="200" class="rmap-edge" data-topic="topology"/>
 <line x1="268" y1="268" x2="84" y2="292" class="rmap-edge" data-topic="topology"/>
 <line x1="268" y1="268" x2="116" y2="378" class="rmap-edge" data-topic="topology"/>
@@ -46,6 +48,7 @@
 <a href="#error-correction" class="rmap-node rmap-sat" data-topic="error-correction"><rect x="826.8" y="309.8" width="122.5" height="24.5" rx="12.2" filter="url(#rmap-glow)"/><text x="888.0" y="322.0" text-anchor="middle" dominant-baseline="central">fault tolerance</text></a>
 <a href="#error-correction" class="rmap-node rmap-sat" data-topic="error-correction"><rect x="783.0" y="379.8" width="158.0" height="24.5" rx="12.2" filter="url(#rmap-glow)"/><text x="862.0" y="392.0" text-anchor="middle" dominant-baseline="central">addressable logicals</text></a>
 <a href="#error-correction" class="rmap-node rmap-sat" data-topic="error-correction"><rect x="707.2" y="177.8" width="129.6" height="24.5" rx="12.2" filter="url(#rmap-glow)"/><text x="772.0" y="190.0" text-anchor="middle" dominant-baseline="central">error thresholds</text></a>
+<a href="#error-correction" class="rmap-node rmap-sat" data-topic="error-correction"><rect x="684.4" y="347.8" width="101.2" height="24.5" rx="12.2" filter="url(#rmap-glow)"/><text x="735.0" y="360.0" text-anchor="middle" dominant-baseline="central">magic states</text></a>
 <a href="#dynamics" class="rmap-node rmap-sat" data-topic="dynamics"><rect x="741.7" y="459.8" width="200.6" height="24.5" rx="12.2" filter="url(#rmap-glow)"/><text x="842.0" y="472.0" text-anchor="middle" dominant-baseline="central">measurement-induced phases</text></a>
 <a href="#dynamics" class="rmap-node rmap-sat" data-topic="dynamics"><rect x="747.0" y="543.8" width="158.0" height="24.5" rx="12.2" filter="url(#rmap-glow)"/><text x="826.0" y="556.0" text-anchor="middle" dominant-baseline="central">Lindbladian dynamics</text></a>
 <a href="#dynamics" class="rmap-node rmap-sat" data-topic="dynamics"><rect x="607.3" y="587.8" width="115.4" height="24.5" rx="12.2" filter="url(#rmap-glow)"/><text x="665.0" y="600.0" text-anchor="middle" dominant-baseline="central">Floquet phases</text></a>
@@ -54,6 +57,7 @@
 <a href="#criticality" class="rmap-node rmap-sat" data-topic="criticality"><rect x="57.4" y="442.8" width="101.2" height="24.5" rx="12.2" filter="url(#rmap-glow)"/><text x="108.0" y="455.0" text-anchor="middle" dominant-baseline="central">spin liquids</text></a>
 <a href="#criticality" class="rmap-node rmap-sat" data-topic="criticality"><rect x="170.3" y="591.8" width="115.4" height="24.5" rx="12.2" filter="url(#rmap-glow)"/><text x="228.0" y="604.0" text-anchor="middle" dominant-baseline="central">gauge theories</text></a>
 <a href="#criticality" class="rmap-node rmap-sat" data-topic="criticality"><rect x="312.8" y="575.8" width="264.5" height="24.5" rx="12.2" filter="url(#rmap-glow)"/><text x="445.0" y="588.0" text-anchor="middle" dominant-baseline="central">symmetry-enriched topological order</text></a>
+<a href="#criticality" class="rmap-node rmap-sat" data-topic="criticality"><rect x="389.4" y="382.8" width="101.2" height="24.5" rx="12.2" filter="url(#rmap-glow)"/><text x="440.0" y="395.0" text-anchor="middle" dominant-baseline="central">spin glasses</text></a>
 <a href="#topology" class="rmap-node rmap-sat" data-topic="topology"><rect x="13.9" y="187.8" width="172.2" height="24.5" rx="12.2" filter="url(#rmap-glow)"/><text x="100.0" y="200.0" text-anchor="middle" dominant-baseline="central">non-Hermitian topology</text></a>
 <a href="#topology" class="rmap-node rmap-sat" data-topic="topology"><rect x="22.8" y="279.8" width="122.5" height="24.5" rx="12.2" filter="url(#rmap-glow)"/><text x="84.0" y="292.0" text-anchor="middle" dominant-baseline="central">moiré materials</text></a>
 <a href="#topology" class="rmap-node rmap-sat" data-topic="topology"><rect x="40.5" y="365.8" width="150.9" height="24.5" rx="12.2" filter="url(#rmap-glow)"/><text x="116.0" y="378.0" text-anchor="middle" dominant-baseline="central">quantum Monte Carlo</text></a>

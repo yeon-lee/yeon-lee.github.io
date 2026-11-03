@@ -24,9 +24,9 @@ Our group explores the intersection of quantum many-body physics and quantum inf
 <h2>Many-body physics of quantum information</h2>
 <div class="topic-body" markdown="1">
 
-What happens to a many-body quantum state when it decoheres? We study mixed-state phases of matter and the transitions between them, using information-theoretic quantities such as the coherent information as order parameters. This includes the exact characterization of error thresholds in stabilizer codes as phase transitions, topological mixed states, symmetry-protected topological phases under decoherence, and new forms of symmetry breaking (strong-to-weak spontaneous symmetry breaking) that exist only in mixed states. Related work uses the entanglement bootstrap to derive the properties of topological order from the structure of entanglement alone.
+What happens to a many-body quantum state when it decoheres? We study mixed-state phases of matter and the transitions between them, using information-theoretic quantities such as the coherent information as order parameters. This includes the exact characterization of error thresholds in stabilizer codes as phase transitions, a hierarchy of computable Rényi measures of how much encoded information survives noise, intermediate phases in which only part of the information survives, topological mixed states, and new forms of symmetry breaking (strong-to-weak spontaneous symmetry breaking) that exist only in mixed states, together with their footprint on charge fluctuations. We also prove that the code states of general quantum LDPC codes stay stable under local noise: their conditional mutual information decays exponentially across any buffer region. Related work uses the entanglement bootstrap to derive the properties of topological order, including transparent domain walls, from the structure of entanglement alone.
 
-Representative papers: [exact coherent information for toric codes under decoherence](https://arxiv.org/abs/2402.16937), [quantum criticality under decoherence or weak measurement](https://arxiv.org/abs/2301.05238), [topological mixed states](https://arxiv.org/abs/2506.04221).
+Representative papers: [exact coherent information for toric codes under decoherence](https://arxiv.org/abs/2402.16937), [quantum criticality under decoherence or weak measurement](https://arxiv.org/abs/2301.05238), [topological mixed states](https://arxiv.org/abs/2506.04221), [stability of quantum LDPC states under local Pauli noise](https://arxiv.org/abs/2610.22357), [hierarchy of Rényi coherent information](https://arxiv.org/abs/2609.11930), [charge scrambling in strong-to-weak spontaneous symmetry breaking](https://arxiv.org/abs/2605.05288).
 
 </div>
 </section>
@@ -35,9 +35,9 @@ Representative papers: [exact coherent information for toric codes under decoher
 <h2>Quantum error correction</h2>
 <div class="topic-body" markdown="1">
 
-We design and analyze quantum error-correcting codes, with a focus on high-rate quantum low-density parity-check (LDPC) codes that dramatically reduce the qubit overhead of fault tolerance. Directions include design principles for ultra-high-rate codes, lifted-product code constructions with addressable logical operators, and approximate quantum error correction at the edges of chiral topological phases.
+We design and analyze quantum error-correcting codes, with a focus on high-rate quantum low-density parity-check (LDPC) codes that dramatically reduce the qubit overhead of fault tolerance, and on how to compute with them. Directions include design principles for ultra-high-rate codes; codes whose logical operators come with an addressable, labeled basis (logical spectroscopy) or a complete basis of light operators (frame width); lifting codes into families that carry surgery gadgets along; preparing logical CCZ states, the magic states behind Toffoli gates, directly inside high-rate codes; classical memories protected by local updates that need no global clock; and approximate quantum error correction at the edges of chiral topological phases. The [Quantum Computing](/quantum-computing/) page explains what this work means for building error-corrected quantum computers.
 
-Representative papers: [design principles for ultra-high-rate quantum codes](https://arxiv.org/abs/2609.30069), [logical spectroscopy](https://arxiv.org/abs/2607.05386), [lifting lifted product codes](https://arxiv.org/abs/2607.28621).
+Representative papers: [design principles for ultra-high-rate quantum codes](https://arxiv.org/abs/2609.30069), [logical spectroscopy](https://arxiv.org/abs/2607.05386), [designing group-valued codes with full regular low-weight bases](https://arxiv.org/abs/2610.06820), [lifting lifted product codes](https://arxiv.org/abs/2607.28621), [logical CCZ state cultivation](https://arxiv.org/abs/2610.20591), [renormalization for robust memory without synchronization](https://arxiv.org/abs/2610.40651).
 
 </div>
 </section>
@@ -46,9 +46,9 @@ Representative papers: [design principles for ultra-high-rate quantum codes](htt
 <h2>Non-equilibrium dynamics and quantum control</h2>
 <div class="topic-body" markdown="1">
 
-Measurements, dissipation, and driving can stabilize phases that have no equilibrium counterpart. We study measurement-prepared quantum phases and their transitions, Floquet-enriched topological order, the low-energy structure of Lindbladian dynamics and its relation to emergent hydrodynamics, and spectral gaps of dissipative random circuits. On the control side, we work with experimental collaborators on programmable quantum simulators, from Rydberg-atom arrays to multi-level encodings in neutral ytterbium atoms.
+Measurements, dissipation, and driving can stabilize phases that have no equilibrium counterpart. We study measurement-prepared quantum phases and their transitions, Floquet-enriched topological order, the low-energy structure of Lindbladian dynamics and its relation to emergent hydrodynamics, and spectral gaps of dissipative random circuits, including how much non-Clifford doping a circuit needs before dissipation produces chaotic relaxation. On the control side, we work with experimental collaborators on programmable quantum simulators, from Rydberg-atom arrays to multi-level encodings in neutral ytterbium atoms.
 
-Representative papers: [decoding measurement-prepared quantum phases and transitions](https://arxiv.org/abs/2208.11699), [unifying emergent hydrodynamics and Lindbladian low-energy spectra](https://arxiv.org/abs/2304.13028), [Landau-forbidden quantum criticality in Rydberg quantum simulators](https://arxiv.org/abs/2207.08829).
+Representative papers: [decoding measurement-prepared quantum phases and transitions](https://arxiv.org/abs/2208.11699), [unifying emergent hydrodynamics and Lindbladian low-energy spectra](https://arxiv.org/abs/2304.13028), [Liouvillian gap in dissipative Haar-doped Clifford circuits](https://arxiv.org/abs/2602.03234), [Landau-forbidden quantum criticality in Rydberg quantum simulators](https://arxiv.org/abs/2207.08829).
 
 </div>
 </section>
@@ -57,9 +57,9 @@ Representative papers: [decoding measurement-prepared quantum phases and transit
 <h2>Topological band theory and correlated physics</h2>
 <div class="topic-body" markdown="1">
 
-We study the interplay of band topology and strong correlations, including the classification of topological bands with non-Hermitian Bloch Hamiltonians and their correspondence with Hermitian systems, and the correlated insulators, nematicity, and superconductivity of moiré materials such as twisted bilayer graphene, using both analytic approaches and sign-problem-free quantum Monte Carlo.
+We study the interplay of band topology and strong correlations, including the classification of topological bands with non-Hermitian Bloch Hamiltonians and their correspondence with Hermitian systems, and the correlated insulators, nematicity, and superconductivity of moiré materials such as twisted bilayer graphene, using both analytic approaches and sign-problem-free quantum Monte Carlo, most recently to map how strain and temperature reshape the phase diagram of twisted bilayer graphene.
 
-Representative papers: [periodic table for topological bands with non-Hermitian Bernard-LeClair symmetries](https://arxiv.org/abs/1812.10490), [spin-polarized correlated insulator and superconductor in twisted double bilayer graphene](https://arxiv.org/abs/1903.08130), [fermionic Monte Carlo study of a realistic model of twisted bilayer graphene](https://arxiv.org/abs/2105.12112).
+Representative papers: [periodic table for topological bands with non-Hermitian Bernard-LeClair symmetries](https://arxiv.org/abs/1812.10490), [spin-polarized correlated insulator and superconductor in twisted double bilayer graphene](https://arxiv.org/abs/1903.08130), [fermionic Monte Carlo study of a realistic model of twisted bilayer graphene](https://arxiv.org/abs/2105.12112), [Monte Carlo studies of twisted bilayer graphene: strain and thermal fluctuations](https://arxiv.org/abs/2607.20619).
 
 </div>
 </section>
@@ -68,9 +68,9 @@ Representative papers: [periodic table for topological bands with non-Hermitian 
 <h2>Exotic quantum phases and quantum criticality</h2>
 <div class="topic-body" markdown="1">
 
-Beyond the Landau paradigm, we look for phases and critical points characterized by emergent gauge fields and fractionalized excitations: deconfined quantum critical points in frustrated magnets such as the Shastry-Sutherland lattice, Dirac spin liquids, symmetry-enriched topological phases, emergent multi-flavor QED3, and gauge theories obtained by gauging modulated symmetries.
+Beyond the Landau paradigm, we look for phases and critical points characterized by emergent gauge fields and fractionalized excitations: deconfined quantum critical points in frustrated magnets such as the Shastry-Sutherland lattice, Dirac spin liquids, symmetry-enriched topological phases, emergent multi-flavor QED3, and gauge theories obtained by gauging modulated symmetries. In disordered systems, we study glassy order: a short-range lattice model of vector spins in which Parisi's hierarchy of replica symmetry breaking is thermodynamically stable in finite dimensions and acquires a direct real-space meaning.
 
-Representative papers: [signatures of a deconfined phase transition on the Shastry-Sutherland lattice](https://arxiv.org/abs/1904.07266), [evidence for a Z2 Dirac spin liquid](https://arxiv.org/abs/2501.00096), [emergent multi-flavor QED3](https://arxiv.org/abs/1802.09538).
+Representative papers: [signatures of a deconfined phase transition on the Shastry-Sutherland lattice](https://arxiv.org/abs/1904.07266), [evidence for a Z2 Dirac spin liquid](https://arxiv.org/abs/2501.00096), [emergent multi-flavor QED3](https://arxiv.org/abs/1802.09538), [short-range vector spin glasses](https://arxiv.org/abs/2610.12441).
 
 </div>
 </section>
