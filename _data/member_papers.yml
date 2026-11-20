@@ -83,6 +83,16 @@ rishi-lohar:
   - Bryce Gadway
   primary: cond-mat.quant-gas
 tai-hsuan-yang:
+- id: '2611.26626'
+  title: High-temperature Gibbs states are uniformly Markovian and trivial
+  venue: arXiv:2611.26626
+  date: '2026-11-19'
+  url: https://arxiv.org/abs/2611.26626
+  authors:
+  - Andrew D. Kim
+  - Tai Hsuan Yang
+  - Jong Yeon Lee
+  primary: quant-ph
 - id: '2610.22357'
   title: Stability of Quantum LDPC States under Local Pauli Noise
   venue: arXiv:2610.22357
@@ -104,17 +114,6 @@ tai-hsuan-yang:
   - Bowen Shi
   - Jong Yeon Lee
   primary: cond-mat.str-el
-- id: '2410.23152'
-  title: When can classical neural networks represent quantum states?
-  venue: arXiv:2410.23152
-  date: '2024-10-30'
-  url: https://arxiv.org/abs/2410.23152
-  authors:
-  - Tai-Hsuan Yang
-  - Mehdi Soleimanifar
-  - Thiago Bergamaschi
-  - John Preskill
-  primary: quant-ph
 yuta-hirasaki:
 - id: '2610.20591'
   title: Logical CCZ state cultivation
@@ -146,6 +145,16 @@ yuta-hirasaki:
   - Eiji Saitoh
   primary: quant-ph
 drew-kim:
+- id: '2611.26626'
+  title: High-temperature Gibbs states are uniformly Markovian and trivial
+  venue: arXiv:2611.26626
+  date: '2026-11-19'
+  url: https://arxiv.org/abs/2611.26626
+  authors:
+  - Andrew D. Kim
+  - Tai Hsuan Yang
+  - Jong Yeon Lee
+  primary: quant-ph
 - id: '2610.22357'
   title: Stability of Quantum LDPC States under Local Pauli Noise
   venue: arXiv:2610.22357
@@ -167,16 +176,6 @@ drew-kim:
   - Andrew D. Kim
   - Jong Yeon Lee
   primary: quant-ph
-- id: '2407.19011'
-  title: Field-induced magnon decays in dipolar quantum magnets
-  venue: Phys. Rev. Lett. 135, 046703 (2025)
-  date: '2024-07-26'
-  url: https://arxiv.org/abs/2407.19011
-  authors:
-  - Andrew D. Kim
-  - Ahmed Khalifa
-  - Shubhayu Chatterjee
-  primary: cond-mat.str-el
 shashwat-chakraborty:
 - id: '2610.40651'
   title: Renormalization for Robust Memory without Synchronization
